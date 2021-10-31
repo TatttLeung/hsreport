@@ -1,0 +1,651 @@
+2021/10/27 21:32:56 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'club_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `club_list` `t` WHERE club_id=1 LIMIT 1.
+2021/10/27 21:32:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'club_id' in 'where clause'' in F:\wamp64\www\www100\framework\db\CDbCommand.php:543
+Stack trace:
+#0 F:\wamp64\www\www100\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1359): CDbCommand->queryRow()
+#2 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1464): CActiveRecord->query(Object(CDbCriteria))
+#3 F:\wamp64\www\www100\models\ClubNews.php(100): CActiveRecord->find('club_id=1')
+#4 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1125): ClubNews->beforeSave()
+#5 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(811): CActiveRecord->update(NULL)
+#6 F:\wamp64\www\www100\admin\controllers\ClubNewsController.php(55): CActiveRecord->save()
+#7 F:\wamp64\www\www100\admin\controllers\ClubNewsController.php(44): ClubNewsController->saveData(Object(ClubNews), Array)
+#8 [internal function]: ClubNewsController->actionUpdate('779')
+#9 F:\wamp64\www\www100\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(ClubNewsController), Array)
+#10 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ClubNewsController), Object(ReflectionMethod), Array)
+#11 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 F:\wamp64\www\www100\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 F:\wamp64\www\www100\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('update')
+#15 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('clubNews/update')
+#16 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#18 {main}
+REQUEST_URI=/www100/index.php?r=clubNews/update&id=779&news_type=0
+HTTP_REFERER=http://127.0.0.1/www100/index.php?r=clubNews/update&id=779&news_type=0
+---
+2021/10/27 21:33:33 [error] [php] Object of class ClubNews could not be converted to string (F:\wamp64\www\www100\framework\db\schema\CDbColumnSchema.php:146)
+Stack trace:
+#0 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1130): ClubNews->updateByPk()
+#1 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(811): ClubNews->update()
+#2 F:\wamp64\www\www100\admin\controllers\ClubNewsController.php(55): ClubNews->save()
+#3 F:\wamp64\www\www100\admin\controllers\ClubNewsController.php(44): ClubNewsController->saveData()
+#4 unknown(0): ClubNewsController->actionUpdate()
+#5 F:\wamp64\www\www100\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#6 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 F:\wamp64\www\www100\framework\web\CController.php(286): ClubNewsController->runAction()
+#9 F:\wamp64\www\www100\framework\web\CController.php(265): ClubNewsController->runActionWithFilters()
+#10 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): ClubNewsController->run()
+#11 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 F:\wamp64\www\www100\index.php(33): CWebApplication->run()
+REQUEST_URI=/www100/index.php?r=clubNews/update&id=779&news_type=0
+2021/10/27 21:34:40 [error] [php] Object of class ClubNews could not be converted to string (F:\wamp64\www\www100\framework\db\schema\CDbColumnSchema.php:146)
+Stack trace:
+#0 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1130): ClubNews->updateByPk()
+#1 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(811): ClubNews->update()
+#2 F:\wamp64\www\www100\admin\controllers\ClubNewsController.php(55): ClubNews->save()
+#3 F:\wamp64\www\www100\admin\controllers\ClubNewsController.php(44): ClubNewsController->saveData()
+#4 unknown(0): ClubNewsController->actionUpdate()
+#5 F:\wamp64\www\www100\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#6 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 F:\wamp64\www\www100\framework\web\CController.php(286): ClubNewsController->runAction()
+#9 F:\wamp64\www\www100\framework\web\CController.php(265): ClubNewsController->runActionWithFilters()
+#10 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): ClubNewsController->run()
+#11 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 F:\wamp64\www\www100\index.php(33): CWebApplication->run()
+REQUEST_URI=/www100/index.php?r=clubNews/update&id=779&news_type=0
+2021/10/27 21:37:16 [error] [exception.CException] exception 'CException' with message '属性 "ClubNews.club_code" 未被定义.' in F:\wamp64\www\www100\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(145): CComponent->__get('club_code')
+#1 F:\wamp64\www\www100\models\ClubNews.php(100): CActiveRecord->__get('club_code')
+#2 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1125): ClubNews->beforeSave()
+#3 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(811): CActiveRecord->update(NULL)
+#4 F:\wamp64\www\www100\admin\controllers\ClubNewsController.php(55): CActiveRecord->save()
+#5 F:\wamp64\www\www100\admin\controllers\ClubNewsController.php(44): ClubNewsController->saveData(Object(ClubNews), Array)
+#6 [internal function]: ClubNewsController->actionUpdate('779')
+#7 F:\wamp64\www\www100\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(ClubNewsController), Array)
+#8 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ClubNewsController), Object(ReflectionMethod), Array)
+#9 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 F:\wamp64\www\www100\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 F:\wamp64\www\www100\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('update')
+#13 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('clubNews/update')
+#14 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#16 {main}
+REQUEST_URI=/www100/index.php?r=clubNews/update&id=779&news_type=0
+HTTP_REFERER=http://127.0.0.1/www100/index.php?r=clubNews/update&id=779&news_type=0
+---
+2021/10/27 21:39:15 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'club_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `club_list` `t` WHERE club_id=1 LIMIT 1.
+2021/10/27 21:39:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'club_id' in 'where clause'' in F:\wamp64\www\www100\framework\db\CDbCommand.php:543
+Stack trace:
+#0 F:\wamp64\www\www100\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1359): CDbCommand->queryRow()
+#2 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1464): CActiveRecord->query(Object(CDbCriteria))
+#3 F:\wamp64\www\www100\models\ClubNews.php(100): CActiveRecord->find('club_id=1')
+#4 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1125): ClubNews->beforeSave()
+#5 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(811): CActiveRecord->update(NULL)
+#6 F:\wamp64\www\www100\admin\controllers\ClubNewsController.php(55): CActiveRecord->save()
+#7 F:\wamp64\www\www100\admin\controllers\ClubNewsController.php(44): ClubNewsController->saveData(Object(ClubNews), Array)
+#8 [internal function]: ClubNewsController->actionUpdate('779')
+#9 F:\wamp64\www\www100\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(ClubNewsController), Array)
+#10 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ClubNewsController), Object(ReflectionMethod), Array)
+#11 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 F:\wamp64\www\www100\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 F:\wamp64\www\www100\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('update')
+#15 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('clubNews/update')
+#16 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#18 {main}
+REQUEST_URI=/www100/index.php?r=clubNews/update&id=779&news_type=0
+HTTP_REFERER=http://127.0.0.1/www100/index.php?r=clubNews/update&id=779&news_type=0
+---
+2021/10/27 21:40:01 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'club_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `club_list` `t` WHERE club_id=1 LIMIT 1.
+2021/10/27 21:40:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'club_id' in 'where clause'' in F:\wamp64\www\www100\framework\db\CDbCommand.php:543
+Stack trace:
+#0 F:\wamp64\www\www100\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1359): CDbCommand->queryRow()
+#2 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1464): CActiveRecord->query(Object(CDbCriteria))
+#3 F:\wamp64\www\www100\models\ClubNews.php(100): CActiveRecord->find('club_id=1')
+#4 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1125): ClubNews->beforeSave()
+#5 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(811): CActiveRecord->update(NULL)
+#6 F:\wamp64\www\www100\admin\controllers\ClubNewsController.php(55): CActiveRecord->save()
+#7 F:\wamp64\www\www100\admin\controllers\ClubNewsController.php(44): ClubNewsController->saveData(Object(ClubNews), Array)
+#8 [internal function]: ClubNewsController->actionUpdate('779')
+#9 F:\wamp64\www\www100\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(ClubNewsController), Array)
+#10 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ClubNewsController), Object(ReflectionMethod), Array)
+#11 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 F:\wamp64\www\www100\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 F:\wamp64\www\www100\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('update')
+#15 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('clubNews/update')
+#16 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#18 {main}
+REQUEST_URI=/www100/index.php?r=clubNews/update&id=779&news_type=0
+HTTP_REFERER=http://127.0.0.1/www100/index.php?r=clubNews/update&id=779&news_type=0
+---
+2021/10/27 21:47:31 [error] [exception.CException] exception 'CException' with message '属性 "ClubNews.club_code" 未被定义.' in F:\wamp64\www\www100\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(145): CComponent->__get('club_code')
+#1 F:\wamp64\www\www100\models\ClubNews.php(100): CActiveRecord->__get('club_code')
+#2 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1125): ClubNews->beforeSave()
+#3 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(811): CActiveRecord->update(NULL)
+#4 F:\wamp64\www\www100\admin\controllers\ClubNewsController.php(55): CActiveRecord->save()
+#5 F:\wamp64\www\www100\admin\controllers\ClubNewsController.php(44): ClubNewsController->saveData(Object(ClubNews), Array)
+#6 [internal function]: ClubNewsController->actionUpdate('779')
+#7 F:\wamp64\www\www100\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(ClubNewsController), Array)
+#8 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ClubNewsController), Object(ReflectionMethod), Array)
+#9 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 F:\wamp64\www\www100\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 F:\wamp64\www\www100\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('update')
+#13 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('clubNews/update')
+#14 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#16 {main}
+REQUEST_URI=/www100/index.php?r=clubNews/update&id=779&news_type=0
+HTTP_REFERER=http://127.0.0.1/www100/index.php?r=clubNews/update&id=779&news_type=0
+---
+2021/10/27 21:48:26 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'club_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `club_list` `t` WHERE club_id=1 LIMIT 1.
+2021/10/27 21:48:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'club_id' in 'where clause'' in F:\wamp64\www\www100\framework\db\CDbCommand.php:543
+Stack trace:
+#0 F:\wamp64\www\www100\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1359): CDbCommand->queryRow()
+#2 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1464): CActiveRecord->query(Object(CDbCriteria))
+#3 F:\wamp64\www\www100\models\ClubNews.php(100): CActiveRecord->find('club_id=1')
+#4 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1125): ClubNews->beforeSave()
+#5 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(811): CActiveRecord->update(NULL)
+#6 F:\wamp64\www\www100\admin\controllers\ClubNewsController.php(55): CActiveRecord->save()
+#7 F:\wamp64\www\www100\admin\controllers\ClubNewsController.php(44): ClubNewsController->saveData(Object(ClubNews), Array)
+#8 [internal function]: ClubNewsController->actionUpdate('779')
+#9 F:\wamp64\www\www100\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(ClubNewsController), Array)
+#10 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ClubNewsController), Object(ReflectionMethod), Array)
+#11 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 F:\wamp64\www\www100\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 F:\wamp64\www\www100\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('update')
+#15 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('clubNews/update')
+#16 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#18 {main}
+REQUEST_URI=/www100/index.php?r=clubNews/update&id=779&news_type=0
+HTTP_REFERER=http://127.0.0.1/www100/index.php?r=clubNews/update&id=779&news_type=0
+---
+2021/10/29 15:05:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "indexindex" 动作.' in F:\wamp64\www\www100\framework\web\CController.php:486
+Stack trace:
+#0 F:\wamp64\www\www100\framework\web\CController.php(270): CController->missingAction('indexindex')
+#1 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('indexindex')
+#2 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('Teacher/indexin...')
+#3 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/www100/index.php?r=Teacher/indexindex&news_type=0
+HTTP_REFERER=http://127.0.0.1/www100/index.php
+---
+2021/10/29 15:06:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "indexindex" 动作.' in F:\wamp64\www\www100\framework\web\CController.php:486
+Stack trace:
+#0 F:\wamp64\www\www100\framework\web\CController.php(270): CController->missingAction('indexindex')
+#1 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('indexindex')
+#2 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('Teacher/indexin...')
+#3 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/www100/index.php?r=Teacher/indexindex&news_type=0
+HTTP_REFERER=http://127.0.0.1/www100/index.php
+---
+2021/10/29 15:06:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "indexindex" 动作.' in F:\wamp64\www\www100\framework\web\CController.php:486
+Stack trace:
+#0 F:\wamp64\www\www100\framework\web\CController.php(270): CController->missingAction('indexindex')
+#1 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('indexindex')
+#2 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('Teacher/indexin...')
+#3 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/www100/index.php?r=Teacher/indexindex&news_type=0
+HTTP_REFERER=http://127.0.0.1/www100/index.php
+---
+2021/10/29 15:06:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "indexindex" 动作.' in F:\wamp64\www\www100\framework\web\CController.php:486
+Stack trace:
+#0 F:\wamp64\www\www100\framework\web\CController.php(270): CController->missingAction('indexindex')
+#1 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('indexindex')
+#2 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('Teacher/indexin...')
+#3 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/www100/index.php?r=Teacher/indexindex&news_type=0
+HTTP_REFERER=http://127.0.0.1/www100/index.php
+---
+2021/10/29 15:06:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "indexindex" 动作.' in F:\wamp64\www\www100\framework\web\CController.php:486
+Stack trace:
+#0 F:\wamp64\www\www100\framework\web\CController.php(270): CController->missingAction('indexindex')
+#1 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('indexindex')
+#2 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('Teacher/indexin...')
+#3 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/www100/index.php?r=Teacher/indexindex&news_type=0
+HTTP_REFERER=http://127.0.0.1/www100/index.php
+---
+2021/10/29 15:06:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "indexindex" 动作.' in F:\wamp64\www\www100\framework\web\CController.php:486
+Stack trace:
+#0 F:\wamp64\www\www100\framework\web\CController.php(270): CController->missingAction('indexindex')
+#1 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('indexindex')
+#2 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('Teacher/indexin...')
+#3 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/www100/index.php?r=Teacher/indexindex&news_type=0
+HTTP_REFERER=http://127.0.0.1/www100/index.php
+---
+2021/10/29 15:06:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "indexindex" 动作.' in F:\wamp64\www\www100\framework\web\CController.php:486
+Stack trace:
+#0 F:\wamp64\www\www100\framework\web\CController.php(270): CController->missingAction('indexindex')
+#1 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('indexindex')
+#2 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('Teacher/indexin...')
+#3 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/www100/index.php?r=Teacher/indexindex&news_type=0
+HTTP_REFERER=http://127.0.0.1/www100/index.php
+---
+2021/10/29 15:06:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'new hsyii.teacher' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `teacher`.
+2021/10/29 15:06:45 [error] [exception.CDbException] exception 'CDbException' with message '数据库中无法找到 active record class "Teacher" 对应的 table "{{teacher}}".' in F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php:2390
+Stack trace:
+#0 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(Teacher))
+#1 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(663): CActiveRecord->getMetaData()
+#2 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1609): CActiveRecord->getTableSchema()
+#3 F:\wamp64\www\www100\admin\components\BaseController.php(28): CActiveRecord->count(Object(CDbCriteria))
+#4 F:\wamp64\www\www100\admin\controllers\TeacherController.php(32): BaseController->_list(Object(Teacher), Object(CDbCriteria))
+#5 [internal function]: TeacherController->actionIndex('', 0)
+#6 F:\wamp64\www\www100\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(TeacherController), Array)
+#7 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(TeacherController), Object(ReflectionMethod), Array)
+#8 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 F:\wamp64\www\www100\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 F:\wamp64\www\www100\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('index')
+#12 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('Teacher/index')
+#13 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#15 {main}
+REQUEST_URI=/www100/index.php?r=Teacher/index
+HTTP_REFERER=http://127.0.0.1/www100/index.php
+---
+2021/10/29 15:06:54 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'new hsyii.teacher' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `teacher`.
+2021/10/29 15:06:54 [error] [exception.CDbException] exception 'CDbException' with message '数据库中无法找到 active record class "Teacher" 对应的 table "{{teacher}}".' in F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php:2390
+Stack trace:
+#0 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(Teacher))
+#1 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(663): CActiveRecord->getMetaData()
+#2 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1609): CActiveRecord->getTableSchema()
+#3 F:\wamp64\www\www100\admin\components\BaseController.php(28): CActiveRecord->count(Object(CDbCriteria))
+#4 F:\wamp64\www\www100\admin\controllers\TeacherController.php(32): BaseController->_list(Object(Teacher), Object(CDbCriteria))
+#5 [internal function]: TeacherController->actionIndex('', 0)
+#6 F:\wamp64\www\www100\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(TeacherController), Array)
+#7 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(TeacherController), Object(ReflectionMethod), Array)
+#8 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 F:\wamp64\www\www100\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 F:\wamp64\www\www100\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('index')
+#12 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('Teacher/index')
+#13 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#15 {main}
+REQUEST_URI=/www100/index.php?r=Teacher/index&news_type=0
+HTTP_REFERER=http://127.0.0.1/www100/index.php
+---
+2021/10/29 15:13:28 [error] [exception.CException] exception 'CException' with message 'TeacherController 无法找到请求的视图 "update".' in F:\wamp64\www\www100\framework\web\CController.php:881
+Stack trace:
+#0 F:\wamp64\www\www100\framework\web\CController.php(785): CController->renderPartial('update', Array, true)
+#1 F:\wamp64\www\www100\admin\controllers\TeacherController.php(48): CController->render('update', Array)
+#2 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(49): TeacherController->actionCreate()
+#3 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 F:\wamp64\www\www100\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 F:\wamp64\www\www100\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('create')
+#7 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('teacher/create')
+#8 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#10 {main}
+REQUEST_URI=/www100/index.php?r=teacher/create
+HTTP_REFERER=http://127.0.0.1/www100/index.php?r=Teacher/index&news_type=0
+---
+2021/10/29 15:14:55 [error] [exception.CException] exception 'CException' with message 'ClubList and its behaviors do not have a method or closure named "get_club_name".' in F:\wamp64\www\www100\framework\base\CComponent.php:266
+Stack trace:
+#0 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(229): CComponent->__call('get_club_name', Array)
+#1 F:\wamp64\www\www100\models\Teacher.php(105): CActiveRecord->__call('get_club_name', Array)
+#2 F:\wamp64\www\www100\models\Teacher.php(105): ClubList->get_club_name('1')
+#3 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1077): Teacher->beforeSave()
+#4 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#5 F:\wamp64\www\www100\admin\controllers\TeacherController.php(71): CActiveRecord->save()
+#6 F:\wamp64\www\www100\admin\controllers\TeacherController.php(50): TeacherController->saveData(Object(Teacher), Array)
+#7 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(49): TeacherController->actionCreate()
+#8 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 F:\wamp64\www\www100\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 F:\wamp64\www\www100\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('create')
+#12 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('teacher/create')
+#13 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#15 {main}
+REQUEST_URI=/www100/index.php?r=teacher/create
+HTTP_REFERER=http://127.0.0.1/www100/index.php?r=teacher/create
+---
+2021/10/29 15:17:15 [error] [exception.CException] exception 'CException' with message '属性 "Teacher.club_id" 未被定义.' in F:\wamp64\www\www100\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(145): CComponent->__get('club_id')
+#1 F:\wamp64\www\www100\models\Teacher.php(105): CActiveRecord->__get('club_id')
+#2 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1077): Teacher->beforeSave()
+#3 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#4 F:\wamp64\www\www100\admin\controllers\TeacherController.php(71): CActiveRecord->save()
+#5 F:\wamp64\www\www100\admin\controllers\TeacherController.php(50): TeacherController->saveData(Object(Teacher), Array)
+#6 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(49): TeacherController->actionCreate()
+#7 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 F:\wamp64\www\www100\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 F:\wamp64\www\www100\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('create')
+#11 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('teacher/create')
+#12 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#14 {main}
+REQUEST_URI=/www100/index.php?r=teacher/create
+HTTP_REFERER=http://127.0.0.1/www100/index.php?r=teacher/create
+---
+2021/10/29 16:09:19 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `club_list` `t` WHERE club_code= LIMIT 1.
+2021/10/29 16:09:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1' in F:\wamp64\www\www100\framework\db\CDbCommand.php:543
+Stack trace:
+#0 F:\wamp64\www\www100\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1359): CDbCommand->queryRow()
+#2 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1464): CActiveRecord->query(Object(CDbCriteria))
+#3 F:\wamp64\www\www100\models\Teacher.php(105): CActiveRecord->find('club_code=')
+#4 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1077): Teacher->beforeSave()
+#5 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#6 F:\wamp64\www\www100\admin\controllers\TeacherController.php(71): CActiveRecord->save()
+#7 F:\wamp64\www\www100\admin\controllers\TeacherController.php(50): TeacherController->saveData(Object(Teacher), Array)
+#8 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(49): TeacherController->actionCreate()
+#9 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 F:\wamp64\www\www100\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 F:\wamp64\www\www100\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('create')
+#13 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('teacher/create')
+#14 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#16 {main}
+REQUEST_URI=/www100/index.php?r=teacher/create
+HTTP_REFERER=http://127.0.0.1/www100/index.php?r=teacher/create
+---
+2021/10/29 16:18:18 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0091' for key 'tcod'. The SQL statement executed was: INSERT INTO `teacher` (`TCOD`, `TUNAME`, `TCNAME`, `TENAME`, `TPOS`, `TAUTH`, `TPWD`, `TSEX`, `TTEL`, `TMOB`, `TADDR`, `TIDN`, `TIDT`, `TIND`, `TNHK`, `TSCHOOL`, `TORIGIN`, `TMERRY`, `TBORNP`, `TNATION`, `TFRIEND`, `TFADDR`, `TFPHONE`, `TMEMO`, `TEMAIL`, `TBANK`, `TACCNAME`, `TACCNO`, `TSEAL`, `TPHOTO`, `TIDP`, `TTNO`, `TTICKET`, `TABSYN`, `F_ROLECODE`, `F_ROLENAME`, `F_PH_ADDRE`, `TDEPART`, `F_SCHOOLCODE`, `f_NORMAL`, `f_reading`, `ip_name`, `CLUB_ID`, `CLUB_NAME`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24, :yp25, :yp26, :yp27, :yp28, :yp29, :yp30, :yp31, :yp32, :yp33, :yp34, :yp35, :yp36, :yp37, :yp38, :yp39, :yp40, :yp41, :yp42, :yp43).
+2021/10/29 16:18:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0091' for key 'tcod'' in F:\wamp64\www\www100\framework\db\CDbCommand.php:358
+Stack trace:
+#0 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1083): CDbCommand->execute()
+#1 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 F:\wamp64\www\www100\admin\controllers\TeacherController.php(71): CActiveRecord->save()
+#3 F:\wamp64\www\www100\admin\controllers\TeacherController.php(50): TeacherController->saveData(Object(Teacher), Array)
+#4 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(49): TeacherController->actionCreate()
+#5 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 F:\wamp64\www\www100\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 F:\wamp64\www\www100\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('create')
+#9 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('teacher/create')
+#10 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#12 {main}
+REQUEST_URI=/www100/index.php?r=teacher/create
+HTTP_REFERER=http://127.0.0.1/www100/index.php?r=teacher/create
+---
+2021/10/29 16:26:48 [error] [php] Trying to get property of non-object (F:\wamp64\www\www100\models\Teacher.php:106)
+Stack trace:
+#0 F:\wamp64\www\www100\admin\controllers\TeacherController.php(75): Teacher->save()
+#1 F:\wamp64\www\www100\admin\controllers\TeacherController.php(67): TeacherController->saveData()
+#2 unknown(0): TeacherController->actionUpdate()
+#3 F:\wamp64\www\www100\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#4 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 F:\wamp64\www\www100\framework\web\CController.php(286): TeacherController->runAction()
+#7 F:\wamp64\www\www100\framework\web\CController.php(265): TeacherController->runActionWithFilters()
+#8 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): TeacherController->run()
+#9 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 F:\wamp64\www\www100\index.php(33): CWebApplication->run()
+REQUEST_URI=/www100/index.php?r=teacher/update&id=2306
+2021/10/29 16:28:30 [error] [php] Use of undefined constant club_id - assumed 'club_id' (F:\wamp64\www\www100\admin\controllers\TeacherController.php:21)
+Stack trace:
+#0 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 F:\wamp64\www\www100\framework\web\CController.php(286): TeacherController->runAction()
+#3 F:\wamp64\www\www100\framework\web\CController.php(265): TeacherController->runActionWithFilters()
+#4 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): TeacherController->run()
+#5 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 F:\wamp64\www\www100\index.php(33): CWebApplication->run()
+REQUEST_URI=/www100/index.php?r=Teacher/index&clubtype=1
+2021/10/29 16:29:33 [error] [php] Trying to get property of non-object (F:\wamp64\www\www100\models\Teacher.php:106)
+Stack trace:
+#0 F:\wamp64\www\www100\admin\controllers\TeacherController.php(75): Teacher->save()
+#1 F:\wamp64\www\www100\admin\controllers\TeacherController.php(54): TeacherController->saveData()
+#2 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(49): TeacherController->actionCreate()
+#3 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 F:\wamp64\www\www100\framework\web\CController.php(286): TeacherController->runAction()
+#5 F:\wamp64\www\www100\framework\web\CController.php(265): TeacherController->runActionWithFilters()
+#6 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): TeacherController->run()
+#7 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 F:\wamp64\www\www100\index.php(33): CWebApplication->run()
+REQUEST_URI=/www100/index.php?r=teacher/create
+2021/10/29 16:31:26 [error] [php] Trying to get property of non-object (F:\wamp64\www\www100\models\Teacher.php:107)
+Stack trace:
+#0 F:\wamp64\www\www100\admin\controllers\TeacherController.php(75): Teacher->save()
+#1 F:\wamp64\www\www100\admin\controllers\TeacherController.php(54): TeacherController->saveData()
+#2 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(49): TeacherController->actionCreate()
+#3 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 F:\wamp64\www\www100\framework\web\CController.php(286): TeacherController->runAction()
+#5 F:\wamp64\www\www100\framework\web\CController.php(265): TeacherController->runActionWithFilters()
+#6 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): TeacherController->run()
+#7 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 F:\wamp64\www\www100\index.php(33): CWebApplication->run()
+REQUEST_URI=/www100/index.php?r=teacher/create
+2021/10/29 16:32:07 [error] [php] Trying to get property of non-object (F:\wamp64\www\www100\models\Teacher.php:107)
+Stack trace:
+#0 F:\wamp64\www\www100\admin\controllers\TeacherController.php(71): Teacher->save()
+#1 F:\wamp64\www\www100\admin\controllers\TeacherController.php(50): TeacherController->saveData()
+#2 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(49): TeacherController->actionCreate()
+#3 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 F:\wamp64\www\www100\framework\web\CController.php(286): TeacherController->runAction()
+#5 F:\wamp64\www\www100\framework\web\CController.php(265): TeacherController->runActionWithFilters()
+#6 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): TeacherController->run()
+#7 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 F:\wamp64\www\www100\index.php(33): CWebApplication->run()
+REQUEST_URI=/www100/index.php?r=teacher/create
+2021/10/29 16:32:41 [error] [php] Trying to get property of non-object (F:\wamp64\www\www100\models\Teacher.php:108)
+Stack trace:
+#0 F:\wamp64\www\www100\admin\controllers\TeacherController.php(71): Teacher->save()
+#1 F:\wamp64\www\www100\admin\controllers\TeacherController.php(50): TeacherController->saveData()
+#2 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(49): TeacherController->actionCreate()
+#3 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 F:\wamp64\www\www100\framework\web\CController.php(286): TeacherController->runAction()
+#5 F:\wamp64\www\www100\framework\web\CController.php(265): TeacherController->runActionWithFilters()
+#6 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): TeacherController->run()
+#7 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 F:\wamp64\www\www100\index.php(33): CWebApplication->run()
+REQUEST_URI=/www100/index.php?r=teacher/create
+2021/10/29 16:33:12 [error] [php] Trying to get property of non-object (F:\wamp64\www\www100\models\Teacher.php:108)
+Stack trace:
+#0 F:\wamp64\www\www100\admin\controllers\TeacherController.php(71): Teacher->save()
+#1 F:\wamp64\www\www100\admin\controllers\TeacherController.php(50): TeacherController->saveData()
+#2 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(49): TeacherController->actionCreate()
+#3 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 F:\wamp64\www\www100\framework\web\CController.php(286): TeacherController->runAction()
+#5 F:\wamp64\www\www100\framework\web\CController.php(265): TeacherController->runActionWithFilters()
+#6 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): TeacherController->run()
+#7 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 F:\wamp64\www\www100\index.php(33): CWebApplication->run()
+REQUEST_URI=/www100/index.php?r=teacher/create
+2021/10/29 16:34:12 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `club_list` `t` WHERE club_code= LIMIT 1.
+2021/10/29 16:34:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1' in F:\wamp64\www\www100\framework\db\CDbCommand.php:543
+Stack trace:
+#0 F:\wamp64\www\www100\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1359): CDbCommand->queryRow()
+#2 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1464): CActiveRecord->query(Object(CDbCriteria))
+#3 F:\wamp64\www\www100\models\Teacher.php(105): CActiveRecord->find('club_code=')
+#4 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1077): Teacher->beforeSave()
+#5 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#6 F:\wamp64\www\www100\admin\controllers\TeacherController.php(71): CActiveRecord->save()
+#7 F:\wamp64\www\www100\admin\controllers\TeacherController.php(50): TeacherController->saveData(Object(Teacher), Array)
+#8 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(49): TeacherController->actionCreate()
+#9 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 F:\wamp64\www\www100\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 F:\wamp64\www\www100\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('create')
+#13 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('teacher/create')
+#14 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#16 {main}
+REQUEST_URI=/www100/index.php?r=teacher/create
+HTTP_REFERER=http://127.0.0.1/www100/index.php?r=teacher/create
+---
+2021/10/29 16:34:45 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `club_list` `t` WHERE club_code= LIMIT 1.
+2021/10/29 16:34:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1' in F:\wamp64\www\www100\framework\db\CDbCommand.php:543
+Stack trace:
+#0 F:\wamp64\www\www100\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1359): CDbCommand->queryRow()
+#2 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1464): CActiveRecord->query(Object(CDbCriteria))
+#3 F:\wamp64\www\www100\models\Teacher.php(105): CActiveRecord->find('club_code=')
+#4 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1077): Teacher->beforeSave()
+#5 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#6 F:\wamp64\www\www100\admin\controllers\TeacherController.php(69): CActiveRecord->save()
+#7 F:\wamp64\www\www100\admin\controllers\TeacherController.php(48): TeacherController->saveData(Object(Teacher), Array)
+#8 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(49): TeacherController->actionCreate()
+#9 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 F:\wamp64\www\www100\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 F:\wamp64\www\www100\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('create')
+#13 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('teacher/create')
+#14 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#16 {main}
+REQUEST_URI=/www100/index.php?r=teacher/create
+HTTP_REFERER=http://127.0.0.1/www100/index.php?r=teacher/create
+---
+2021/10/29 16:38:41 [error] [php] Object of class Teacher could not be converted to string (F:\wamp64\www\www100\models\Teacher.php:104)
+Stack trace:
+#0 F:\wamp64\www\www100\admin\controllers\TeacherController.php(69): Teacher->save()
+#1 F:\wamp64\www\www100\admin\controllers\TeacherController.php(48): TeacherController->saveData()
+#2 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(49): TeacherController->actionCreate()
+#3 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 F:\wamp64\www\www100\framework\web\CController.php(286): TeacherController->runAction()
+#5 F:\wamp64\www\www100\framework\web\CController.php(265): TeacherController->runActionWithFilters()
+#6 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): TeacherController->run()
+#7 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 F:\wamp64\www\www100\index.php(33): CWebApplication->run()
+REQUEST_URI=/www100/index.php?r=teacher/create
+2021/10/29 16:42:38 [error] [exception.CException] exception 'CException' with message '属性 "Teacher.club_id" 未被定义.' in F:\wamp64\www\www100\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(145): CComponent->__get('club_id')
+#1 F:\wamp64\www\www100\models\Teacher.php(105): CActiveRecord->__get('club_id')
+#2 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1077): Teacher->beforeSave()
+#3 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#4 F:\wamp64\www\www100\admin\controllers\TeacherController.php(71): CActiveRecord->save()
+#5 F:\wamp64\www\www100\admin\controllers\TeacherController.php(50): TeacherController->saveData(Object(Teacher), Array)
+#6 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(49): TeacherController->actionCreate()
+#7 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 F:\wamp64\www\www100\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 F:\wamp64\www\www100\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('create')
+#11 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('teacher/create')
+#12 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#14 {main}
+REQUEST_URI=/www100/index.php?r=teacher/create
+HTTP_REFERER=http://127.0.0.1/www100/index.php?r=teacher/create
+---
+2021/10/29 16:45:14 [error] [exception.CException] exception 'CException' with message '属性 "Teacher.club_id" 未被定义.' in F:\wamp64\www\www100\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(145): CComponent->__get('club_id')
+#1 F:\wamp64\www\www100\models\Teacher.php(105): CActiveRecord->__get('club_id')
+#2 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1077): Teacher->beforeSave()
+#3 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#4 F:\wamp64\www\www100\admin\controllers\TeacherController.php(71): CActiveRecord->save()
+#5 F:\wamp64\www\www100\admin\controllers\TeacherController.php(50): TeacherController->saveData(Object(Teacher), Array)
+#6 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(49): TeacherController->actionCreate()
+#7 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 F:\wamp64\www\www100\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 F:\wamp64\www\www100\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('create')
+#11 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('teacher/create')
+#12 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#14 {main}
+REQUEST_URI=/www100/index.php?r=teacher/create
+HTTP_REFERER=http://127.0.0.1/www100/index.php?r=teacher/create
+---
+2021/10/29 16:45:42 [error] [php] Trying to get property of non-object (F:\wamp64\www\www100\models\Teacher.php:106)
+Stack trace:
+#0 F:\wamp64\www\www100\admin\controllers\TeacherController.php(71): Teacher->save()
+#1 F:\wamp64\www\www100\admin\controllers\TeacherController.php(50): TeacherController->saveData()
+#2 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(49): TeacherController->actionCreate()
+#3 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 F:\wamp64\www\www100\framework\web\CController.php(286): TeacherController->runAction()
+#5 F:\wamp64\www\www100\framework\web\CController.php(265): TeacherController->runActionWithFilters()
+#6 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): TeacherController->run()
+#7 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 F:\wamp64\www\www100\index.php(33): CWebApplication->run()
+REQUEST_URI=/www100/index.php?r=teacher/create
+2021/10/29 16:47:03 [error] [exception.CException] exception 'CException' with message '属性 "Teacher.news_club_name" 未被定义.' in F:\wamp64\www\www100\framework\base\CComponent.php:173
+Stack trace:
+#0 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(162): CComponent->__set('news_club_name', '123123')
+#1 F:\wamp64\www\www100\models\Teacher.php(106): CActiveRecord->__set('news_club_name', '123123')
+#2 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(1077): Teacher->beforeSave()
+#3 F:\wamp64\www\www100\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#4 F:\wamp64\www\www100\admin\controllers\TeacherController.php(71): CActiveRecord->save()
+#5 F:\wamp64\www\www100\admin\controllers\TeacherController.php(50): TeacherController->saveData(Object(Teacher), Array)
+#6 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(49): TeacherController->actionCreate()
+#7 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 F:\wamp64\www\www100\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 F:\wamp64\www\www100\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): CController->run('create')
+#11 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController('teacher/create')
+#12 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 F:\wamp64\www\www100\index.php(33): CApplication->run()
+#14 {main}
+REQUEST_URI=/www100/index.php?r=teacher/create
+HTTP_REFERER=http://127.0.0.1/www100/index.php?r=teacher/create
+---
+2021/10/31 09:31:50 [error] [php] Missing argument 1 for BasePath::getPath(), called in F:\wamp64\www\www100\admin\views\article\update.php on line 122 and defined (F:\wamp64\www\www100\models\BasePath.php:45)
+Stack trace:
+#0 F:\wamp64\www\www100\framework\web\CBaseController.php(95): ArticleController->renderInternal()
+#1 F:\wamp64\www\www100\framework\web\CController.php(872): ArticleController->renderFile()
+#2 F:\wamp64\www\www100\framework\web\CController.php(785): ArticleController->renderPartial()
+#3 F:\wamp64\www\www100\admin\controllers\ArticleController.php(70): ArticleController->render()
+#4 F:\wamp64\www\www100\framework\web\actions\CInlineAction.php(49): ArticleController->actionCreate()
+#5 F:\wamp64\www\www100\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 F:\wamp64\www\www100\framework\web\CController.php(286): ArticleController->runAction()
+#7 F:\wamp64\www\www100\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#8 F:\wamp64\www\www100\framework\web\CWebApplication.php(282): ArticleController->run()
+#9 F:\wamp64\www\www100\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 F:\wamp64\www\www100\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 F:\wamp64\www\www100\index.php(33): CWebApplication->run()
+REQUEST_URI=/www100/index.php?r=article/create
+2021/10/31 10:43:49 [error] [php] Missing argument 1 for BasePath::getPath(), called in F:\wamp64\www\hsreport\admin\views\article\update.php on line 122 and defined (F:\wamp64\www\hsreport\models\BasePath.php:45)
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CBaseController.php(95): ArticleController->renderInternal()
+#1 F:\wamp64\www\hsreport\framework\web\CController.php(872): ArticleController->renderFile()
+#2 F:\wamp64\www\hsreport\framework\web\CController.php(785): ArticleController->renderPartial()
+#3 F:\wamp64\www\hsreport\admin\controllers\ArticleController.php(70): ArticleController->render()
+#4 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(49): ArticleController->actionCreate()
+#5 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 F:\wamp64\www\hsreport\framework\web\CController.php(286): ArticleController->runAction()
+#7 F:\wamp64\www\hsreport\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#8 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): ArticleController->run()
+#9 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 F:\wamp64\www\hsreport\index.php(33): CWebApplication->run()
+REQUEST_URI=/hsreport/index.php?r=article/create
