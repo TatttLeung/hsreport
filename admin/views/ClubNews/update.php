@@ -19,13 +19,6 @@
                 <?php echo $form->error($model, 'f_year', $htmlOptions = array()); ?>
                         </td>
                     </tr>
-                   <tr>
-                        <td ><?php echo $form->labelEx($model, 'f_term'); ?></td>
-                        <td >
-                            <?php echo $form->dropDownList($model, 'f_term', Chtml::listData(Term::model()->findALL(), 'F_value', 'F_NAME'), array('prompt'=>'请选择')); ?>
-                            <?php echo $form->error($model, 'f_term', $htmlOptions = array()); ?>
-                        </td>
-                      </tr>
                          <tr>
                         <td ><?php echo $form->labelEx($model, 'news_title'); ?></td>
                         <td >

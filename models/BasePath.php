@@ -50,7 +50,7 @@ public function getPath($f_id) {
 //http://127.0.0.1/hkam/files/html/T12.files/image001.png
 //http://127.0.0.1/hkam/hsyii/files/html/T12.files/image001.png
     public function getLocalPath() {
-        return str_replace('/', trim(' \ '), "F:/wamp64/www/hsreport/uploads/temp/");
+        return str_replace('/', trim(' \ '), "D:/wamp64/www/hsreport/uploads/temp/");
     }
 
     public function diskPath() {
