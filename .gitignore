@@ -1,1 +1,3 @@
-/runtime/admin/application.log
+uploads/*
+runtime/*
+.gitignore
