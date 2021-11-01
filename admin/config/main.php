@@ -53,7 +53,7 @@ $st="";
      '人员信息管理',
         array(
             'award_index322' => array('学生信息', 'ClubNews/index&news_type=0'),
-            'award_index323' => array('教师信息', 'ClubNews/index&news_type=1'), 
+            'award_index323' => array('教师信息', 'teainfo/index'), 
             'award_index324' => array('课程学生信息', 'ClubNews/index&news_type=1'), 
             'award_index325' => array('教师任课信息', 'ClubNews/index&news_type=1'), 
 
