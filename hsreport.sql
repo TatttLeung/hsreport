@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : mydp
+Source Server         : mydb
 Source Server Version : 50714
 Source Host           : localhost:3306
 Source Database       : hsreport
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2021-11-01 13:16:35
+Date: 2021-11-01 16:07:25
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -1104,49 +1104,6 @@ INSERT INTO `article` VALUES ('145', '班干部竞选\r', null, '今天下午，
 INSERT INTO `article` VALUES ('146', '我心爱的“甜筒”', null, '我家养了一只人见人爱，花见花开的小仓鼠，它的名字叫“甜筒”。', '　　我家养了一只人见人爱，花见花开的小仓鼠，它的名字叫“甜筒”。\r\n　　甜筒小小的身体，穿着棕黄色的毛衣，只要摸上去就会让你爱不释手。它滚圆的身体，从远处看就像一个小绒球，可爱极了！\r\n　　别看甜筒小小的，可是它的食量可是真的可以雷倒每个人。甜筒不仅能吃，而且非常贪吃，绝对是仓鼠家族中名副其实的小吃货，\r\n不信我把甜筒一天的食谱亮出来，给大家看看：半碟花生碎、半块钙片、一勺松肉、三颗杏仁、两块小饼干、五块小鱼干……怎么样？\r\n说它是大胃王是不是一点都不夸张呀！\r\n　　甜筒很有个性，它最讨厌有人摸它乳红色的小爪子，只要你一摸，它就全身充满了杀气，用一双大眼睛怒视着你，好像在说：“别\r\n碰我，这粉嫩嫩的小爪子，可是我的宝贝，碰脏了，你赔得起呀？”\r\n　　甜筒非常怕黑，夜晚，你只要一关灯，它就一刻都不得安宁，又跳又蹦，甚至把笼子磕得“吱吱”响，直闹到你为它把灯打开，他\r\n才肯罢休。\r\n　　甜筒不仅长得可爱，趣事也很多，这不，最近学会爬笼子顶了，所以时不时就会炫技，瞧，又开始施展才艺了，看它抓着一根铁\r\n丝，使劲一窜，顺利爬上了笼顶，这时的甜筒，头抬得高高的，骄傲地看着四周，嘴里还发出了“吱吱呀呀”的叫声，好像在向全世界\r\n宣布：“看，我——甜筒，轻松征服了世界第一峰！”哈哈，也许是乐极生悲，前一秒还神气十足的甜筒，后一秒就从笼顶跌落下来，\r\n摔了个四脚朝天，幸亏下边是保暖的木屑堆。\r\n　　甜筒不仅是我的开心果还是我的玩伴，我会永远爱它。\r\r', '4db94fffd7b0393ad781ba259cb4df2.png', null, '繁露', '4', '2021-07-24 16:07:36', null, '07', '待收稿', '2021/07/24/1_60fbca47d09767.59329688.docx', null, null, '写物', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
 
 -- ----------------------------
--- Table structure for `article_status`
--- ----------------------------
-DROP TABLE IF EXISTS `article_status`;
-CREATE TABLE `article_status` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `status_name` varchar(12) CHARACTER SET utf8 DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
-
--- ----------------------------
--- Records of article_status
--- ----------------------------
-INSERT INTO `article_status` VALUES ('1', '未审核');
-INSERT INTO `article_status` VALUES ('2', '一审通过');
-INSERT INTO `article_status` VALUES ('3', '退稿重改');
-INSERT INTO `article_status` VALUES ('4', '收稿');
-INSERT INTO `article_status` VALUES ('5', '淘汰');
-INSERT INTO `article_status` VALUES ('6', '二审通过');
-INSERT INTO `article_status` VALUES ('7', '录用');
-INSERT INTO `article_status` VALUES ('8', '发表');
-
--- ----------------------------
--- Table structure for `article_type`
--- ----------------------------
-DROP TABLE IF EXISTS `article_type`;
-CREATE TABLE `article_type` (
-  `id` int(11) NOT NULL,
-  `type` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- ----------------------------
--- Records of article_type
--- ----------------------------
-INSERT INTO `article_type` VALUES ('1', '写人');
-INSERT INTO `article_type` VALUES ('2', '写事');
-INSERT INTO `article_type` VALUES ('3', '写景');
-INSERT INTO `article_type` VALUES ('4', '状物');
-INSERT INTO `article_type` VALUES ('5', '想象文');
-INSERT INTO `article_type` VALUES ('6', '应用文');
-INSERT INTO `article_type` VALUES ('7', '其他');
-
--- ----------------------------
 -- Table structure for `articlenum_detail`
 -- ----------------------------
 DROP TABLE IF EXISTS `articlenum_detail`;
@@ -1253,6 +1210,49 @@ INSERT INTO `articlenum_detail` VALUES ('108', null, '1', '0', '0');
 INSERT INTO `articlenum_detail` VALUES ('109', null, '1', '0', '0');
 INSERT INTO `articlenum_detail` VALUES ('110', null, '1', '0', '0');
 INSERT INTO `articlenum_detail` VALUES ('111', null, '1', '0', '0');
+
+-- ----------------------------
+-- Table structure for `article_status`
+-- ----------------------------
+DROP TABLE IF EXISTS `article_status`;
+CREATE TABLE `article_status` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `status_name` varchar(12) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of article_status
+-- ----------------------------
+INSERT INTO `article_status` VALUES ('1', '未审核');
+INSERT INTO `article_status` VALUES ('2', '一审通过');
+INSERT INTO `article_status` VALUES ('3', '退稿重改');
+INSERT INTO `article_status` VALUES ('4', '收稿');
+INSERT INTO `article_status` VALUES ('5', '淘汰');
+INSERT INTO `article_status` VALUES ('6', '二审通过');
+INSERT INTO `article_status` VALUES ('7', '录用');
+INSERT INTO `article_status` VALUES ('8', '发表');
+
+-- ----------------------------
+-- Table structure for `article_type`
+-- ----------------------------
+DROP TABLE IF EXISTS `article_type`;
+CREATE TABLE `article_type` (
+  `id` int(11) NOT NULL,
+  `type` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of article_type
+-- ----------------------------
+INSERT INTO `article_type` VALUES ('1', '写人');
+INSERT INTO `article_type` VALUES ('2', '写事');
+INSERT INTO `article_type` VALUES ('3', '写景');
+INSERT INTO `article_type` VALUES ('4', '状物');
+INSERT INTO `article_type` VALUES ('5', '想象文');
+INSERT INTO `article_type` VALUES ('6', '应用文');
+INSERT INTO `article_type` VALUES ('7', '其他');
 
 -- ----------------------------
 -- Table structure for `base_code`
@@ -1512,6 +1512,23 @@ INSERT INTO `base_code` VALUES ('768', 'VOTESTYPE', 'VOTESTYPE02', 'VOTESTYPE02'
 INSERT INTO `base_code` VALUES ('769', 'VOTESTYPE', 'VOTESTYPE03', 'VOTESTYPE03', '支付平台', '', '1', '0', '0', '0', '0', null, null, null, null, '', '', '', '', '', '0', null, '766');
 
 -- ----------------------------
+-- Table structure for `base_sex`
+-- ----------------------------
+DROP TABLE IF EXISTS `base_sex`;
+CREATE TABLE `base_sex` (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  `sexname` varchar(5) DEFAULT '' COMMENT '性别',
+  `sexid` varchar(5) DEFAULT '' COMMENT '性别编号',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of base_sex
+-- ----------------------------
+INSERT INTO `base_sex` VALUES ('1', '男', '1');
+INSERT INTO `base_sex` VALUES ('2', '女', '2');
+
+-- ----------------------------
 -- Table structure for `base_term`
 -- ----------------------------
 DROP TABLE IF EXISTS `base_term`;
@@ -1530,8 +1547,8 @@ CREATE TABLE `base_term` (
 -- ----------------------------
 -- Records of base_term
 -- ----------------------------
-INSERT INTO `base_term` VALUES ('229', '25', '上学期', '2.5', '0', '30', '1', '1');
-INSERT INTO `base_term` VALUES ('230', '45', '下学期', '4.5', '0', '50', '1', '1');
+INSERT INTO `base_term` VALUES ('229', '25', '上学期', '上学期', '0', '30', '1', '1');
+INSERT INTO `base_term` VALUES ('230', '45', '下学期', '下学期', '0', '50', '1', '1');
 
 -- ----------------------------
 -- Table structure for `base_year`
@@ -5131,11 +5148,14 @@ CREATE TABLE `major` (
   `majorname` varchar(20) DEFAULT '' COMMENT '专业名称',
   `majorid` varchar(20) DEFAULT '' COMMENT '专业编号',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of major
 -- ----------------------------
+INSERT INTO `major` VALUES ('1', '计算机科学与技术', '1');
+INSERT INTO `major` VALUES ('2', '网络工程', '2');
+INSERT INTO `major` VALUES ('3', '人工智能', '3');
 
 -- ----------------------------
 -- Table structure for `navigation_bar`
@@ -5936,11 +5956,12 @@ CREATE TABLE `stuinfo` (
   `stugrade` varchar(20) DEFAULT '' COMMENT '年级',
   `stumajor` varchar(20) DEFAULT '' COMMENT '学生专业',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of stuinfo
 -- ----------------------------
+INSERT INTO `stuinfo` VALUES ('1', '20203231004', '李达良', '男', '2020', '计算机科学与技术');
 
 -- ----------------------------
 -- Table structure for `subscribe`

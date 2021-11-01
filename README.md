@@ -23,7 +23,29 @@
 
 #### 学年（base_year）
 
+f_id 自动递增的id不用管
+
+F_CODE	序号
+
+F_NAME	学年名称
+
+F_value	作用于上面一样不管，给函数里面填的
+
 #### 学期（base_term）
+
+f_id 自动递增的id不用管
+
+F_CODE 序号
+
+F_NAME 学期名称
+
+F_value 同上
+
+#### 性别基础(base_sex)
+
+sexname
+
+sexid
 
 #### 专业（major）
 ##### majorname
@@ -41,7 +63,6 @@
 #####   stumajor
 
 ####  教师信息(teainfo) 
-##### 	teaid
 ##### 	teaname
 ##### 	teasex
 #####   teadep
