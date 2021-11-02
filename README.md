@@ -97,5 +97,5 @@ sexid
 ##### 	workterm 
 ##### 	workid
 ##### 	workname
-##### 	workpath
-##### 	workscore
+#####  workstart
+#####  workend
