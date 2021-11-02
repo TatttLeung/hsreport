@@ -22,3 +22,177 @@ Stack trace:
 REQUEST_URI=/hsreport/index.php?r=teainfo/index
 HTTP_REFERER=http://127.0.0.1/hsreport/index.php?r=teainfo/create
 ---
+2021/11/02 17:48:13 [error] [php] Undefined index: stgrade (F:\wamp64\www\hsreport\admin\views\stuinfo\index.php:24)
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CController.php(872): stuinfoController->renderFile()
+#1 F:\wamp64\www\hsreport\framework\web\CController.php(785): stuinfoController->renderPartial()
+#2 F:\wamp64\www\hsreport\admin\components\BaseController.php(34): stuinfoController->render()
+#3 F:\wamp64\www\hsreport\admin\controllers\stuinfoController.php(18): stuinfoController->_list()
+#4 unknown(0): stuinfoController->actionIndex()
+#5 F:\wamp64\www\hsreport\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#6 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 F:\wamp64\www\hsreport\framework\web\CController.php(286): stuinfoController->runAction()
+#9 F:\wamp64\www\hsreport\framework\web\CController.php(265): stuinfoController->runActionWithFilters()
+#10 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): stuinfoController->run()
+#11 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 F:\wamp64\www\hsreport\index.php(33): CWebApplication->run()
+REQUEST_URI=/hsreport/index.php?r=stuinfo/index
+2021/11/02 17:48:49 [error] [php] Undefined index: stgrade (F:\wamp64\www\hsreport\admin\views\stuinfo\index.php:24)
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CController.php(872): stuinfoController->renderFile()
+#1 F:\wamp64\www\hsreport\framework\web\CController.php(785): stuinfoController->renderPartial()
+#2 F:\wamp64\www\hsreport\admin\components\BaseController.php(34): stuinfoController->render()
+#3 F:\wamp64\www\hsreport\admin\controllers\stuinfoController.php(18): stuinfoController->_list()
+#4 unknown(0): stuinfoController->actionIndex()
+#5 F:\wamp64\www\hsreport\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#6 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 F:\wamp64\www\hsreport\framework\web\CController.php(286): stuinfoController->runAction()
+#9 F:\wamp64\www\hsreport\framework\web\CController.php(265): stuinfoController->runActionWithFilters()
+#10 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): stuinfoController->run()
+#11 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 F:\wamp64\www\hsreport\index.php(33): CWebApplication->run()
+REQUEST_URI=/hsreport/index.php?r=stuinfo/index
+2021/11/02 17:48:49 [error] [php] Undefined index: stgrade (F:\wamp64\www\hsreport\admin\views\stuinfo\index.php:24)
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CController.php(872): stuinfoController->renderFile()
+#1 F:\wamp64\www\hsreport\framework\web\CController.php(785): stuinfoController->renderPartial()
+#2 F:\wamp64\www\hsreport\admin\components\BaseController.php(34): stuinfoController->render()
+#3 F:\wamp64\www\hsreport\admin\controllers\stuinfoController.php(18): stuinfoController->_list()
+#4 unknown(0): stuinfoController->actionIndex()
+#5 F:\wamp64\www\hsreport\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#6 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 F:\wamp64\www\hsreport\framework\web\CController.php(286): stuinfoController->runAction()
+#9 F:\wamp64\www\hsreport\framework\web\CController.php(265): stuinfoController->runActionWithFilters()
+#10 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): stuinfoController->run()
+#11 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 F:\wamp64\www\hsreport\index.php(33): CWebApplication->run()
+REQUEST_URI=/hsreport/index.php?r=stuinfo/index
+2021/11/02 17:49:12 [error] [php] Undefined index: stugrade (F:\wamp64\www\hsreport\admin\views\stuinfo\index.php:24)
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CController.php(872): stuinfoController->renderFile()
+#1 F:\wamp64\www\hsreport\framework\web\CController.php(785): stuinfoController->renderPartial()
+#2 F:\wamp64\www\hsreport\admin\components\BaseController.php(34): stuinfoController->render()
+#3 F:\wamp64\www\hsreport\admin\controllers\stuinfoController.php(18): stuinfoController->_list()
+#4 unknown(0): stuinfoController->actionIndex()
+#5 F:\wamp64\www\hsreport\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#6 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 F:\wamp64\www\hsreport\framework\web\CController.php(286): stuinfoController->runAction()
+#9 F:\wamp64\www\hsreport\framework\web\CController.php(265): stuinfoController->runActionWithFilters()
+#10 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): stuinfoController->run()
+#11 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 F:\wamp64\www\hsreport\index.php(33): CWebApplication->run()
+REQUEST_URI=/hsreport/index.php?r=stuinfo/index
+2021/11/02 19:43:35 [error] [php] Undefined variable: stlevel (F:\wamp64\www\hsreport\admin\controllers\stuinfoController.php:18)
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 F:\wamp64\www\hsreport\framework\web\CController.php(286): stuinfoController->runAction()
+#3 F:\wamp64\www\hsreport\framework\web\CController.php(265): stuinfoController->runActionWithFilters()
+#4 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): stuinfoController->run()
+#5 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 F:\wamp64\www\hsreport\index.php(33): CWebApplication->run()
+REQUEST_URI=/hsreport/index.php?r=stuinfo/index
+2021/11/02 19:44:21 [error] [php] Undefined variable: stugrade (F:\wamp64\www\hsreport\admin\controllers\stuinfoController.php:18)
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 F:\wamp64\www\hsreport\framework\web\CController.php(286): stuinfoController->runAction()
+#3 F:\wamp64\www\hsreport\framework\web\CController.php(265): stuinfoController->runActionWithFilters()
+#4 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): stuinfoController->run()
+#5 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 F:\wamp64\www\hsreport\index.php(33): CWebApplication->run()
+REQUEST_URI=/hsreport/index.php?r=stuinfo/index
+2021/11/02 19:44:22 [error] [php] Undefined variable: stugrade (F:\wamp64\www\hsreport\admin\controllers\stuinfoController.php:18)
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 F:\wamp64\www\hsreport\framework\web\CController.php(286): stuinfoController->runAction()
+#3 F:\wamp64\www\hsreport\framework\web\CController.php(265): stuinfoController->runActionWithFilters()
+#4 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): stuinfoController->run()
+#5 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 F:\wamp64\www\hsreport\index.php(33): CWebApplication->run()
+REQUEST_URI=/hsreport/index.php?r=stuinfo/index
+2021/11/02 19:44:56 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'sign_date_start' in 'order clause'. The SQL statement executed was: SELECT * FROM `stuinfo` `t` WHERE 1=1 ORDER BY sign_date_start desc LIMIT 15.
+2021/11/02 19:44:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'sign_date_start' in 'order clause'' in F:\wamp64\www\hsreport\framework\db\CDbCommand.php:543
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 F:\wamp64\www\hsreport\framework\db\ar\CActiveRecord.php(1359): CDbCommand->queryAll()
+#2 F:\wamp64\www\hsreport\framework\db\ar\CActiveRecord.php(1478): CActiveRecord->query(Object(CDbCriteria), true)
+#3 F:\wamp64\www\hsreport\admin\components\BaseController.php(32): CActiveRecord->findAll(Object(CDbCriteria))
+#4 F:\wamp64\www\hsreport\admin\controllers\stuinfoController.php(20): BaseController->_list(Object(stuinfo), Object(CDbCriteria), 'index', Array)
+#5 [internal function]: stuinfoController->actionIndex('0')
+#6 F:\wamp64\www\hsreport\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(stuinfoController), Array)
+#7 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(stuinfoController), Object(ReflectionMethod), Array)
+#8 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 F:\wamp64\www\hsreport\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 F:\wamp64\www\hsreport\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): CController->run('index')
+#12 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController('stuinfo/index')
+#13 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 F:\wamp64\www\hsreport\index.php(33): CApplication->run()
+#15 {main}
+REQUEST_URI=/hsreport/index.php?r=stuinfo/index
+HTTP_REFERER=http://127.0.0.1/hsreport/index.php
+---
+2021/11/02 19:49:07 [error] [php] Undefined index: stgrade (F:\wamp64\www\hsreport\admin\views\stuinfo\index.php:24)
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CController.php(872): stuinfoController->renderFile()
+#1 F:\wamp64\www\hsreport\framework\web\CController.php(785): stuinfoController->renderPartial()
+#2 F:\wamp64\www\hsreport\admin\components\BaseController.php(34): stuinfoController->render()
+#3 F:\wamp64\www\hsreport\admin\controllers\stuinfoController.php(20): stuinfoController->_list()
+#4 unknown(0): stuinfoController->actionIndex()
+#5 F:\wamp64\www\hsreport\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#6 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 F:\wamp64\www\hsreport\framework\web\CController.php(286): stuinfoController->runAction()
+#9 F:\wamp64\www\hsreport\framework\web\CController.php(265): stuinfoController->runActionWithFilters()
+#10 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): stuinfoController->run()
+#11 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 F:\wamp64\www\hsreport\index.php(33): CWebApplication->run()
+REQUEST_URI=/hsreport/index.php?r=stuinfo/index
+2021/11/02 19:49:16 [error] [php] Undefined index: stugrade (F:\wamp64\www\hsreport\admin\views\stuinfo\index.php:24)
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CController.php(872): stuinfoController->renderFile()
+#1 F:\wamp64\www\hsreport\framework\web\CController.php(785): stuinfoController->renderPartial()
+#2 F:\wamp64\www\hsreport\admin\components\BaseController.php(34): stuinfoController->render()
+#3 F:\wamp64\www\hsreport\admin\controllers\stuinfoController.php(20): stuinfoController->_list()
+#4 unknown(0): stuinfoController->actionIndex()
+#5 F:\wamp64\www\hsreport\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#6 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 F:\wamp64\www\hsreport\framework\web\CController.php(286): stuinfoController->runAction()
+#9 F:\wamp64\www\hsreport\framework\web\CController.php(265): stuinfoController->runActionWithFilters()
+#10 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): stuinfoController->run()
+#11 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 F:\wamp64\www\hsreport\index.php(33): CWebApplication->run()
+REQUEST_URI=/hsreport/index.php?r=stuinfo/index
+2021/11/02 22:29:52 [error] [exception.CException] exception 'CException' with message 'courseworkController 无法找到请求的视图 "update".' in F:\wamp64\www\hsreport\framework\web\CController.php:881
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CController.php(785): CController->renderPartial('update', Array, true)
+#1 F:\wamp64\www\hsreport\admin\components\BaseController.php(60): CController->render('update', Array)
+#2 F:\wamp64\www\hsreport\admin\controllers\courseworkController.php(29): BaseController->_create(Object(coursework), 'update', Array, '/hsreport/index...')
+#3 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(49): courseworkController->actionCreate()
+#4 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 F:\wamp64\www\hsreport\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 F:\wamp64\www\hsreport\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): CController->run('create')
+#8 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController('coursework/crea...')
+#9 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 F:\wamp64\www\hsreport\index.php(33): CApplication->run()
+#11 {main}
+REQUEST_URI=/hsreport/index.php?r=coursework/create
+HTTP_REFERER=http://127.0.0.1/hsreport/index.php?r=coursework/index
+---
