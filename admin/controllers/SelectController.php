@@ -54,6 +54,16 @@ function show_Student($php_file, $stsnum) {
     parent::_list($model, $criteria,$php_file,$data);
  }
 
+ function show_course($php_file, $stsnum) {
+    set_cookie('_currentUrl_', Yii::app()->request->url);
+    $model = courseinfo::model(); 
+    $criteria = new CDbCriteria;
+    $criteria->condition='';
+    $criteria->select ='' ;    
+    $data = array();
+    parent::_list($model, $criteria,$php_file,$data);
+ }
+
  public function actionShownews($keywords = '',$styear="0",$stterm="0",$start_date='',$end_date='',$state='') {
     set_cookie('_currentUrl_', Yii::app()->request->url);
     $model = ClubNews::model();

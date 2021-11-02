@@ -1,1 +1,151 @@
-
+2021/11/02 23:36:56 [error] [exception.CException] exception 'CException' with message '属性 "coursework.stusex" 未被定义.' in F:\wamp64\www\hsreport\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\db\ar\CActiveRecord.php(145): CComponent->__get('stusex')
+#1 F:\wamp64\www\hsreport\framework\web\helpers\CHtml.php(2747): CActiveRecord->__get('stusex')
+#2 F:\wamp64\www\hsreport\framework\web\helpers\CHtml.php(1994): CHtml::resolveValue(Object(coursework), 'stusex')
+#3 F:\wamp64\www\hsreport\framework\web\widgets\CActiveForm.php(914): CHtml::activeDropDownList(Object(coursework), 'stusex', Array, Array)
+#4 F:\wamp64\www\hsreport\admin\views\coursework\update.php(35): CActiveForm->dropDownList(Object(coursework), 'stusex', Array, Array)
+#5 F:\wamp64\www\hsreport\framework\web\CBaseController.php(126): require('F:\\wamp64\\www\\h...')
+#6 F:\wamp64\www\hsreport\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\\wamp64\\www\\h...', Array, true)
+#7 F:\wamp64\www\hsreport\framework\web\CController.php(872): CBaseController->renderFile('F:\\wamp64\\www\\h...', Array, true)
+#8 F:\wamp64\www\hsreport\framework\web\CController.php(785): CController->renderPartial('update', Array, true)
+#9 F:\wamp64\www\hsreport\admin\components\BaseController.php(60): CController->render('update', Array)
+#10 F:\wamp64\www\hsreport\admin\controllers\courseworkController.php(29): BaseController->_create(Object(coursework), 'update', Array, '/hsreport/index...')
+#11 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(49): courseworkController->actionCreate()
+#12 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 F:\wamp64\www\hsreport\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 F:\wamp64\www\hsreport\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): CController->run('create')
+#16 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController('coursework/crea...')
+#17 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 F:\wamp64\www\hsreport\index.php(33): CApplication->run()
+#19 {main}
+REQUEST_URI=/hsreport/index.php?r=coursework/create
+HTTP_REFERER=http://127.0.0.1/hsreport/index.php?r=coursework/index
+---
+2021/11/02 23:37:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "course" 动作.' in F:\wamp64\www\hsreport\framework\web\CController.php:486
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CController.php(270): CController->missingAction('course')
+#1 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): CController->run('course')
+#2 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController('select/course')
+#3 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 F:\wamp64\www\hsreport\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/hsreport/index.php?r=select/course&partnership_type=16
+HTTP_REFERER=http://127.0.0.1/hsreport/index.php?r=coursework/create
+---
+2021/11/02 23:37:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "course" 动作.' in F:\wamp64\www\hsreport\framework\web\CController.php:486
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CController.php(270): CController->missingAction('course')
+#1 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): CController->run('course')
+#2 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController('select/course')
+#3 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 F:\wamp64\www\hsreport\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/hsreport/index.php?r=select/course&partnership_type=16
+HTTP_REFERER=http://127.0.0.1/hsreport/index.php?r=coursework/create
+---
+2021/11/02 23:38:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "coursework" 动作.' in F:\wamp64\www\hsreport\framework\web\CController.php:486
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CController.php(270): CController->missingAction('coursework')
+#1 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): CController->run('coursework')
+#2 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController('select/coursewo...')
+#3 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 F:\wamp64\www\hsreport\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/hsreport/index.php?r=select/coursework&partnership_type=16
+HTTP_REFERER=http://127.0.0.1/hsreport/index.php?r=coursework/create
+---
+2021/11/02 23:42:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "coursework" 动作.' in F:\wamp64\www\hsreport\framework\web\CController.php:486
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CController.php(270): CController->missingAction('coursework')
+#1 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): CController->run('coursework')
+#2 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController('select/coursewo...')
+#3 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 F:\wamp64\www\hsreport\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/hsreport/index.php?r=select/coursework&partnership_type=16
+HTTP_REFERER=http://127.0.0.1/hsreport/index.php?r=coursework/create
+---
+2021/11/02 23:42:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "coursework" 动作.' in F:\wamp64\www\hsreport\framework\web\CController.php:486
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CController.php(270): CController->missingAction('coursework')
+#1 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): CController->run('coursework')
+#2 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController('select/coursewo...')
+#3 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 F:\wamp64\www\hsreport\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/hsreport/index.php?r=select/coursework&partnership_type=16
+HTTP_REFERER=http://127.0.0.1/hsreport/index.php?r=coursework/create
+---
+2021/11/02 23:51:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "coursework" 动作.' in F:\wamp64\www\hsreport\framework\web\CController.php:486
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CController.php(270): CController->missingAction('coursework')
+#1 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): CController->run('coursework')
+#2 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController('select/coursewo...')
+#3 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 F:\wamp64\www\hsreport\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/hsreport/index.php?r=select/coursework&partnership_type=16
+HTTP_REFERER=http://127.0.0.1/hsreport/index.php?r=coursework/create
+---
+2021/11/02 23:58:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "coursework" 动作.' in F:\wamp64\www\hsreport\framework\web\CController.php:486
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CController.php(270): CController->missingAction('coursework')
+#1 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): CController->run('coursework')
+#2 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController('select/coursewo...')
+#3 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 F:\wamp64\www\hsreport\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/hsreport/index.php?r=select/coursework&partnership_type=16
+HTTP_REFERER=http://127.0.0.1/hsreport/index.php?r=coursework/create
+---
+2021/11/03 00:01:43 [error] [exception.CException] exception 'CException' with message '属性 "coursework.coursework" 未被定义.' in F:\wamp64\www\hsreport\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\db\ar\CActiveRecord.php(145): CComponent->__get('coursework')
+#1 F:\wamp64\www\hsreport\framework\web\helpers\CHtml.php(2747): CActiveRecord->__get('coursework')
+#2 F:\wamp64\www\hsreport\framework\web\helpers\CHtml.php(1994): CHtml::resolveValue(Object(coursework), 'coursework')
+#3 F:\wamp64\www\hsreport\framework\web\widgets\CActiveForm.php(914): CHtml::activeDropDownList(Object(coursework), 'coursework', Array, Array)
+#4 F:\wamp64\www\hsreport\admin\views\coursework\update.php(42): CActiveForm->dropDownList(Object(coursework), 'coursework', Array, Array)
+#5 F:\wamp64\www\hsreport\framework\web\CBaseController.php(126): require('F:\\wamp64\\www\\h...')
+#6 F:\wamp64\www\hsreport\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\\wamp64\\www\\h...', Array, true)
+#7 F:\wamp64\www\hsreport\framework\web\CController.php(872): CBaseController->renderFile('F:\\wamp64\\www\\h...', Array, true)
+#8 F:\wamp64\www\hsreport\framework\web\CController.php(785): CController->renderPartial('update', Array, true)
+#9 F:\wamp64\www\hsreport\admin\components\BaseController.php(60): CController->render('update', Array)
+#10 F:\wamp64\www\hsreport\admin\controllers\courseworkController.php(29): BaseController->_create(Object(coursework), 'update', Array, '/hsreport/index...')
+#11 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(49): courseworkController->actionCreate()
+#12 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 F:\wamp64\www\hsreport\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 F:\wamp64\www\hsreport\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): CController->run('create')
+#16 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController('coursework/crea...')
+#17 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 F:\wamp64\www\hsreport\index.php(33): CApplication->run()
+#19 {main}
+REQUEST_URI=/hsreport/index.php?r=coursework/create
+HTTP_REFERER=http://127.0.0.1/hsreport/index.php?r=coursework/index
+---
+2021/11/03 00:05:41 [error] [exception.CException] exception 'CException' with message '属性 "coursework.courseyear" 未被定义.' in F:\wamp64\www\hsreport\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\db\ar\CActiveRecord.php(145): CComponent->__get('courseyear')
+#1 F:\wamp64\www\hsreport\admin\views\coursework\index.php(21): CActiveRecord->__get('courseyear')
+#2 F:\wamp64\www\hsreport\framework\web\CBaseController.php(126): require('F:\\wamp64\\www\\h...')
+#3 F:\wamp64\www\hsreport\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\\wamp64\\www\\h...', Array, true)
+#4 F:\wamp64\www\hsreport\framework\web\CController.php(872): CBaseController->renderFile('F:\\wamp64\\www\\h...', Array, true)
+#5 F:\wamp64\www\hsreport\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#6 F:\wamp64\www\hsreport\admin\components\BaseController.php(34): CController->render('index', Array)
+#7 F:\wamp64\www\hsreport\admin\controllers\courseworkController.php(22): BaseController->_list(Object(coursework), Object(CDbCriteria), 'index', Array)
+#8 [internal function]: courseworkController->actionIndex('0', '0')
+#9 F:\wamp64\www\hsreport\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(courseworkController), Array)
+#10 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(courseworkController), Object(ReflectionMethod), Array)
+#11 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 F:\wamp64\www\hsreport\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 F:\wamp64\www\hsreport\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): CController->run('index')
+#15 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController('coursework/inde...')
+#16 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 F:\wamp64\www\hsreport\index.php(33): CApplication->run()
+#18 {main}
+REQUEST_URI=/hsreport/index.php?r=coursework/index
+HTTP_REFERER=http://127.0.0.1/hsreport/index.php?r=coursework/create
+---

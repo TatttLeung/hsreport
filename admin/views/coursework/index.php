@@ -18,17 +18,17 @@
         <select name="courseyear"> <!-- 更改这里的选择项目，必须同时更改对应controller的actionindex -->
             <option value="">请选择</option>
             <?php foreach($cw as $v){?>
-            <option value="<?php echo $v->courseyear;?>"><?php echo $v->courseyear;?></option>
+            <option value="<?php echo $v->workyear;?>"><?php echo $v->workyear;?></option>
             <?php }?>
         </select>
     </label>
 
     <label style="margin-right:20px;">
         <span>学期</span>
-        <select name="courseterm"> <!-- 更改这里的选择项目，必须同时更改对应controller的actionindex -->
+        <select name="workterm"> <!-- 更改这里的选择项目，必须同时更改对应controller的actionindex -->
             <option value="">请选择</option>
             <?php foreach($cw as $v){?>
-            <option value="<?php echo $v->courseterm;?>"><?php echo $v->courseterm;?></option>
+            <option value="<?php echo $v->workterm;?>"><?php echo $v->workterm;?></option>
             <?php }?>
         </select>
     </label>
@@ -49,6 +49,7 @@
         <th style='text-align: center;'>学期</th>  
         <th style='text-align: center;'>作业序号</th>
         <th style='text-align: center;'>作业名称</th>
+        <th style='text-align: center;'>绑定课程</th>
         <th style='text-align: center;'>开始提交时间</th>
         <th style='text-align: center;'>提交结束时间</th>
         <th style='text-align: center;'>操作</th>
@@ -66,6 +67,7 @@ foreach($arclist as $v){
    <td style='text-align: center;'><?php echo $v->workterm; ?></td>
     <td style='text-align: center;'><?php echo $v->workid; ?></td>
     <td style='text-align: center;'><?php echo $v->workname; ?></td>
+    <td style='text-align: center;'><?php echo $v->workcourse; ?></td>
     <td style='text-align: center;'><?php echo $v->workstart; ?></td>
     <td style='text-align: center;'><?php echo $v->workend; ?></td>
     <td style='text-align: center;'>
