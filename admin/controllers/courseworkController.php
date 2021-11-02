@@ -1,6 +1,6 @@
 <?php
 
-class stuinfoController extends BaseController {
+class courseworkController extends BaseController {
 
     protected $model = '';
 
@@ -10,15 +10,13 @@ class stuinfoController extends BaseController {
         //dump(Yii::app()->request->isPostRequest);
     }
 
-     public function actionIndex( $stugrade="0",$stumajor="0") {
+     public function actionIndex( $courseyear="0",$courseterm="0") {
         set_cookie('_currentUrl_', Yii::app()->request->url);
         $modelName = $this->model;
         $model = $modelName::model();
         $criteria = new CDbCriteria;
-        $w1=get_where('1=1',($stumajor!="0"),'stumajor',$stumajor,'"');
-        //put_msg("19"." ".$w1);
-        $criteria->condition=get_where($w1,($stugrade!="0"),'stugrade',$stugrade,'"');
-        //put_msg("21"." ".$criteria->condition);
+        $w1=get_where('1=1',($courseyear!="0"),'courseyear',$courseyear,'"');
+        $criteria->condition=get_where($w1,($courseterm!="0"),'courseterm',$courseterm,'"');
         /*criteria为筛选条件，更改对条件即可完成筛选，第一个不用改，第二个改成index里面对应命名
         （即参数，应设置为默认0），第三个为此模块中的筛选的表名，第四个为index里面对应命名（即参数）*/
         parent::_list($model, $criteria, 'index', array()); //调用S

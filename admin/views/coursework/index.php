@@ -1,8 +1,8 @@
 <?php
- $stu=stuinfo::model()->findALL();
+ $cw=coursework::model()->findALL();
 ?>
 <div class="box">
-     <div class="box-title c"><h1><i class="fa fa-table"></i>学生信息列表</h1></div><!--box-title end-->
+     <div class="box-title c"><h1><i class="fa fa-table"></i>课程作业信息列表</h1></div><!--box-title end-->
     <div class="box-content">
         <div class="box-header">
             <a class="btn" href="<?php echo $this->createUrl('create');?>"><i class="fa fa-plus"></i>添加</a>
@@ -14,21 +14,21 @@
     <input type="hidden" name="r" value="<?php echo Yii::app()->request->getParam('r');?>">
 
       <label style="margin-right:20px;">
-        <span>年级</span>
-        <select name="stugrade"> <!-- 更改这里的选择项目，必须同时更改对应controller的actionindex -->
+        <span>学年</span>
+        <select name="courseyear"> <!-- 更改这里的选择项目，必须同时更改对应controller的actionindex -->
             <option value="">请选择</option>
-            <?php foreach($stu as $v){?>
-            <option value="<?php echo $v->stugrade;?>"><?php echo $v->stugrade;?></option>
+            <?php foreach($cw as $v){?>
+            <option value="<?php echo $v->courseyear;?>"><?php echo $v->courseyear;?></option>
             <?php }?>
         </select>
     </label>
 
     <label style="margin-right:20px;">
-        <span>专业</span>
-        <select name="stumajor"> <!-- 更改这里的选择项目，必须同时更改对应controller的actionindex -->
+        <span>学期</span>
+        <select name="courseterm"> <!-- 更改这里的选择项目，必须同时更改对应controller的actionindex -->
             <option value="">请选择</option>
-            <?php foreach($stu as $v){?>
-            <option value="<?php echo $v->stumajor;?>"><?php echo $v->stumajor;?></option>
+            <?php foreach($cw as $v){?>
+            <option value="<?php echo $v->courseterm;?>"><?php echo $v->courseterm;?></option>
             <?php }?>
         </select>
     </label>
@@ -44,13 +44,13 @@
 <thead>
 
     <tr>
-        <th class="check"><input id="j-checkall" class="input-check" type="checkbox"></th>
-        <th style='text-align: center;'>序号</th>
-        <th style='text-align: center;'>学号</th>
-        <th style='text-align: center;'>姓名</th>
-        <th style='text-align: center;'>性别</th>
-        <th style='text-align: center;'>年级</th>
-        <th style='text-align: center;'>专业</th>
+        <th class="check"><input id="j-checkall" class="input-check" type="checkbox"></th>    
+        <th style='text-align: center;'>学年</th>
+        <th style='text-align: center;'>学期</th>  
+        <th style='text-align: center;'>作业序号</th>
+        <th style='text-align: center;'>作业名称</th>
+        <th style='text-align: center;'>开始提交时间</th>
+        <th style='text-align: center;'>提交结束时间</th>
         <th style='text-align: center;'>操作</th>
     </tr>
 </thead>
@@ -62,12 +62,12 @@ foreach($arclist as $v){
 ?>
 <tr>
     <td class="check check-item"><input class="input-check" type="checkbox" value="<?php echo CHtml::encode($v->id); ?>"></td>
-    <td style='text-align: center;'><span class="num num-1"><?php echo $index ?></span></td>
-   <td style='text-align: center;'><?php echo $v->stuid; ?></td>
-   <td style='text-align: center;'><?php echo $v->stuname; ?></td>
-    <td style='text-align: center;'><?php echo $v->stusex; ?></td>
-    <td style='text-align: center;'><?php echo $v->stugrade; ?></td>
-    <td style='text-align: center;'><?php echo $v->stumajor; ?></td>
+   <td style='text-align: center;'><?php echo $v->workyear; ?></td>
+   <td style='text-align: center;'><?php echo $v->workterm; ?></td>
+    <td style='text-align: center;'><?php echo $v->workid; ?></td>
+    <td style='text-align: center;'><?php echo $v->workname; ?></td>
+    <td style='text-align: center;'><?php echo $v->workstart; ?></td>
+    <td style='text-align: center;'><?php echo $v->workend; ?></td>
     <td style='text-align: center;'>
      
         <a class="btn" href="<?php echo $this->createUrl('update', array('id'=>$v->id,'news_type'=>Yii::app()->request->getParam('news_type')));?>" title="编辑"><i class="fa fa-edit"></i></a>

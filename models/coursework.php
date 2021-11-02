@@ -1,9 +1,9 @@
 <?php
 
-class stuinfo extends BaseModel {
+class coursework extends BaseModel {
     public $news_content_temp = '';
     public function tableName() {
-        return '{{stuinfo}}';
+        return '{{coursework}}';
     }
 
     /**
@@ -11,13 +11,16 @@ class stuinfo extends BaseModel {
      */
     public function rules() {
         return array(
-          array('stuid', 'required', 'message' => '{attribute} 不能為空'),
-          array('stuname', 'required', 'message' => '{attribute} 不能為空'),
-          array('stusex', 'required', 'message' => '{attribute} 不能為空'),
-          array('stugrade', 'required', 'message' => '{attribute} 不能為空'),
-          array('stumajor', 'required', 'message' => '{attribute} 不能為空'),
+          array('workyear', 'required', 'message' => '{attribute} 不能為空'),
+          array('workterm', 'required', 'message' => '{attribute} 不能為空'),
+          array('workid', 'required', 'message' => '{attribute} 不能為空'),
+          array('workname', 'required', 'message' => '{attribute} 不能為空'),
+          array('workstart', 'required', 'message' => '{attribute} 不能為空'),
+          array('workend', 'required', 'message' => '{attribute} 不能為空'),
+      
+          array('workyear,workterm,workid,workname,workstart,workend','safe'),
 
-          array('stuid,stuname,stusex,stugrade,stumajor','safe'),
+           // array('f_year,f_term,news_title,news_content_temp','safe'),
         );
     }
 
@@ -38,11 +41,12 @@ class stuinfo extends BaseModel {
      */
     public function attributeLabels() {
         return array(
-        'stuid'=>'学生学号',
-        'stuname'=>'学生姓名',
-        'stusex'=>'学生性别',
-        'stugrade'=>'学生年级',
-        'stumajor'=>'学生专业',
+        'workyear'=>'学年',
+        'workterm'=>'学期',
+        'workid'=>'作业编号',
+        'workname'=>'作业名称',
+        'workstart'=>'开始提交时间',
+        'workend'=>'提交结束时间',
         );
     }
 
@@ -56,6 +60,5 @@ class stuinfo extends BaseModel {
     protected function afterFind() {
         parent::afterFind();
         return true;
-    }
-
+    } 
 }
