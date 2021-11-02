@@ -77,7 +77,9 @@ sexid
 ##### 	coursename
 ##### 	courseteacher
 ##### 	coursetime
-##### 	missioncnt
+##### 	reportcnt
+##### 	homeworkcnt
+##### 	examcnt
 
 #### 课程学生信息（coursestu）
 ##### 	courseyear
