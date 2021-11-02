@@ -1,4 +1,5 @@
-**<big>！提交的时候，必须将错误日志清空，否则克隆下来会报错！！！！！</big>**
+**<big>！提交的时候，必须将错误日志清空，否则克隆下来会报错！！！！！
+       还有basepath里面的文件路径要根据自己的更改！！！！！</big>**
 
 ## 合作文档
 
@@ -77,7 +78,9 @@ sexid
 ##### 	coursename
 ##### 	courseteacher
 ##### 	coursetime
-##### 	missioncnt
+##### 	reportcnt
+##### 	homeworkcnt
+##### 	examcnt
 
 #### 课程学生信息（coursestu）
 ##### 	courseyear
