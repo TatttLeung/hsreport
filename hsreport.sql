@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2021-11-01 18:37:24
+Date: 2021-11-02 18:49:48
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -1681,7 +1681,9 @@ CREATE TABLE `courseinfo` (
   `coursename` varchar(20) DEFAULT '' COMMENT '课程名称',
   `courseteacher` varchar(20) DEFAULT '' COMMENT '课程教师',
   `coursetime` varchar(20) DEFAULT '' COMMENT '上课时间',
-  `missioncnt` int(4) DEFAULT NULL COMMENT '提交次数',
+  `reportcnt` int(4) DEFAULT NULL COMMENT '报告提交次数',
+  `homeworkcnt` int(4) DEFAULT NULL COMMENT '作业提交次数',
+  `examcnt` int(4) DEFAULT NULL COMMENT '考试次数',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -6079,12 +6081,13 @@ CREATE TABLE `teainfo` (
   `teadep` varchar(20) DEFAULT '' COMMENT '教师院系',
   `tealevel` varchar(20) DEFAULT '' COMMENT '教师职称',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of teainfo
 -- ----------------------------
 INSERT INTO `teainfo` VALUES ('1', '曾锡山', '男', '计算机学院', '讲师');
+INSERT INTO `teainfo` VALUES ('2', '陈寅', '男', '计算机学院', '教授');
 
 -- ----------------------------
 -- Table structure for `test_err`
@@ -6097,7 +6100,7 @@ CREATE TABLE `test_err` (
   `f_username` char(20) DEFAULT '' COMMENT '测试员',
   `f_callname` varchar(200) DEFAULT '' COMMENT '调用函数名称',
   PRIMARY KEY (`f_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=717814 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=717815 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of test_err
@@ -6371,6 +6374,7 @@ INSERT INTO `test_err` VALUES ('717810', 'CLUB_ID<2000', '2021-11-01 09:52:42', 
 INSERT INTO `test_err` VALUES ('717811', 'CLUB_ID>2000', '2021-11-01 09:52:42', '', '');
 INSERT INTO `test_err` VALUES ('717812', 'CLUB_ID<2000', '2021-11-01 09:52:44', '', '');
 INSERT INTO `test_err` VALUES ('717813', 'CLUB_ID<2000', '2021-11-01 09:52:46', '', '');
+INSERT INTO `test_err` VALUES ('717814', '{\"teainfo\":{\"teaname\":\"\\u66fe\\u9521\\u5c71\",\"teasex\":\"\\u7537\",\"teadep\":\"\\u8ba1\\u7b97\\u673a\\u5b66\\u9662\",\"tealevel\":\"\\u8bb2\\u5e08\"},\"submitType\":\"shenhe\"}', '2021-11-01 18:39:09', '', '');
 
 -- ----------------------------
 -- Table structure for `user`
