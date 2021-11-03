@@ -1,4 +1,3 @@
-<?php if (!isset($_REQUEST['news_type'])) {$_REQUEST['news_type']=0;} ?>
 <div class="box">
     <div class="box-title c">
     <h1><i class="fa fa-table"></i>教师信息详情</h1><span class="back">
