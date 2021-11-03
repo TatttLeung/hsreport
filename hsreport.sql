@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2021-11-03 15:05:09
+Date: 2021-11-03 16:32:32
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -1690,7 +1690,7 @@ CREATE TABLE `courseinfo` (
 -- ----------------------------
 -- Records of courseinfo
 -- ----------------------------
-INSERT INTO `courseinfo` VALUES ('1', '2020-2021', '上学期', '1', '程序设计基础', '曾锡山', '1', '1', '1', '1');
+INSERT INTO `courseinfo` VALUES ('1', '2020-2021', '上学期', '33333', '程序设计基础', '曾锡山', '1', '1', '1', '1');
 
 -- ----------------------------
 -- Table structure for `coursestu`
@@ -6104,320 +6104,55 @@ CREATE TABLE `test_err` (
   `f_username` char(20) DEFAULT '' COMMENT '测试员',
   `f_callname` varchar(200) DEFAULT '' COMMENT '调用函数名称',
   PRIMARY KEY (`f_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=717854 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=717907 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of test_err
 -- ----------------------------
-INSERT INTO `test_err` VALUES ('717545', 'CLUB_ID>1', '2021-10-29 16:32:02', '', '');
-INSERT INTO `test_err` VALUES ('717546', 'CLUB_ID>1', '2021-10-29 16:32:36', '', '');
-INSERT INTO `test_err` VALUES ('717547', '106', '2021-10-29 16:32:41', '', '');
-INSERT INTO `test_err` VALUES ('717548', 'CLUB_ID>1', '2021-10-29 16:33:07', '', '');
-INSERT INTO `test_err` VALUES ('717549', '1', '2021-10-29 16:33:12', '', '');
-INSERT INTO `test_err` VALUES ('717550', '106', '2021-10-29 16:33:12', '', '');
-INSERT INTO `test_err` VALUES ('717551', 'CLUB_ID>1', '2021-10-29 16:34:06', '', '');
-INSERT INTO `test_err` VALUES ('717552', '1', '2021-10-29 16:34:12', '', '');
-INSERT INTO `test_err` VALUES ('717553', '1', '2021-10-29 16:34:45', '', '');
-INSERT INTO `test_err` VALUES ('717554', '1=1', '2021-10-29 16:42:22', '', '');
-INSERT INTO `test_err` VALUES ('717555', 'CLUB_ID>1', '2021-10-29 16:42:32', '', '');
-INSERT INTO `test_err` VALUES ('717556', 'CLUB_ID>1', '2021-10-29 16:45:06', '', '');
-INSERT INTO `test_err` VALUES ('717557', 'CLUB_ID>1', '2021-10-29 16:45:37', '', '');
-INSERT INTO `test_err` VALUES ('717558', 'CLUB_ID>1', '2021-10-29 16:46:56', '', '');
-INSERT INTO `test_err` VALUES ('717559', 'CLUB_ID>1', '2021-10-29 16:47:43', '', '');
-INSERT INTO `test_err` VALUES ('717560', 'CLUB_ID>1', '2021-10-29 16:47:51', '', '');
-INSERT INTO `test_err` VALUES ('717561', '1=1', '2021-10-29 16:47:53', '', '');
-INSERT INTO `test_err` VALUES ('717562', 'CLUB_ID>1', '2021-10-29 16:48:41', '', '');
-INSERT INTO `test_err` VALUES ('717563', 'CLUB_ID>1', '2021-10-29 16:48:51', '', '');
-INSERT INTO `test_err` VALUES ('717564', '1=1', '2021-10-29 16:48:53', '', '');
-INSERT INTO `test_err` VALUES ('717565', 'CLUB_ID>1', '2021-10-29 16:49:05', '', '');
-INSERT INTO `test_err` VALUES ('717566', 'CLUB_ID>1', '2021-10-29 16:49:08', '', '');
-INSERT INTO `test_err` VALUES ('717567', '1=1', '2021-10-29 16:49:09', '', '');
-INSERT INTO `test_err` VALUES ('717568', '1=1', '2021-10-29 16:49:13', '', '');
-INSERT INTO `test_err` VALUES ('717569', '1=1', '2021-10-29 16:49:21', '', '');
-INSERT INTO `test_err` VALUES ('717570', 'CLUB_ID>1', '2021-10-29 16:49:23', '', '');
-INSERT INTO `test_err` VALUES ('717571', '1=1', '2021-10-29 16:49:24', '', '');
-INSERT INTO `test_err` VALUES ('717572', 'CLUB_ID>1', '2021-10-29 16:49:26', '', '');
-INSERT INTO `test_err` VALUES ('717573', '1=1', '2021-10-29 16:49:38', '', '');
-INSERT INTO `test_err` VALUES ('717574', 'CLUB_ID>1', '2021-10-29 16:49:41', '', '');
-INSERT INTO `test_err` VALUES ('717575', '1=1', '2021-10-29 16:49:42', '', '');
-INSERT INTO `test_err` VALUES ('717576', 'CLUB_ID>1', '2021-10-29 16:49:44', '', '');
-INSERT INTO `test_err` VALUES ('717577', '1=1', '2021-10-29 16:49:50', '', '');
-INSERT INTO `test_err` VALUES ('717578', '1=1', '2021-10-29 16:50:21', '', '');
-INSERT INTO `test_err` VALUES ('717579', '1=1', '2021-10-29 16:50:22', '', '');
-INSERT INTO `test_err` VALUES ('717580', '1=1', '2021-10-29 16:50:26', '', '');
-INSERT INTO `test_err` VALUES ('717581', '1=1', '2021-10-29 16:50:27', '', '');
-INSERT INTO `test_err` VALUES ('717582', '1=1', '2021-10-29 16:50:30', '', '');
-INSERT INTO `test_err` VALUES ('717583', '1=1', '2021-10-29 16:50:32', '', '');
-INSERT INTO `test_err` VALUES ('717584', '1=1', '2021-10-29 16:50:35', '', '');
-INSERT INTO `test_err` VALUES ('717585', '1=1', '2021-10-29 16:50:51', '', '');
-INSERT INTO `test_err` VALUES ('717586', '1=1', '2021-10-29 16:51:02', '', '');
-INSERT INTO `test_err` VALUES ('717587', '1=1', '2021-10-29 16:51:03', '', '');
-INSERT INTO `test_err` VALUES ('717588', '1=1', '2021-10-29 16:51:04', '', '');
-INSERT INTO `test_err` VALUES ('717589', '1=1', '2021-10-29 16:51:12', '', '');
-INSERT INTO `test_err` VALUES ('717590', '1=1', '2021-10-29 16:51:19', '', '');
-INSERT INTO `test_err` VALUES ('717591', '1=1', '2021-10-29 16:51:21', '', '');
-INSERT INTO `test_err` VALUES ('717592', '1=1', '2021-10-29 16:51:31', '', '');
-INSERT INTO `test_err` VALUES ('717593', '1=1', '2021-10-29 16:51:40', '', '');
-INSERT INTO `test_err` VALUES ('717594', '1=1 and CLUB_ID=0', '2021-10-29 16:53:11', '', '');
-INSERT INTO `test_err` VALUES ('717595', '1=1 and CLUB_ID=0', '2021-10-29 16:53:12', '', '');
-INSERT INTO `test_err` VALUES ('717596', '1=1 and CLUB_ID=0', '2021-10-29 16:53:13', '', '');
-INSERT INTO `test_err` VALUES ('717597', '1=1', '2021-10-29 16:53:43', '', '');
-INSERT INTO `test_err` VALUES ('717598', 'CLUB_ID>1', '2021-10-29 16:53:44', '', '');
-INSERT INTO `test_err` VALUES ('717599', '1=1', '2021-10-29 16:53:45', '', '');
-INSERT INTO `test_err` VALUES ('717600', 'CLUB_ID>1', '2021-10-29 16:54:06', '', '');
-INSERT INTO `test_err` VALUES ('717601', '1=1', '2021-10-29 16:54:07', '', '');
-INSERT INTO `test_err` VALUES ('717602', '1=1 and CLUB_ID=0', '2021-10-29 16:54:18', '', '');
-INSERT INTO `test_err` VALUES ('717603', '1=1', '2021-10-29 16:54:28', '', '');
-INSERT INTO `test_err` VALUES ('717604', 'CLUB_ID>1', '2021-10-29 16:54:29', '', '');
-INSERT INTO `test_err` VALUES ('717605', '1=1', '2021-10-29 16:54:30', '', '');
-INSERT INTO `test_err` VALUES ('717606', '1=1', '2021-10-29 16:54:55', '', '');
-INSERT INTO `test_err` VALUES ('717607', '1=1', '2021-10-29 16:55:02', '', '');
-INSERT INTO `test_err` VALUES ('717608', '1=1 and CLUB_ID=0', '2021-10-29 16:55:19', '', '');
-INSERT INTO `test_err` VALUES ('717609', 'CLUB_ID>1', '2021-10-29 16:55:39', '', '');
-INSERT INTO `test_err` VALUES ('717610', '1=1', '2021-10-29 16:55:39', '', '');
-INSERT INTO `test_err` VALUES ('717611', 'CLUB_ID>1', '2021-10-29 16:55:46', '', '');
-INSERT INTO `test_err` VALUES ('717612', '1=1', '2021-10-29 16:55:49', '', '');
-INSERT INTO `test_err` VALUES ('717613', 'CLUB_ID>1', '2021-10-29 16:55:54', '', '');
-INSERT INTO `test_err` VALUES ('717614', 'CLUB_ID>1', '2021-10-29 16:56:06', '', '');
-INSERT INTO `test_err` VALUES ('717615', '1=1', '2021-10-29 16:56:07', '', '');
-INSERT INTO `test_err` VALUES ('717616', 'CLUB_ID>1', '2021-10-29 16:56:10', '', '');
-INSERT INTO `test_err` VALUES ('717617', '1=1', '2021-10-29 16:56:15', '', '');
-INSERT INTO `test_err` VALUES ('717618', '1=1', '2021-10-29 16:57:11', '', '');
-INSERT INTO `test_err` VALUES ('717619', '1=1', '2021-10-29 16:57:12', '', '');
-INSERT INTO `test_err` VALUES ('717620', '1=1', '2021-10-29 16:57:13', '', '');
-INSERT INTO `test_err` VALUES ('717621', '1=1', '2021-10-29 16:57:15', '', '');
-INSERT INTO `test_err` VALUES ('717622', '1=1', '2021-10-29 16:57:21', '', '');
-INSERT INTO `test_err` VALUES ('717623', '1=1', '2021-10-29 16:57:31', '', '');
-INSERT INTO `test_err` VALUES ('717624', '1=1', '2021-10-29 16:57:33', '', '');
-INSERT INTO `test_err` VALUES ('717625', '1=1', '2021-10-29 16:57:52', '', '');
-INSERT INTO `test_err` VALUES ('717626', 'CLUB_ID>1', '2021-10-29 16:57:53', '', '');
-INSERT INTO `test_err` VALUES ('717627', '1=1', '2021-10-29 16:57:53', '', '');
-INSERT INTO `test_err` VALUES ('717628', '1=1 and CLUB_ID=0', '2021-10-29 16:58:15', '', '');
-INSERT INTO `test_err` VALUES ('717629', '1=1 and CLUB_ID=0', '2021-10-29 16:58:16', '', '');
-INSERT INTO `test_err` VALUES ('717630', '1=1 and CLUB_ID=0', '2021-10-29 16:58:17', '', '');
-INSERT INTO `test_err` VALUES ('717631', '1=1 and CLUB_ID=0', '2021-10-29 16:58:31', '', '');
-INSERT INTO `test_err` VALUES ('717632', '1=1 and CLUB_ID=0', '2021-10-29 16:58:32', '', '');
-INSERT INTO `test_err` VALUES ('717633', '22', '2021-10-29 17:00:32', '', '');
-INSERT INTO `test_err` VALUES ('717634', '1=1', '2021-10-29 17:00:32', '', '');
-INSERT INTO `test_err` VALUES ('717635', '26', '2021-10-29 17:02:50', '', '');
-INSERT INTO `test_err` VALUES ('717636', 'CLUB_ID>1', '2021-10-29 17:02:50', '', '');
-INSERT INTO `test_err` VALUES ('717637', '22', '2021-10-29 17:02:52', '', '');
-INSERT INTO `test_err` VALUES ('717638', '1=1', '2021-10-29 17:02:52', '', '');
-INSERT INTO `test_err` VALUES ('717639', '26', '2021-10-29 17:02:56', '', '');
-INSERT INTO `test_err` VALUES ('717640', 'CLUB_ID>1', '2021-10-29 17:02:57', '', '');
-INSERT INTO `test_err` VALUES ('717641', '22', '2021-10-29 17:03:11', '', '');
-INSERT INTO `test_err` VALUES ('717642', '1=1', '2021-10-29 17:03:11', '', '');
-INSERT INTO `test_err` VALUES ('717643', '26', '2021-10-29 17:03:13', '', '');
-INSERT INTO `test_err` VALUES ('717644', 'CLUB_ID>1', '2021-10-29 17:03:13', '', '');
-INSERT INTO `test_err` VALUES ('717645', '22', '2021-10-29 17:03:18', '', '');
-INSERT INTO `test_err` VALUES ('717646', '1=1', '2021-10-29 17:03:18', '', '');
-INSERT INTO `test_err` VALUES ('717647', '26', '2021-10-29 17:03:32', '', '');
-INSERT INTO `test_err` VALUES ('717648', 'CLUB_ID>1', '2021-10-29 17:03:32', '', '');
-INSERT INTO `test_err` VALUES ('717649', '22', '2021-10-29 17:03:36', '', '');
-INSERT INTO `test_err` VALUES ('717650', '1=1', '2021-10-29 17:03:36', '', '');
-INSERT INTO `test_err` VALUES ('717651', '26', '2021-10-29 17:04:22', '', '');
-INSERT INTO `test_err` VALUES ('717652', 'CLUB_ID>1', '2021-10-29 17:04:23', '', '');
-INSERT INTO `test_err` VALUES ('717653', '26', '2021-10-29 17:04:26', '', '');
-INSERT INTO `test_err` VALUES ('717654', 'CLUB_ID>1', '2021-10-29 17:04:26', '', '');
-INSERT INTO `test_err` VALUES ('717655', '22', '2021-10-29 17:04:29', '', '');
-INSERT INTO `test_err` VALUES ('717656', '1=1', '2021-10-29 17:04:29', '', '');
-INSERT INTO `test_err` VALUES ('717657', '22', '2021-10-30 23:48:19', '', '');
-INSERT INTO `test_err` VALUES ('717658', '1=1', '2021-10-30 23:48:19', '', '');
-INSERT INTO `test_err` VALUES ('717659', '26', '2021-10-30 23:48:20', '', '');
-INSERT INTO `test_err` VALUES ('717660', 'CLUB_ID>1', '2021-10-30 23:48:20', '', '');
-INSERT INTO `test_err` VALUES ('717661', '22', '2021-10-30 23:48:21', '', '');
-INSERT INTO `test_err` VALUES ('717662', '1=1', '2021-10-30 23:48:21', '', '');
-INSERT INTO `test_err` VALUES ('717663', '26', '2021-10-30 23:48:28', '', '');
-INSERT INTO `test_err` VALUES ('717664', 'CLUB_ID>1', '2021-10-30 23:48:28', '', '');
-INSERT INTO `test_err` VALUES ('717665', '26', '2021-10-30 23:48:28', '', '');
-INSERT INTO `test_err` VALUES ('717666', 'CLUB_ID>1', '2021-10-30 23:48:28', '', '');
-INSERT INTO `test_err` VALUES ('717667', '22', '2021-10-30 23:54:20', '', '');
-INSERT INTO `test_err` VALUES ('717668', '1=1', '2021-10-30 23:54:20', '', '');
-INSERT INTO `test_err` VALUES ('717669', '26', '2021-10-30 23:54:26', '', '');
-INSERT INTO `test_err` VALUES ('717670', 'CLUB_ID>1', '2021-10-30 23:54:26', '', '');
-INSERT INTO `test_err` VALUES ('717671', '22', '2021-10-30 23:54:27', '', '');
-INSERT INTO `test_err` VALUES ('717672', '1=1', '2021-10-30 23:54:27', '', '');
-INSERT INTO `test_err` VALUES ('717673', '22', '2021-10-30 23:54:32', '', '');
-INSERT INTO `test_err` VALUES ('717674', '1=1', '2021-10-30 23:54:32', '', '');
-INSERT INTO `test_err` VALUES ('717675', '22', '2021-10-30 23:54:34', '', '');
-INSERT INTO `test_err` VALUES ('717676', '1=1', '2021-10-30 23:54:34', '', '');
-INSERT INTO `test_err` VALUES ('717677', '26', '2021-10-30 23:54:42', '', '');
-INSERT INTO `test_err` VALUES ('717678', 'CLUB_ID>1', '2021-10-30 23:54:42', '', '');
-INSERT INTO `test_err` VALUES ('717679', '26', '2021-10-30 23:55:45', '', '');
-INSERT INTO `test_err` VALUES ('717680', 'CLUB_ID>1', '2021-10-30 23:55:45', '', '');
-INSERT INTO `test_err` VALUES ('717681', '22', '2021-10-30 23:55:46', '', '');
-INSERT INTO `test_err` VALUES ('717682', '1=1', '2021-10-30 23:55:46', '', '');
-INSERT INTO `test_err` VALUES ('717683', '22', '2021-10-30 23:55:57', '', '');
-INSERT INTO `test_err` VALUES ('717684', '1=1', '2021-10-30 23:55:57', '', '');
-INSERT INTO `test_err` VALUES ('717685', '22', '2021-10-30 23:56:09', '', '');
-INSERT INTO `test_err` VALUES ('717686', '1=1', '2021-10-30 23:56:09', '', '');
-INSERT INTO `test_err` VALUES ('717687', '26', '2021-10-30 23:56:15', '', '');
-INSERT INTO `test_err` VALUES ('717688', 'CLUB_ID>1', '2021-10-30 23:56:15', '', '');
-INSERT INTO `test_err` VALUES ('717689', '22', '2021-10-30 23:56:16', '', '');
-INSERT INTO `test_err` VALUES ('717690', '1=1', '2021-10-30 23:56:16', '', '');
-INSERT INTO `test_err` VALUES ('717691', '26', '2021-10-30 23:56:21', '', '');
-INSERT INTO `test_err` VALUES ('717692', 'CLUB_ID>1', '2021-10-30 23:56:21', '', '');
-INSERT INTO `test_err` VALUES ('717693', '22', '2021-10-30 23:56:22', '', '');
-INSERT INTO `test_err` VALUES ('717694', '1=1', '2021-10-30 23:56:22', '', '');
-INSERT INTO `test_err` VALUES ('717695', '26', '2021-10-30 23:56:25', '', '');
-INSERT INTO `test_err` VALUES ('717696', 'CLUB_ID>1', '2021-10-30 23:56:25', '', '');
-INSERT INTO `test_err` VALUES ('717697', '22', '2021-10-30 23:56:31', '', '');
-INSERT INTO `test_err` VALUES ('717698', '1=1', '2021-10-30 23:56:31', '', '');
-INSERT INTO `test_err` VALUES ('717699', '26', '2021-10-30 23:56:33', '', '');
-INSERT INTO `test_err` VALUES ('717700', 'CLUB_ID>1', '2021-10-30 23:56:33', '', '');
-INSERT INTO `test_err` VALUES ('717701', '26', '2021-10-30 23:56:34', '', '');
-INSERT INTO `test_err` VALUES ('717702', 'CLUB_ID>1', '2021-10-30 23:56:34', '', '');
-INSERT INTO `test_err` VALUES ('717703', '26', '2021-10-30 23:56:48', '', '');
-INSERT INTO `test_err` VALUES ('717704', 'CLUB_ID>1', '2021-10-30 23:56:48', '', '');
-INSERT INTO `test_err` VALUES ('717705', '22', '2021-10-30 23:56:50', '', '');
-INSERT INTO `test_err` VALUES ('717706', '1=1', '2021-10-30 23:56:50', '', '');
-INSERT INTO `test_err` VALUES ('717707', '26', '2021-10-30 23:56:51', '', '');
-INSERT INTO `test_err` VALUES ('717708', 'CLUB_ID>1', '2021-10-30 23:56:51', '', '');
-INSERT INTO `test_err` VALUES ('717709', '22', '2021-10-31 00:03:59', '', '');
-INSERT INTO `test_err` VALUES ('717710', '1=1', '2021-10-31 00:03:59', '', '');
-INSERT INTO `test_err` VALUES ('717711', '26', '2021-10-31 00:04:00', '', '');
-INSERT INTO `test_err` VALUES ('717712', 'CLUB_ID>1', '2021-10-31 00:04:00', '', '');
-INSERT INTO `test_err` VALUES ('717713', '26', '2021-10-31 00:04:02', '', '');
-INSERT INTO `test_err` VALUES ('717714', 'CLUB_ID>1', '2021-10-31 00:04:02', '', '');
-INSERT INTO `test_err` VALUES ('717715', '26', '2021-10-31 00:04:10', '', '');
-INSERT INTO `test_err` VALUES ('717716', 'CLUB_ID>1', '2021-10-31 00:04:10', '', '');
-INSERT INTO `test_err` VALUES ('717717', '26', '2021-10-31 00:06:15', '', '');
-INSERT INTO `test_err` VALUES ('717718', 'CLUB_ID>1', '2021-10-31 00:06:15', '', '');
-INSERT INTO `test_err` VALUES ('717719', '22', '2021-10-31 00:06:16', '', '');
-INSERT INTO `test_err` VALUES ('717720', '1=1', '2021-10-31 00:06:16', '', '');
-INSERT INTO `test_err` VALUES ('717721', '26', '2021-10-31 00:06:22', '', '');
-INSERT INTO `test_err` VALUES ('717722', 'CLUB_ID>1', '2021-10-31 00:06:22', '', '');
-INSERT INTO `test_err` VALUES ('717723', '26', '2021-10-31 00:06:30', '', '');
-INSERT INTO `test_err` VALUES ('717724', 'CLUB_ID>1', '2021-10-31 00:06:30', '', '');
-INSERT INTO `test_err` VALUES ('717725', '26', '2021-10-31 00:06:38', '', '');
-INSERT INTO `test_err` VALUES ('717726', 'CLUB_ID>1', '2021-10-31 00:06:38', '', '');
-INSERT INTO `test_err` VALUES ('717727', '26', '2021-10-31 00:06:43', '', '');
-INSERT INTO `test_err` VALUES ('717728', 'CLUB_ID>1', '2021-10-31 00:06:44', '', '');
-INSERT INTO `test_err` VALUES ('717729', '22', '2021-10-31 00:06:45', '', '');
-INSERT INTO `test_err` VALUES ('717730', '1=1', '2021-10-31 00:06:45', '', '');
-INSERT INTO `test_err` VALUES ('717731', '22', '2021-10-31 00:06:51', '', '');
-INSERT INTO `test_err` VALUES ('717732', '1=1', '2021-10-31 00:06:51', '', '');
-INSERT INTO `test_err` VALUES ('717733', 'CLUB_ID>1', '2021-10-31 00:07:25', '', '');
-INSERT INTO `test_err` VALUES ('717734', '1=1 and CLUB_ID=0', '2021-10-31 00:07:26', '', '');
-INSERT INTO `test_err` VALUES ('717735', 'CLUB_ID>1', '2021-10-31 00:07:27', '', '');
-INSERT INTO `test_err` VALUES ('717736', '1=1 and CLUB_ID=0', '2021-10-31 00:07:31', '', '');
-INSERT INTO `test_err` VALUES ('717737', '1=1', '2021-10-31 00:07:43', '', '');
-INSERT INTO `test_err` VALUES ('717738', 'CLUB_ID>1', '2021-10-31 00:07:44', '', '');
-INSERT INTO `test_err` VALUES ('717739', 'CLUB_ID>1', '2021-10-31 00:07:47', '', '');
-INSERT INTO `test_err` VALUES ('717740', 'CLUB_ID>1', '2021-10-31 00:07:55', '', '');
-INSERT INTO `test_err` VALUES ('717741', '1=1', '2021-10-31 00:07:56', '', '');
-INSERT INTO `test_err` VALUES ('717742', 'CLUB_ID>1', '2021-10-31 00:07:57', '', '');
-INSERT INTO `test_err` VALUES ('717743', 'CLUB_ID>1', '2021-10-31 00:08:01', '', '');
-INSERT INTO `test_err` VALUES ('717744', 'CLUB_ID>1', '2021-10-31 00:08:20', '', '');
-INSERT INTO `test_err` VALUES ('717745', '1=1', '2021-10-31 00:08:20', '', '');
-INSERT INTO `test_err` VALUES ('717746', 'CLUB_ID>1', '2021-10-31 00:08:22', '', '');
-INSERT INTO `test_err` VALUES ('717747', 'CLUB_ID>1', '2021-10-31 00:09:06', '', '');
-INSERT INTO `test_err` VALUES ('717748', '1=1', '2021-10-31 00:09:07', '', '');
-INSERT INTO `test_err` VALUES ('717749', '1=1', '2021-10-31 00:09:07', '', '');
-INSERT INTO `test_err` VALUES ('717750', 'CLUB_ID>1', '2021-10-31 00:09:08', '', '');
-INSERT INTO `test_err` VALUES ('717751', 'CLUB_ID>1', '2021-10-31 00:09:56', '', '');
-INSERT INTO `test_err` VALUES ('717752', '1=1 and CLUB_ID=0', '2021-10-31 00:09:56', '', '');
-INSERT INTO `test_err` VALUES ('717753', 'CLUB_ID>1', '2021-10-31 00:09:59', '', '');
-INSERT INTO `test_err` VALUES ('717754', '1=1 and CLUB_ID=0', '2021-10-31 00:10:00', '', '');
-INSERT INTO `test_err` VALUES ('717755', '1=1 and CLUB_ID=0', '2021-10-31 00:10:36', '', '');
-INSERT INTO `test_err` VALUES ('717756', 'CLUB_ID>2000', '2021-10-31 00:10:37', '', '');
-INSERT INTO `test_err` VALUES ('717757', '1=1 and CLUB_ID=0', '2021-10-31 00:10:58', '', '');
-INSERT INTO `test_err` VALUES ('717758', '1=1', '2021-10-31 00:10:59', '', '');
-INSERT INTO `test_err` VALUES ('717759', '1=1 and CLUB_ID=0', '2021-10-31 00:11:00', '', '');
-INSERT INTO `test_err` VALUES ('717760', '1=1 and CLUB_ID=0', '2021-10-31 00:11:12', '', '');
-INSERT INTO `test_err` VALUES ('717761', 'CLUB_ID>1', '2021-10-31 00:11:13', '', '');
-INSERT INTO `test_err` VALUES ('717762', '1=1 and CLUB_ID=0', '2021-10-31 00:11:13', '', '');
-INSERT INTO `test_err` VALUES ('717763', '1=1 and CLUB_ID=0', '2021-10-31 00:11:21', '', '');
-INSERT INTO `test_err` VALUES ('717764', 'CLUB_ID>2000', '2021-10-31 00:11:22', '', '');
-INSERT INTO `test_err` VALUES ('717765', '1=1 and CLUB_ID=0', '2021-10-31 00:11:44', '', '');
-INSERT INTO `test_err` VALUES ('717766', 'CLUB_ID>2000', '2021-10-31 00:11:45', '', '');
-INSERT INTO `test_err` VALUES ('717767', '1=1 and CLUB_ID=0', '2021-10-31 00:11:47', '', '');
-INSERT INTO `test_err` VALUES ('717768', 'CLUB_ID>2000', '2021-10-31 00:11:48', '', '');
-INSERT INTO `test_err` VALUES ('717769', '1=1 and CLUB_ID=0', '2021-10-31 00:12:11', '', '');
-INSERT INTO `test_err` VALUES ('717770', 'CLUB_ID>2000', '2021-10-31 00:12:12', '', '');
-INSERT INTO `test_err` VALUES ('717771', '1=1 and CLUB_ID=0', '2021-10-31 00:12:40', '', '');
-INSERT INTO `test_err` VALUES ('717772', 'CLUB_ID>2000', '2021-10-31 00:12:41', '', '');
-INSERT INTO `test_err` VALUES ('717773', 'CLUB_ID<2000', '2021-10-31 00:12:57', '', '');
-INSERT INTO `test_err` VALUES ('717774', 'CLUB_ID>2000', '2021-10-31 00:12:58', '', '');
-INSERT INTO `test_err` VALUES ('717775', 'CLUB_ID<2000', '2021-10-31 00:12:59', '', '');
-INSERT INTO `test_err` VALUES ('717776', 'CLUB_ID>2000', '2021-10-31 00:12:59', '', '');
-INSERT INTO `test_err` VALUES ('717777', 'CLUB_ID<2000', '2021-10-31 00:13:00', '', '');
-INSERT INTO `test_err` VALUES ('717778', 'CLUB_ID>2000', '2021-10-31 00:13:40', '', '');
-INSERT INTO `test_err` VALUES ('717779', 'CLUB_ID<2000', '2021-10-31 00:13:41', '', '');
-INSERT INTO `test_err` VALUES ('717780', 'CLUB_ID>2000', '2021-10-31 00:13:42', '', '');
-INSERT INTO `test_err` VALUES ('717781', 'CLUB_ID<2000', '2021-10-31 00:13:43', '', '');
-INSERT INTO `test_err` VALUES ('717782', 'CLUB_ID>2000', '2021-10-31 00:13:44', '', '');
-INSERT INTO `test_err` VALUES ('717783', 'CLUB_ID<2000', '2021-10-31 00:13:45', '', '');
-INSERT INTO `test_err` VALUES ('717784', 'CLUB_ID>2000', '2021-10-31 00:13:46', '', '');
-INSERT INTO `test_err` VALUES ('717785', 'CLUB_ID>2000', '2021-10-31 00:13:47', '', '');
-INSERT INTO `test_err` VALUES ('717786', 'CLUB_ID>2000', '2021-10-31 00:13:49', '', '');
-INSERT INTO `test_err` VALUES ('717787', 'CLUB_ID>2000', '2021-10-31 00:13:50', '', '');
-INSERT INTO `test_err` VALUES ('717788', 'CLUB_ID<2000', '2021-10-31 00:13:50', '', '');
-INSERT INTO `test_err` VALUES ('717789', 'CLUB_ID>2000', '2021-10-31 00:13:51', '', '');
-INSERT INTO `test_err` VALUES ('717790', 'CLUB_ID<2000', '2021-10-31 00:13:51', '', '');
-INSERT INTO `test_err` VALUES ('717791', 'F:/wamp64/www/www100', '2021-10-31 00:15:53', '', '');
-INSERT INTO `test_err` VALUES ('717792', 'CLUB_ID<2000', '2021-10-31 00:17:39', '', '');
-INSERT INTO `test_err` VALUES ('717793', 'CLUB_ID>2000', '2021-10-31 00:17:40', '', '');
-INSERT INTO `test_err` VALUES ('717794', 'CLUB_ID>2000', '2021-10-31 00:17:41', '', '');
-INSERT INTO `test_err` VALUES ('717795', 'CLUB_ID<2000', '2021-10-31 00:17:57', '', '');
-INSERT INTO `test_err` VALUES ('717796', 'CLUB_ID>2000', '2021-10-31 00:18:00', '', '');
-INSERT INTO `test_err` VALUES ('717797', 'CLUB_ID<2000', '2021-10-31 09:16:27', '', '');
-INSERT INTO `test_err` VALUES ('717798', 'CLUB_ID>2000', '2021-10-31 09:16:28', '', '');
-INSERT INTO `test_err` VALUES ('717799', 'CLUB_ID<2000', '2021-10-31 09:16:32', '', '');
-INSERT INTO `test_err` VALUES ('717800', 'CLUB_ID<2000', '2021-10-31 09:17:35', '', '');
-INSERT INTO `test_err` VALUES ('717801', 'CLUB_ID>2000', '2021-10-31 09:17:36', '', '');
-INSERT INTO `test_err` VALUES ('717802', 'CLUB_ID<2000', '2021-10-31 09:17:37', '', '');
-INSERT INTO `test_err` VALUES ('717803', 'CLUB_ID>2000', '2021-10-31 09:17:42', '', '');
-INSERT INTO `test_err` VALUES ('717804', 'CLUB_ID<2000', '2021-10-31 09:19:26', '', '');
-INSERT INTO `test_err` VALUES ('717805', 'CLUB_ID>2000', '2021-10-31 09:19:27', '', '');
-INSERT INTO `test_err` VALUES ('717806', 'F:/wamp64/www/hsreport', '2021-10-31 10:44:24', '', '');
-INSERT INTO `test_err` VALUES ('717807', 'F:/wamp64/www/hsreport', '2021-10-31 10:44:32', '', '');
-INSERT INTO `test_err` VALUES ('717808', 'F:/wamp64/www/hsreport', '2021-10-31 10:46:03', '', '');
-INSERT INTO `test_err` VALUES ('717809', 'F:/wamp64/www/hsreport', '2021-10-31 11:03:38', '', '');
-INSERT INTO `test_err` VALUES ('717810', 'CLUB_ID<2000', '2021-11-01 09:52:42', '', '');
-INSERT INTO `test_err` VALUES ('717811', 'CLUB_ID>2000', '2021-11-01 09:52:42', '', '');
-INSERT INTO `test_err` VALUES ('717812', 'CLUB_ID<2000', '2021-11-01 09:52:44', '', '');
-INSERT INTO `test_err` VALUES ('717813', 'CLUB_ID<2000', '2021-11-01 09:52:46', '', '');
-INSERT INTO `test_err` VALUES ('717814', '19 1=1', '2021-11-02 20:08:56', '', '');
-INSERT INTO `test_err` VALUES ('717815', '21 1=1', '2021-11-02 20:08:56', '', '');
-INSERT INTO `test_err` VALUES ('717816', '19 1=1', '2021-11-02 20:08:57', '', '');
-INSERT INTO `test_err` VALUES ('717817', '21 1=1', '2021-11-02 20:08:58', '', '');
-INSERT INTO `test_err` VALUES ('717818', '19 1=1', '2021-11-02 20:09:20', '', '');
-INSERT INTO `test_err` VALUES ('717819', '21 1=1', '2021-11-02 20:09:21', '', '');
-INSERT INTO `test_err` VALUES ('717820', '19 1=1 and stumajor=\"计算机科学与技术\"', '2021-11-02 20:20:41', '', '');
-INSERT INTO `test_err` VALUES ('717821', '21 1=1 and stumajor=\"计算机科学与技术\" and stugrade=\"2020\"', '2021-11-02 20:20:41', '', '');
-INSERT INTO `test_err` VALUES ('717822', '19 1=1', '2021-11-02 20:20:43', '', '');
-INSERT INTO `test_err` VALUES ('717823', '21 1=1', '2021-11-02 20:20:43', '', '');
-INSERT INTO `test_err` VALUES ('717824', '19 1=1 and stumajor=\"计算机科学与技术\"', '2021-11-02 20:20:47', '', '');
-INSERT INTO `test_err` VALUES ('717825', '21 1=1 and stumajor=\"计算机科学与技术\" and stugrade=\"2020\"', '2021-11-02 20:20:48', '', '');
-INSERT INTO `test_err` VALUES ('717826', '19 1=1 and stumajor=\"\"', '2021-11-02 20:20:50', '', '');
-INSERT INTO `test_err` VALUES ('717827', '21 1=1 and stumajor=\"\" and stugrade=\"\"', '2021-11-02 20:20:50', '', '');
-INSERT INTO `test_err` VALUES ('717828', '19 1=1 and stumajor=\"\"', '2021-11-02 20:20:51', '', '');
-INSERT INTO `test_err` VALUES ('717829', '21 1=1 and stumajor=\"\" and stugrade=\"\"', '2021-11-02 20:20:51', '', '');
-INSERT INTO `test_err` VALUES ('717830', '19 1=1', '2021-11-02 20:20:56', '', '');
-INSERT INTO `test_err` VALUES ('717831', '21 1=1', '2021-11-02 20:20:56', '', '');
-INSERT INTO `test_err` VALUES ('717832', '19 1=1', '2021-11-02 22:23:27', '', '');
-INSERT INTO `test_err` VALUES ('717833', '21 1=1', '2021-11-02 22:23:28', '', '');
-INSERT INTO `test_err` VALUES ('717834', '19 1=1', '2021-11-02 22:23:28', '', '');
-INSERT INTO `test_err` VALUES ('717835', '21 1=1', '2021-11-02 22:23:28', '', '');
-INSERT INTO `test_err` VALUES ('717836', '19 1=1 and stumajor=\"\"', '2021-11-02 22:23:30', '', '');
-INSERT INTO `test_err` VALUES ('717837', '21 1=1 and stumajor=\"\" and stugrade=\"2020\"', '2021-11-02 22:23:31', '', '');
-INSERT INTO `test_err` VALUES ('717838', '19 1=1', '2021-11-02 22:23:32', '', '');
-INSERT INTO `test_err` VALUES ('717839', '21 1=1', '2021-11-02 22:23:32', '', '');
-INSERT INTO `test_err` VALUES ('717840', '19 1=1 and stumajor=\"计算机科学与技术\"', '2021-11-02 22:23:35', '', '');
-INSERT INTO `test_err` VALUES ('717841', '21 1=1 and stumajor=\"计算机科学与技术\" and stugrade=\"2020\"', '2021-11-02 22:23:35', '', '');
-INSERT INTO `test_err` VALUES ('717842', 'F:/wamp64/www/hsreport', '2021-11-03 14:06:00', '', '');
-INSERT INTO `test_err` VALUES ('717843', 'F:/wamp64/www/hsreport', '2021-11-03 14:07:14', '', '');
-INSERT INTO `test_err` VALUES ('717844', 'F:/wamp64/www/hsreport', '2021-11-03 14:07:18', '', '');
-INSERT INTO `test_err` VALUES ('717845', 'F:/wamp64/www/hsreport', '2021-11-03 14:07:28', '', '');
-INSERT INTO `test_err` VALUES ('717846', 'F:/wamp64/www/hsreport', '2021-11-03 14:07:46', '', '');
-INSERT INTO `test_err` VALUES ('717847', 'F:/wamp64/www/hsreport', '2021-11-03 14:07:55', '', '');
-INSERT INTO `test_err` VALUES ('717848', 'F:/wamp64/www/hsreport', '2021-11-03 14:08:09', '', '');
-INSERT INTO `test_err` VALUES ('717849', 'F:/wamp64/www/hsreport', '2021-11-03 14:08:12', '', '');
-INSERT INTO `test_err` VALUES ('717850', 'F:/wamp64/www/hsreport', '2021-11-03 14:09:06', '', '');
-INSERT INTO `test_err` VALUES ('717851', 'F:/wamp64/www/hsreport', '2021-11-03 14:09:15', '', '');
-INSERT INTO `test_err` VALUES ('717852', 'F:/wamp64/www/hsreport', '2021-11-03 14:21:18', '', '');
-INSERT INTO `test_err` VALUES ('717853', '{\"stuinfo\":{\"stuid\":\"20203231004\",\"stuname\":\"\\u674e\\u8fbe\\u826f\",\"stusex\":\"\\u7537\",\"stugrade\":\"2020\",\"stumajor\":\"\\u8ba1\\u7b97\\u673a\\u79d1\\u5b66\\u4e0e\\u6280\\u672f\"},\"submitType\":\"baocun\"}', '2021-11-03 14:54:14', '', '');
+INSERT INTO `test_err` VALUES ('717863', '{\"teaconfirm\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0a\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cscore\":\"100\"},\"submitType\":\"baocun\"}', '2021-11-03 16:03:35', '', '');
+INSERT INTO `test_err` VALUES ('717864', '67', '2021-11-03 16:03:35', '', '');
+INSERT INTO `test_err` VALUES ('717865', '{\"teaconfirm\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0a\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cscore\":\"100\"},\"submitType\":\"baocun\"}', '2021-11-03 16:07:36', '', '');
+INSERT INTO `test_err` VALUES ('717866', '67', '2021-11-03 16:07:37', '', '');
+INSERT INTO `test_err` VALUES ('717867', '程序设计基础', '2021-11-03 16:07:37', '', '');
+INSERT INTO `test_err` VALUES ('717868', '{\"teaconfirm\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0a\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cscore\":\"100\"},\"submitType\":\"baocun\"}', '2021-11-03 16:09:05', '', '');
+INSERT INTO `test_err` VALUES ('717869', '67', '2021-11-03 16:09:05', '', '');
+INSERT INTO `test_err` VALUES ('717870', '{\"teaconfirm\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0a\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cscore\":\"100\"},\"submitType\":\"baocun\"}', '2021-11-03 16:09:37', '', '');
+INSERT INTO `test_err` VALUES ('717871', '67', '2021-11-03 16:09:37', '', '');
+INSERT INTO `test_err` VALUES ('717872', 'coursename=程序设计基础', '2021-11-03 16:09:37', '', '');
+INSERT INTO `test_err` VALUES ('717873', '{\"teaconfirm\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0a\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cscore\":\"100\"},\"submitType\":\"baocun\"}', '2021-11-03 16:12:17', '', '');
+INSERT INTO `test_err` VALUES ('717874', '67', '2021-11-03 16:12:17', '', '');
+INSERT INTO `test_err` VALUES ('717875', 'coursename=程序设计基础', '2021-11-03 16:12:17', '', '');
+INSERT INTO `test_err` VALUES ('717876', '{\"teaconfirm\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0a\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cscore\":\"100\"},\"submitType\":\"baocun\"}', '2021-11-03 16:12:29', '', '');
+INSERT INTO `test_err` VALUES ('717877', '67', '2021-11-03 16:12:30', '', '');
+INSERT INTO `test_err` VALUES ('717878', 'coursename=$this->ccoursename', '2021-11-03 16:12:30', '', '');
+INSERT INTO `test_err` VALUES ('717879', '{\"teaconfirm\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0a\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cscore\":\"100\"},\"submitType\":\"baocun\"}', '2021-11-03 16:13:57', '', '');
+INSERT INTO `test_err` VALUES ('717880', '67', '2021-11-03 16:13:57', '', '');
+INSERT INTO `test_err` VALUES ('717881', '{\"teaconfirm\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0a\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cscore\":\"100\"},\"submitType\":\"baocun\"}', '2021-11-03 16:15:33', '', '');
+INSERT INTO `test_err` VALUES ('717882', '67', '2021-11-03 16:15:33', '', '');
+INSERT INTO `test_err` VALUES ('717883', '\'coursename=\'.\'程序设计基础\'', '2021-11-03 16:15:33', '', '');
+INSERT INTO `test_err` VALUES ('717884', '{\"teaconfirm\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0a\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cscore\":\"100\"},\"submitType\":\"baocun\"}', '2021-11-03 16:16:00', '', '');
+INSERT INTO `test_err` VALUES ('717885', '67', '2021-11-03 16:16:00', '', '');
+INSERT INTO `test_err` VALUES ('717886', 'coursename=.\'程序设计基础\'', '2021-11-03 16:16:00', '', '');
+INSERT INTO `test_err` VALUES ('717887', '{\"teaconfirm\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0a\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cscore\":\"100\"},\"submitType\":\"baocun\"}', '2021-11-03 16:19:06', '', '');
+INSERT INTO `test_err` VALUES ('717888', '67', '2021-11-03 16:19:06', '', '');
+INSERT INTO `test_err` VALUES ('717889', '{\"teaconfirm\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0a\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cscore\":\"100\"},\"submitType\":\"baocun\"}', '2021-11-03 16:20:44', '', '');
+INSERT INTO `test_err` VALUES ('717890', '67', '2021-11-03 16:20:44', '', '');
+INSERT INTO `test_err` VALUES ('717891', 'coursename=\'程序设计基础\'', '2021-11-03 16:20:45', '', '');
+INSERT INTO `test_err` VALUES ('717892', '68', '2021-11-03 16:20:45', '', '');
+INSERT INTO `test_err` VALUES ('717893', '{\"teaconfirm\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0a\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cscore\":\"100\"},\"submitType\":\"baocun\"}', '2021-11-03 16:22:55', '', '');
+INSERT INTO `test_err` VALUES ('717894', '67', '2021-11-03 16:22:56', '', '');
+INSERT INTO `test_err` VALUES ('717895', 'coursename=\'程序设计基础\'', '2021-11-03 16:22:56', '', '');
+INSERT INTO `test_err` VALUES ('717896', '68', '2021-11-03 16:22:56', '', '');
+INSERT INTO `test_err` VALUES ('717897', '{\"teaconfirm\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0a\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cscore\":\"100\"},\"submitType\":\"baocun\"}', '2021-11-03 16:23:12', '', '');
+INSERT INTO `test_err` VALUES ('717898', '67', '2021-11-03 16:23:12', '', '');
+INSERT INTO `test_err` VALUES ('717899', 'coursename=\'程序设计基础\'', '2021-11-03 16:23:12', '', '');
+INSERT INTO `test_err` VALUES ('717900', '68', '2021-11-03 16:23:12', '', '');
+INSERT INTO `test_err` VALUES ('717901', '{\"courseinfo\":{\"courseyear\":\"2020-2021\",\"courseterm\":\"\\u4e0a\\u5b66\\u671f\",\"courseid\":\"33333\",\"coursename\":\"\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"coursetime\":\"1\",\"courseteacher\":\"\\u66fe\\u9521\\u5c71\",\"reportcnt\":\"1\",\"homeworkcnt\":\"1\",\"examcnt\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 16:23:53', '', '');
+INSERT INTO `test_err` VALUES ('717902', '{\"coursework\":{\"workyear\":\"2020-2021\",\"workterm\":\"\\u4e0a\\u5b66\\u671f\",\"workid\":\"1\",\"workname\":\"1\",\"workcourse\":\"\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"workstart\":\"2021-11-12 00:05:29\",\"workend\":\"2021-12-31 00:05:31\"},\"submitType\":\"baocun\"}', '2021-11-03 16:23:59', '', '');
+INSERT INTO `test_err` VALUES ('717903', '{\"teaconfirm\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0a\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cscore\":\"100\"},\"submitType\":\"baocun\"}', '2021-11-03 16:24:34', '', '');
+INSERT INTO `test_err` VALUES ('717904', '67', '2021-11-03 16:24:34', '', '');
+INSERT INTO `test_err` VALUES ('717905', 'coursename=\'程序设计基础\'', '2021-11-03 16:24:34', '', '');
+INSERT INTO `test_err` VALUES ('717906', '68', '2021-11-03 16:24:34', '', '');
 
 -- ----------------------------
 -- Table structure for `user`
@@ -6486,7 +6221,7 @@ INSERT INTO `user` VALUES ('10000', null, null, null, '', null, null, '1', '1', 
 -- ----------------------------
 DROP TABLE IF EXISTS `workcommit`;
 CREATE TABLE `workcommit` (
-  `id` int(4) NOT NULL,
+  `id` int(4) NOT NULL AUTO_INCREMENT,
   `cyear` varchar(20) DEFAULT '' COMMENT '学年',
   `cterm` varchar(20) DEFAULT '' COMMENT '学期',
   `ccourseid` varchar(20) DEFAULT '' COMMENT '课程编码',
@@ -6499,11 +6234,12 @@ CREATE TABLE `workcommit` (
   `copinion` text COMMENT '审核意见',
   `ccoursename` varchar(20) DEFAULT '' COMMENT '课程名称',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of workcommit
 -- ----------------------------
+INSERT INTO `workcommit` VALUES ('1', '2020-2021', '上学期', '33333', '1', '1', '1', '', '100', '', null, '程序设计基础');
 DROP TRIGGER IF EXISTS `insert_num`;
 DELIMITER ;;
 CREATE TRIGGER `insert_num` AFTER INSERT ON `article` FOR EACH ROW begin
