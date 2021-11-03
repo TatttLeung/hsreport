@@ -64,7 +64,7 @@ $st="";
         array(
             'award_index329' => array('课程信息设置', 'courseinfo/index'),
             'award_index330' => array('课程作业设置', 'coursework/index'), 
-            'award_index326' => array('学生材料提交', 'ClubNews/index&news_type=0'),
+            'award_index326' => array('学生材料提交', 'studentfile/index'),
             'award_index327' => array('教师提交确认', 'teaconfirm/index'), 
             'award_index328' => array('材料审核进度查询', 'workarticle/index'),
          )
