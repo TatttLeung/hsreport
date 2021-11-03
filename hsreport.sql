@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2021-11-03 16:42:21
+Date: 2021-11-03 17:21:41
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -6104,11 +6104,26 @@ CREATE TABLE `test_err` (
   `f_username` char(20) DEFAULT '' COMMENT '测试员',
   `f_callname` varchar(200) DEFAULT '' COMMENT '调用函数名称',
   PRIMARY KEY (`f_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=717907 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=717922 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of test_err
 -- ----------------------------
+INSERT INTO `test_err` VALUES ('717907', '{\"workarticle\":{\"ctime\":\"1\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 16:56:40', '', '');
+INSERT INTO `test_err` VALUES ('717908', '{\"workarticle\":{\"ctime\":\"1\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 16:56:43', '', '');
+INSERT INTO `test_err` VALUES ('717909', '{\"workarticle\":{\"ctime\":\"1\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 16:57:12', '', '');
+INSERT INTO `test_err` VALUES ('717910', '{\"workarticle\":{\"ctime\":\"1\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 16:57:12', '', '');
+INSERT INTO `test_err` VALUES ('717911', '{\"workarticle\":{\"ctime\":\"1\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 16:58:01', '', '');
+INSERT INTO `test_err` VALUES ('717912', '{\"workarticle\":{\"ctime\":\"1\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 16:58:42', '', '');
+INSERT INTO `test_err` VALUES ('717913', '{\"workarticle\":{\"ctime\":\"1\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 17:02:42', '', '');
+INSERT INTO `test_err` VALUES ('717914', '{\"workarticle\":{\"ctime\":\"1\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 17:06:11', '', '');
+INSERT INTO `test_err` VALUES ('717915', '{\"teaconfirm\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0a\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cscore\":\"10\"},\"submitType\":\"baocun\"}', '2021-11-03 17:07:22', '', '');
+INSERT INTO `test_err` VALUES ('717916', '67', '2021-11-03 17:07:22', '', '');
+INSERT INTO `test_err` VALUES ('717917', 'coursename=\'程序设计基础\'', '2021-11-03 17:07:22', '', '');
+INSERT INTO `test_err` VALUES ('717918', '68', '2021-11-03 17:07:22', '', '');
+INSERT INTO `test_err` VALUES ('717919', '{\"workarticle\":{\"ctime\":\"2021-11-03 17:13:53\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 17:13:57', '', '');
+INSERT INTO `test_err` VALUES ('717920', '{\"workarticle\":{\"ctime\":\"2021-11-03 17:16:13\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 17:16:15', '', '');
+INSERT INTO `test_err` VALUES ('717921', '{\"workarticle\":{\"ctime\":\"2021-11-03 17:16:13\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 17:20:42', '', '');
 
 -- ----------------------------
 -- Table structure for `user`
@@ -6189,13 +6204,14 @@ CREATE TABLE `workcommit` (
   `cstatus` varchar(20) DEFAULT '' COMMENT '审核状态',
   `copinion` text COMMENT '审核意见',
   `ccoursename` varchar(20) DEFAULT '' COMMENT '课程名称',
+  `ctime` datetime DEFAULT NULL COMMENT '审核时间',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of workcommit
 -- ----------------------------
-INSERT INTO `workcommit` VALUES ('1', '2020-2021', '上学期', '33333', '1', '1', '1', '', '100', '', null, '程序设计基础');
+INSERT INTO `workcommit` VALUES ('1', '2020-2021', '上学期', '33333', '1', '1', '1', '', '10', '1', '1', '程序设计基础', '2021-11-03 17:16:13');
 DROP TRIGGER IF EXISTS `insert_num`;
 DELIMITER ;;
 CREATE TRIGGER `insert_num` AFTER INSERT ON `article` FOR EACH ROW begin
