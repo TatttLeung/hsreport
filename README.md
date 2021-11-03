@@ -115,4 +115,6 @@ sexid
 #####  cscore     作业分数
 #####  cstatus    审核状态
 #####  copinion   审核意见
+#####  ccoursename   课程名称
+##### ctime   审核时间
 
