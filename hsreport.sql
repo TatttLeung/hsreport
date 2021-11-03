@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2021-11-03 00:15:07
+Date: 2021-11-03 12:46:02
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -6468,6 +6468,29 @@ INSERT INTO `user` VALUES ('36', null, null, null, '', null, null, null, null, n
 INSERT INTO `user` VALUES ('37', null, null, null, '', null, null, null, null, null, null, null, '0');
 INSERT INTO `user` VALUES ('38', null, null, null, '', null, null, '1', '1', null, null, null, '0');
 INSERT INTO `user` VALUES ('10000', null, null, null, '', null, null, '1', '1', null, null, null, '0');
+
+-- ----------------------------
+-- Table structure for `workcommit`
+-- ----------------------------
+DROP TABLE IF EXISTS `workcommit`;
+CREATE TABLE `workcommit` (
+  `id` int(4) NOT NULL,
+  `cyear` varchar(20) DEFAULT '' COMMENT '学年',
+  `cterm` varchar(20) DEFAULT '' COMMENT '学期',
+  `ccourseid` varchar(20) DEFAULT '' COMMENT '课程编码',
+  `cworkid` varchar(20) DEFAULT '' COMMENT '作业序号',
+  `cstuname` varchar(20) DEFAULT '' COMMENT '学生姓名',
+  `cstuid` varchar(20) DEFAULT '' COMMENT '学生id',
+  `cpath` varchar(80) DEFAULT '' COMMENT '作业路径',
+  `cscore` varchar(20) DEFAULT '' COMMENT '作业分数',
+  `cstatus` varchar(20) DEFAULT '' COMMENT '审核状态',
+  `copinion` text COMMENT '审核意见',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of workcommit
+-- ----------------------------
 DROP TRIGGER IF EXISTS `insert_num`;
 DELIMITER ;;
 CREATE TRIGGER `insert_num` AFTER INSERT ON `article` FOR EACH ROW begin
