@@ -1,0 +1,54 @@
+2021/11/03 21:04:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "cstuinfo/index"。' in F:\wamp64\www\hsreport\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController('cstuinfo/index')
+#1 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 F:\wamp64\www\hsreport\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/hsreport/index.php?r=cstuinfo/index
+HTTP_REFERER=http://127.0.0.1/hsreport/index.php
+---
+2021/11/03 21:08:38 [error] [exception.CException] exception 'CException' with message '属性 "cstuinfo.courseyear" 未被定义.' in F:\wamp64\www\hsreport\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\db\ar\CActiveRecord.php(145): CComponent->__get('courseyear')
+#1 F:\wamp64\www\hsreport\admin\views\cstuinfo\index.php(21): CActiveRecord->__get('courseyear')
+#2 F:\wamp64\www\hsreport\framework\web\CBaseController.php(126): require('F:\\wamp64\\www\\h...')
+#3 F:\wamp64\www\hsreport\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\\wamp64\\www\\h...', Array, true)
+#4 F:\wamp64\www\hsreport\framework\web\CController.php(872): CBaseController->renderFile('F:\\wamp64\\www\\h...', Array, true)
+#5 F:\wamp64\www\hsreport\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#6 F:\wamp64\www\hsreport\admin\components\BaseController.php(34): CController->render('index', Array)
+#7 F:\wamp64\www\hsreport\admin\controllers\cstuinfoController.php(19): BaseController->_list(Object(cstuinfo), Object(CDbCriteria), 'index', Array)
+#8 [internal function]: cstuinfoController->actionIndex('0')
+#9 F:\wamp64\www\hsreport\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(cstuinfoController), Array)
+#10 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(cstuinfoController), Object(ReflectionMethod), Array)
+#11 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 F:\wamp64\www\hsreport\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 F:\wamp64\www\hsreport\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): CController->run('index')
+#15 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController('cstuinfo/index')
+#16 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 F:\wamp64\www\hsreport\index.php(33): CApplication->run()
+#18 {main}
+REQUEST_URI=/hsreport/index.php?r=cstuinfo/index
+HTTP_REFERER=http://127.0.0.1/hsreport/index.php
+---
+2021/11/03 21:12:04 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'courseyear' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `workcommit` `t` WHERE 1=1 and courseyear="2020-2021".
+2021/11/03 21:12:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'courseyear' in 'where clause'' in F:\wamp64\www\hsreport\framework\db\CDbCommand.php:543
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 F:\wamp64\www\hsreport\framework\db\ar\CActiveRecord.php(1609): CDbCommand->queryScalar()
+#2 F:\wamp64\www\hsreport\admin\components\BaseController.php(28): CActiveRecord->count(Object(CDbCriteria))
+#3 F:\wamp64\www\hsreport\admin\controllers\cstuinfoController.php(19): BaseController->_list(Object(cstuinfo), Object(CDbCriteria), 'index', Array)
+#4 [internal function]: cstuinfoController->actionIndex('2020-2021')
+#5 F:\wamp64\www\hsreport\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(cstuinfoController), Array)
+#6 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(cstuinfoController), Object(ReflectionMethod), Array)
+#7 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 F:\wamp64\www\hsreport\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 F:\wamp64\www\hsreport\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): CController->run('index')
+#11 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController('cstuinfo/index')
+#12 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 F:\wamp64\www\hsreport\index.php(33): CApplication->run()
+#14 {main}
+REQUEST_URI=/hsreport/index.php?r=cstuinfo%2Findex&styear=2020-2021&sterm=%E4%B8%8A%E5%AD%A6%E6%9C%9F
+HTTP_REFERER=http://127.0.0.1/hsreport/index.php?r=cstuinfo/index
+---

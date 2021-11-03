@@ -15,11 +15,11 @@
                             <?php echo $form->error($model, 'teaname', $htmlOptions = array()); ?>
                         </td>
                     </tr>
-                   <tr>
-                        <td><?php echo $form->labelEx($model, 'teasex'); ?></td>
-                        <td>
-                          <?php echo $form->textField($model,'teasex', array('class' => 'input-text')); ?>
-                          <?php echo $form->error($model, 'teasex', $htmlOptions = array()); ?>
+                                     <tr>
+                        <td ><?php echo $form->labelEx($model, 'teasex'); ?></td>
+                        <td >
+                            <?php echo $form->dropDownList($model, 'teasex', Chtml::listData(base_sex::model()->findALL(),'sexname', 'sexname'), array('prompt'=>'请选择')); ?>
+                            <?php echo $form->error($model, 'teasex', $htmlOptions = array()); ?>
                         </td>
                     </tr>
                    <tr>

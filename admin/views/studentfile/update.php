@@ -1,6 +1,6 @@
 <div class="box">
     <div class="box-title c">
-    <h1><i class="fa fa-table"></i>学生信息详情</h1><span class="back">
+    <h1><i class="fa fa-table"></i>学生提交信息详情</h1><span class="back">
     <a class="btn" href="javascript:;" onclick="we.back();">
     <i class="fa fa-reply"></i>返回</a></span></div><!--box-title end-->
     <div class="box-detail">
@@ -11,18 +11,16 @@
                     <tr>
                         <td ><?php echo $form->labelEx($model, 'cyear'); ?></td>
                         <td >
-                            <?php echo $form->textField($model, 'cyear', array('class' => 'input-text')); ?>
+                            <?php echo $form->dropDownList($model, 'cyear', Chtml::listData(base_year::model()->findALL(), 'F_NAME', 'F_NAME'), array('prompt'=>'请选择')); ?>
                             <?php echo $form->error($model, 'cyear', $htmlOptions = array()); ?>
                         </td>
-                      </tr>
-                         <tr>
+                    <tr>
                         <td ><?php echo $form->labelEx($model, 'cterm'); ?></td>
                         <td >
-                            <?php echo $form->textField($model, 'cterm', array('class' => 'input-text')); ?>
+                            <?php echo $form->dropDownList($model, 'cterm', Chtml::listData(base_term::model()->findALL(), 'F_NAME', 'F_NAME'), array('prompt'=>'请选择')); ?>
                             <?php echo $form->error($model, 'cterm', $htmlOptions = array()); ?>
                         </td>
                     </tr>
-                    <tr>
                         <td ><?php echo $form->labelEx($model, 'cstuid'); ?></td>
                         <td >
                             <?php echo $form->textField($model, 'cstuid', array('class' => 'input-text')); ?>
@@ -39,7 +37,7 @@
                     <tr>
                         <td ><?php echo $form->labelEx($model, 'ccoursename'); ?></td>
                         <td >
-                            <?php echo $form->textField($model, 'ccoursename', array('class' => 'input-text')); ?>
+                            <?php echo $form->dropDownList($model, 'ccoursename', Chtml::listData(courseinfo::model()->findALL(), 'coursename', 'coursename'), array('prompt'=>'请选择')); ?>
                             <?php echo $form->error($model, 'ccoursename', $htmlOptions = array()); ?>
                         </td>
                     </tr>

@@ -1,7 +1,6 @@
 <?php
 
 class stuinfo extends BaseModel {
-    public $news_content_temp = '';
     public function tableName() {
         return '{{stuinfo}}';
     }

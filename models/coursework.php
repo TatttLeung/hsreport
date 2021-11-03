@@ -44,7 +44,7 @@ class coursework extends BaseModel {
         return array(
         'workyear'=>'学年',
         'workterm'=>'学期',
-        'workid'=>'作业编号',
+        'workid'=>'作业序号',
         'workname'=>'作业名称',
         'workstart'=>'开始提交时间',
         'workend'=>'提交结束时间',
