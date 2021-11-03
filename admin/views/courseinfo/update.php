@@ -11,15 +11,15 @@
                     <tr>
                         <td ><?php echo $form->labelEx($model, 'courseyear'); ?></td>
                         <td >
-                <?php echo $form->dropDownList($model, 'courseyear', Chtml::listData(base_year::model()->findALL(), 'F_NAME', 'F_NAME'), array('prompt'=>'请选择')); ?>
-                <?php echo $form->error($model, 'courseyear', $htmlOptions = array()); ?>
+                            <?php echo $form->dropDownList($model, 'courseyear', Chtml::listData(base_year::model()->findALL(), 'F_NAME', 'F_NAME'), array('prompt'=>'请选择')); ?>
+                            <?php echo $form->error($model, 'courseyear', $htmlOptions = array()); ?>
                         </td>
                     </tr>
                     <tr>
                         <td ><?php echo $form->labelEx($model, 'courseterm'); ?></td>
                         <td >
-                <?php echo $form->dropDownList($model, 'courseterm', Chtml::listData(base_term::model()->findALL(), 'F_NAME', 'F_NAME'), array('prompt'=>'请选择')); ?>
-                <?php echo $form->error($model, 'courseterm', $htmlOptions = array()); ?>
+                            <?php echo $form->dropDownList($model, 'courseterm', Chtml::listData(base_term::model()->findALL(), 'F_NAME', 'F_NAME'), array('prompt'=>'请选择')); ?>
+                            <?php echo $form->error($model, 'courseterm', $htmlOptions = array()); ?>
                         </td>
                     </tr>
                     <tr>

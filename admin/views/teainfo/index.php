@@ -1,5 +1,3 @@
-<?php if (!isset($_REQUEST['news_type'])) {$_REQUEST['news_type']=0;} ?>
-
 <div class="box">
      <div class="box-title c"><h1><i class="fa fa-table"></i>教师列表</h1></div><!--box-title end-->
     <div class="box-content">
@@ -8,11 +6,6 @@
             <a class="btn" href="javascript:;" onclick="we.reload();"><i class="fa fa-refresh"></i>刷新</a>
             <a style="display:none;" id="j-delete" class="btn" href="javascript:;" onclick="we.dele(we.checkval('.check-item input:checked'), deleteUrl);"><i class="fa fa-trash-o"></i>刪除</a>
         </div><!--box-header end-->
-
-
-
-     
-        <button class="btn btn-blue" type="submit">查询</button>
     </form>
 </div><!--box-search end-->
 
@@ -43,7 +36,7 @@ foreach($arclist as $v){
     <td style='text-align: center;'><?php echo $v->tealevel; ?></td>
     <td style='text-align: center;'>
      
-        <a class="btn" href="<?php echo $this->createUrl('update', array('id'=>$v->id,'news_type'=>Yii::app()->request->getParam('news_type')));?>" title="编辑"><i class="fa fa-edit"></i></a>
+        <a class="btn" href="<?php echo $this->createUrl('update', array('id'=>$v->id));?>" title="编辑"><i class="fa fa-edit"></i></a>
         <a class="btn" href="javascript:;" onclick="we.dele('<?php echo $v->id;?>', deleteUrl);" title="删除"><i class="fa fa-trash-o"></i></a>
     </td>
 </tr>

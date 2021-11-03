@@ -67,6 +67,7 @@ class teainfo extends BaseModel {
     protected function afterFind() {
         parent::afterFind();
         return true;
-    } 
+    }
+
 
 }
