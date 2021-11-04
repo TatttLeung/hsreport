@@ -120,6 +120,15 @@ sexid
 #####  ccoursename   课程名称
 ##### ctime   审核时间
 
+#### 作业序号（base_num）
+##### number
+
+#### 年级（base_grade）
+##### grade
+
+#### 专业（base_subject）
+##### subject
+
 # 现有问题
 
 1、筛选框，选择一次后不能恢复全选状态
