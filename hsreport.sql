@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : mydb
+Source Server         : mydp
 Source Server Version : 50714
 Source Host           : localhost:3306
 Source Database       : hsreport
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2021-11-04 09:55:00
+Date: 2021-11-04 10:45:12
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -1512,6 +1512,61 @@ INSERT INTO `base_code` VALUES ('768', 'VOTESTYPE', 'VOTESTYPE02', 'VOTESTYPE02'
 INSERT INTO `base_code` VALUES ('769', 'VOTESTYPE', 'VOTESTYPE03', 'VOTESTYPE03', '支付平台', '', '1', '0', '0', '0', '0', null, null, null, null, '', '', '', '', '', '0', null, '766');
 
 -- ----------------------------
+-- Table structure for `base_grade`
+-- ----------------------------
+DROP TABLE IF EXISTS `base_grade`;
+CREATE TABLE `base_grade` (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  `grade` varchar(20) DEFAULT '' COMMENT '年级',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of base_grade
+-- ----------------------------
+INSERT INTO `base_grade` VALUES ('1', '2023');
+INSERT INTO `base_grade` VALUES ('2', '2022');
+INSERT INTO `base_grade` VALUES ('3', '2021');
+INSERT INTO `base_grade` VALUES ('4', '2020');
+INSERT INTO `base_grade` VALUES ('5', '2019');
+INSERT INTO `base_grade` VALUES ('6', '2018');
+INSERT INTO `base_grade` VALUES ('7', '2017');
+
+-- ----------------------------
+-- Table structure for `base_num`
+-- ----------------------------
+DROP TABLE IF EXISTS `base_num`;
+CREATE TABLE `base_num` (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  `number` int(20) DEFAULT NULL COMMENT '作业序号',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of base_num
+-- ----------------------------
+INSERT INTO `base_num` VALUES ('1', '1');
+INSERT INTO `base_num` VALUES ('2', '2');
+INSERT INTO `base_num` VALUES ('3', '3');
+INSERT INTO `base_num` VALUES ('4', '4');
+INSERT INTO `base_num` VALUES ('5', '5');
+INSERT INTO `base_num` VALUES ('6', '6');
+INSERT INTO `base_num` VALUES ('7', '7');
+INSERT INTO `base_num` VALUES ('8', '8');
+INSERT INTO `base_num` VALUES ('9', '9');
+INSERT INTO `base_num` VALUES ('10', '10');
+INSERT INTO `base_num` VALUES ('11', '11');
+INSERT INTO `base_num` VALUES ('12', '12');
+INSERT INTO `base_num` VALUES ('13', '13');
+INSERT INTO `base_num` VALUES ('14', '14');
+INSERT INTO `base_num` VALUES ('15', '15');
+INSERT INTO `base_num` VALUES ('16', '16');
+INSERT INTO `base_num` VALUES ('17', '17');
+INSERT INTO `base_num` VALUES ('18', '18');
+INSERT INTO `base_num` VALUES ('19', '19');
+INSERT INTO `base_num` VALUES ('20', '20');
+
+-- ----------------------------
 -- Table structure for `base_sex`
 -- ----------------------------
 DROP TABLE IF EXISTS `base_sex`;
@@ -1527,6 +1582,24 @@ CREATE TABLE `base_sex` (
 -- ----------------------------
 INSERT INTO `base_sex` VALUES ('1', '男', '1');
 INSERT INTO `base_sex` VALUES ('2', '女', '2');
+
+-- ----------------------------
+-- Table structure for `base_subject`
+-- ----------------------------
+DROP TABLE IF EXISTS `base_subject`;
+CREATE TABLE `base_subject` (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  `subject` varchar(20) DEFAULT '' COMMENT '专业',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of base_subject
+-- ----------------------------
+INSERT INTO `base_subject` VALUES ('1', '计算机科学与技术');
+INSERT INTO `base_subject` VALUES ('2', '网络工程');
+INSERT INTO `base_subject` VALUES ('3', '人工智能');
+INSERT INTO `base_subject` VALUES ('4', '计算机科学与技术（师范）');
 
 -- ----------------------------
 -- Table structure for `base_term`
@@ -6107,7 +6180,7 @@ CREATE TABLE `test_err` (
   `f_username` char(20) DEFAULT '' COMMENT '测试员',
   `f_callname` varchar(200) DEFAULT '' COMMENT '调用函数名称',
   PRIMARY KEY (`f_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=717984 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=717992 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of test_err
@@ -6160,6 +6233,14 @@ INSERT INTO `test_err` VALUES ('717980', '20', '2021-11-04 09:48:18', '', '');
 INSERT INTO `test_err` VALUES ('717981', '1=1', '2021-11-04 09:48:18', '', '');
 INSERT INTO `test_err` VALUES ('717982', '21', '2021-11-04 09:51:50', '', '');
 INSERT INTO `test_err` VALUES ('717983', '1=1', '2021-11-04 09:51:50', '', '');
+INSERT INTO `test_err` VALUES ('717984', '20', '2021-11-04 10:11:39', '', '');
+INSERT INTO `test_err` VALUES ('717985', '1=1', '2021-11-04 10:11:39', '', '');
+INSERT INTO `test_err` VALUES ('717986', '21', '2021-11-04 10:12:19', '', '');
+INSERT INTO `test_err` VALUES ('717987', '1=1', '2021-11-04 10:12:19', '', '');
+INSERT INTO `test_err` VALUES ('717988', '21', '2021-11-04 10:12:25', '', '');
+INSERT INTO `test_err` VALUES ('717989', '1=1 and stugrade=\"2020\" and stumajor=\"计算机科学与技术\"', '2021-11-04 10:12:25', '', '');
+INSERT INTO `test_err` VALUES ('717990', '21', '2021-11-04 10:12:29', '', '');
+INSERT INTO `test_err` VALUES ('717991', '1=1 and stumajor=\"网络工程\"', '2021-11-04 10:12:29', '', '');
 
 -- ----------------------------
 -- Table structure for `user`
