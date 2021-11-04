@@ -23,17 +23,17 @@
         <span>学年</span>
         <select name="styear">
             <option value="">请选择</option>
-            <?php foreach($stu as $v){?>
-            <option value="<?php echo $v->courseyear;?>"><?php echo $v->courseyear;?></option>
+            <?php foreach($years as $v){?>
+            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_NAME;?></option>
             <?php }?>
         </select>
     </label>
     <label style="margin-right:20px;">
-        <span>学段</span>
+        <span>学期</span>
         <select name="sterm">
             <option value="">请选择</option>
-            <?php foreach($stu as $v){?>
-            <option value="<?php echo $v->courseterm;?>"><?php echo $v->courseterm;?></option>
+            <?php foreach($terms as $v){?>
+            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_NAME;?></option>
             <?php }?>
         </select>
       </label>

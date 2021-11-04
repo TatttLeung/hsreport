@@ -1,11 +1,9 @@
 <?php
- //$years=Yearlist::model()->findALL();
- //$terms=Term::model()->findALL();
+
  $years=base_year::model()->findALL();
- $stu=courseinfo::model()->findALL();
+ //$stu=teainfo::model()->findALL();
  $terms=base_term::model()->findALL();
- $tclass=get_session('class_teacher');
- set_school_resquest('school','stlevel','stclass','styear','sterm');
+
 ?>
 <div class="box">
      <div class="box-title c"><h1><i class="fa fa-table"></i>教师任课信息</h1></div><!--box-title end-->
@@ -21,8 +19,8 @@
         <span>学年</span>
         <select name="styear">
             <option value="">请选择</option>
-            <?php foreach($stu as $v){?>
-            <option value="<?php echo $v->courseyear;?>"><?php echo $v->courseyear;?></option>
+            <?php foreach($years as $v){?>
+            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_NAME;?></option>
             <?php }?>
         </select>
     </label>
@@ -30,8 +28,8 @@
         <span>学期</span>
         <select name="sterm">
             <option value="">请选择</option>
-            <?php foreach($stu as $v){?>
-            <option value="<?php echo $v->courseterm;?>"><?php echo $v->courseterm;?></option>
+            <?php foreach($terms as $v){?>
+            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_NAME;?></option>
             <?php }?>
         </select>
       </label>

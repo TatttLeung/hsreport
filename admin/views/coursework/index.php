@@ -1,5 +1,7 @@
 <?php
  $cw=coursework::model()->findALL();
+ $terms=base_term::model()->findALL();
+  $years=base_year::model()->findALL();
 ?>
 <div class="box">
      <div class="box-title c"><h1><i class="fa fa-table"></i>课程作业信息列表</h1></div><!--box-title end-->
@@ -15,23 +17,22 @@
 
       <label style="margin-right:20px;">
         <span>学年</span>
-        <select name="courseyear"> <!-- 更改这里的选择项目，必须同时更改对应controller的actionindex -->
+        <select name="styear">
             <option value="">请选择</option>
-            <?php foreach($cw as $v){?>
-            <option value="<?php echo $v->workyear;?>"><?php echo $v->workyear;?></option>
+            <?php foreach($years as $v){?>
+            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_NAME;?></option>
             <?php }?>
         </select>
     </label>
-
     <label style="margin-right:20px;">
         <span>学期</span>
-        <select name="workterm"> <!-- 更改这里的选择项目，必须同时更改对应controller的actionindex -->
+        <select name="sterm">
             <option value="">请选择</option>
-            <?php foreach($cw as $v){?>
-            <option value="<?php echo $v->workterm;?>"><?php echo $v->workterm;?></option>
+            <?php foreach($terms as $v){?>
+            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_NAME;?></option>
             <?php }?>
         </select>
-    </label>
+      </label>
   
 
      

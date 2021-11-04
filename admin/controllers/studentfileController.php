@@ -10,14 +10,16 @@ class studentfileController extends BaseController {
         //dump(Yii::app()->request->isPostRequest);
     }
 
-     public function actionIndex( $cyear="0",$cterm="0") {
+     public function actionIndex( $styear="0",$sterm="0") {
         set_cookie('_currentUrl_', Yii::app()->request->url);
         $modelName = $this->model;
         $model = $modelName::model();
         $criteria = new CDbCriteria;
-        $w1=get_where('1=1',($cterm!="0"),'cterm',$cterm,'"');
+        $w1=get_where('1=1',$styear,'cyear',$styear,'"');
         //put_msg("19"." ".$w1);
-        $criteria->condition=get_where($w1,($cyear!="0"),'cyear',$cyear,'"');
+        $criteria->condition=get_where($w1,$sterm,'cterm',$sterm,'"');
+        put_msg(21);
+        put_msg($criteria->condition);
         //put_msg("21"." ".$criteria->condition);
         /*criteria为筛选条件，更改对条件即可完成筛选，第一个不用改，第二个改成index里面对应命名
         （即参数，应设置为默认0），第三个为此模块中的筛选的表名，第四个为index里面对应命名（即参数）*/

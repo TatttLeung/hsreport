@@ -1,5 +1,7 @@
 <?php
  $stu=stuinfo::model()->findALL();
+ $stgrade=base_grade::model()->findALL();
+ $stsubject=base_subject::model()->findALL();
 ?>
 <div class="box">
      <div class="box-title c"><h1><i class="fa fa-table"></i>学生信息列表</h1></div><!--box-title end-->
@@ -14,25 +16,23 @@
     <input type="hidden" name="r" value="<?php echo Yii::app()->request->getParam('r');?>">
 
       <label style="margin-right:20px;">
-        <span>年级</span>
-        <select name="stugrade"> <!-- 更改这里的选择项目，必须同时更改对应controller的actionindex -->
+        <span>学年</span>
+        <select name="stgrade">
             <option value="">请选择</option>
-            <?php foreach($stu as $v){?>
-            <option value="<?php echo $v->stugrade;?>"><?php echo $v->stugrade;?></option>
+            <?php foreach($stgrade as $v){?>
+            <option value="<?php echo $v->grade;?>"><?php echo $v->grade;?></option>
             <?php }?>
         </select>
     </label>
-
     <label style="margin-right:20px;">
         <span>专业</span>
-        <select name="stumajor"> <!-- 更改这里的选择项目，必须同时更改对应controller的actionindex -->
+        <select name="stsubject">
             <option value="">请选择</option>
-            <?php foreach($stu as $v){?>
-            <option value="<?php echo $v->stumajor;?>"><?php echo $v->stumajor;?></option>
+            <?php foreach($stsubject as $v){?>
+            <option value="<?php echo $v->subject;?>"><?php echo $v->subject;?></option>
             <?php }?>
         </select>
-    </label>
-  
+      </label>
 
      
         <button class="btn btn-blue" type="submit">查询</button>

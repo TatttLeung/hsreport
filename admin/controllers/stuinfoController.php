@@ -10,14 +10,14 @@ class stuinfoController extends BaseController {
         //dump(Yii::app()->request->isPostRequest);
     }
 
-     public function actionIndex( $stugrade="0",$stumajor="0") {
+     public function actionIndex( $stgrade="0",$stsubject="0") {
         set_cookie('_currentUrl_', Yii::app()->request->url);
         $modelName = $this->model;
         $model = $modelName::model();
         $criteria = new CDbCriteria;
-        $w1=get_where('1=1',$stugrade,'stugrade',$stugrade,'"');
+        $w1=get_where('1=1',$stgrade,'stugrade',$stgrade,'"');
         //put_msg("19"." ".$w1);
-        $criteria->condition=get_where($w1,$stumajor,'stumajor',$stumajor,'"');
+        $criteria->condition=get_where($w1,$stsubject,'stumajor',$stsubject,'"');
         put_msg(21);
         put_msg($criteria->condition);
         //put_msg("21"." ".$criteria->condition);
@@ -25,6 +25,7 @@ class stuinfoController extends BaseController {
         （即参数，应设置为默认0），第三个为此模块中的筛选的表名，第四个为index里面对应命名（即参数）*/
         parent::_list($model, $criteria, 'index', array()); //调用S
     }
+
 
    public function actionCreate() {
         $modelName = $this->model;
