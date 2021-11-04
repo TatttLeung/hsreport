@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2021-11-03 17:21:41
+Date: 2021-11-04 09:55:00
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -1685,12 +1685,14 @@ CREATE TABLE `courseinfo` (
   `homeworkcnt` int(4) DEFAULT NULL COMMENT '作业提交次数',
   `examcnt` int(4) DEFAULT NULL COMMENT '考试次数',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of courseinfo
 -- ----------------------------
-INSERT INTO `courseinfo` VALUES ('1', '2020-2021', '上学期', '33333', '程序设计基础', '曾锡山', '1', '1', '1', '1');
+INSERT INTO `courseinfo` VALUES ('1', '2020-2021', '上学期', '00001', '程序设计基础', '曾锡山', '周五下午 19:00', '2', '3', '1');
+INSERT INTO `courseinfo` VALUES ('2', '2020-2021', '下学期', '00002', '离散数学', '陈寅', '周五下午 18:00', '1', '5', '1');
+INSERT INTO `courseinfo` VALUES ('3', '2020-2021', '上学期', '000003', '程序设计基础', '陈寅', '周五下午 19:00', '1', '3', '1');
 
 -- ----------------------------
 -- Table structure for `coursestu`
@@ -1732,7 +1734,7 @@ CREATE TABLE `coursework` (
 -- ----------------------------
 -- Records of coursework
 -- ----------------------------
-INSERT INTO `coursework` VALUES ('1', '2020-2021', '上学期', '1', '1', '2021-11-12 00:05:29', '2021-12-31 00:05:31', '程序设计基础');
+INSERT INTO `coursework` VALUES ('1', '2020-2021', '上学期', '2', '第一次实验', '2021-11-12 00:05:29', '2021-12-31 00:05:31', '程序设计基础');
 
 -- ----------------------------
 -- Table structure for `department`
@@ -5961,13 +5963,14 @@ CREATE TABLE `stuinfo` (
   `stugrade` varchar(20) DEFAULT '' COMMENT '年级',
   `stumajor` varchar(20) DEFAULT '' COMMENT '学生专业',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of stuinfo
 -- ----------------------------
 INSERT INTO `stuinfo` VALUES ('1', '20203231004', '李达良', '男', '2020', '计算机科学与技术');
-INSERT INTO `stuinfo` VALUES ('2', '20213231004', '123', '男', '2021', '网络工程');
+INSERT INTO `stuinfo` VALUES ('2', '20201234561', '郑方形', '男', '2021', '计算机科学与技术');
+INSERT INTO `stuinfo` VALUES ('3', '20201234562', '关竣佑', '男', '2021', '网络工程');
 
 -- ----------------------------
 -- Table structure for `subscribe`
@@ -6104,26 +6107,59 @@ CREATE TABLE `test_err` (
   `f_username` char(20) DEFAULT '' COMMENT '测试员',
   `f_callname` varchar(200) DEFAULT '' COMMENT '调用函数名称',
   PRIMARY KEY (`f_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=717922 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=717984 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of test_err
 -- ----------------------------
-INSERT INTO `test_err` VALUES ('717907', '{\"workarticle\":{\"ctime\":\"1\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 16:56:40', '', '');
-INSERT INTO `test_err` VALUES ('717908', '{\"workarticle\":{\"ctime\":\"1\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 16:56:43', '', '');
-INSERT INTO `test_err` VALUES ('717909', '{\"workarticle\":{\"ctime\":\"1\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 16:57:12', '', '');
-INSERT INTO `test_err` VALUES ('717910', '{\"workarticle\":{\"ctime\":\"1\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 16:57:12', '', '');
-INSERT INTO `test_err` VALUES ('717911', '{\"workarticle\":{\"ctime\":\"1\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 16:58:01', '', '');
-INSERT INTO `test_err` VALUES ('717912', '{\"workarticle\":{\"ctime\":\"1\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 16:58:42', '', '');
-INSERT INTO `test_err` VALUES ('717913', '{\"workarticle\":{\"ctime\":\"1\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 17:02:42', '', '');
-INSERT INTO `test_err` VALUES ('717914', '{\"workarticle\":{\"ctime\":\"1\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 17:06:11', '', '');
-INSERT INTO `test_err` VALUES ('717915', '{\"teaconfirm\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0a\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cscore\":\"10\"},\"submitType\":\"baocun\"}', '2021-11-03 17:07:22', '', '');
-INSERT INTO `test_err` VALUES ('717916', '67', '2021-11-03 17:07:22', '', '');
-INSERT INTO `test_err` VALUES ('717917', 'coursename=\'程序设计基础\'', '2021-11-03 17:07:22', '', '');
-INSERT INTO `test_err` VALUES ('717918', '68', '2021-11-03 17:07:22', '', '');
-INSERT INTO `test_err` VALUES ('717919', '{\"workarticle\":{\"ctime\":\"2021-11-03 17:13:53\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 17:13:57', '', '');
-INSERT INTO `test_err` VALUES ('717920', '{\"workarticle\":{\"ctime\":\"2021-11-03 17:16:13\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 17:16:15', '', '');
-INSERT INTO `test_err` VALUES ('717921', '{\"workarticle\":{\"ctime\":\"2021-11-03 17:16:13\",\"cstatus\":\"1\",\"copinion\":\"1\"},\"submitType\":\"baocun\"}', '2021-11-03 17:20:42', '', '');
+INSERT INTO `test_err` VALUES ('717936', '20', '2021-11-04 09:25:55', '', '');
+INSERT INTO `test_err` VALUES ('717937', '1=1', '2021-11-04 09:25:55', '', '');
+INSERT INTO `test_err` VALUES ('717938', '20', '2021-11-04 09:25:59', '', '');
+INSERT INTO `test_err` VALUES ('717939', '1=1', '2021-11-04 09:25:59', '', '');
+INSERT INTO `test_err` VALUES ('717940', '21', '2021-11-04 09:26:46', '', '');
+INSERT INTO `test_err` VALUES ('717941', '1=1', '2021-11-04 09:26:46', '', '');
+INSERT INTO `test_err` VALUES ('717942', '21', '2021-11-04 09:26:57', '', '');
+INSERT INTO `test_err` VALUES ('717943', '1=1', '2021-11-04 09:26:57', '', '');
+INSERT INTO `test_err` VALUES ('717944', '21', '2021-11-04 09:28:53', '', '');
+INSERT INTO `test_err` VALUES ('717945', '1=1', '2021-11-04 09:28:53', '', '');
+INSERT INTO `test_err` VALUES ('717946', '21', '2021-11-04 09:28:56', '', '');
+INSERT INTO `test_err` VALUES ('717947', '1=1 and stugrade=\"2020\" and stumajor=\"计算机科学与技术\"', '2021-11-04 09:28:56', '', '');
+INSERT INTO `test_err` VALUES ('717948', '21', '2021-11-04 09:29:03', '', '');
+INSERT INTO `test_err` VALUES ('717949', '1=1 and stugrade=\"2021\" and stumajor=\"计算机科学与技术\"', '2021-11-04 09:29:03', '', '');
+INSERT INTO `test_err` VALUES ('717950', '21', '2021-11-04 09:29:05', '', '');
+INSERT INTO `test_err` VALUES ('717951', '1=1', '2021-11-04 09:29:05', '', '');
+INSERT INTO `test_err` VALUES ('717952', '21', '2021-11-04 09:31:04', '', '');
+INSERT INTO `test_err` VALUES ('717953', '1=1', '2021-11-04 09:31:04', '', '');
+INSERT INTO `test_err` VALUES ('717954', '20', '2021-11-04 09:31:23', '', '');
+INSERT INTO `test_err` VALUES ('717955', '1=1', '2021-11-04 09:31:23', '', '');
+INSERT INTO `test_err` VALUES ('717956', '20', '2021-11-04 09:31:24', '', '');
+INSERT INTO `test_err` VALUES ('717957', '1=1', '2021-11-04 09:31:24', '', '');
+INSERT INTO `test_err` VALUES ('717958', '20', '2021-11-04 09:32:01', '', '');
+INSERT INTO `test_err` VALUES ('717959', '1=1', '2021-11-04 09:32:02', '', '');
+INSERT INTO `test_err` VALUES ('717960', '20', '2021-11-04 09:33:13', '', '');
+INSERT INTO `test_err` VALUES ('717961', '1=1', '2021-11-04 09:33:14', '', '');
+INSERT INTO `test_err` VALUES ('717962', '20', '2021-11-04 09:33:21', '', '');
+INSERT INTO `test_err` VALUES ('717963', '1=1', '2021-11-04 09:33:21', '', '');
+INSERT INTO `test_err` VALUES ('717964', '20', '2021-11-04 09:34:07', '', '');
+INSERT INTO `test_err` VALUES ('717965', '1=1', '2021-11-04 09:34:08', '', '');
+INSERT INTO `test_err` VALUES ('717966', '20', '2021-11-04 09:34:21', '', '');
+INSERT INTO `test_err` VALUES ('717967', '1=1', '2021-11-04 09:34:21', '', '');
+INSERT INTO `test_err` VALUES ('717968', '20', '2021-11-04 09:34:53', '', '');
+INSERT INTO `test_err` VALUES ('717969', '1=1', '2021-11-04 09:34:53', '', '');
+INSERT INTO `test_err` VALUES ('717970', '20', '2021-11-04 09:35:25', '', '');
+INSERT INTO `test_err` VALUES ('717971', '1=1', '2021-11-04 09:35:25', '', '');
+INSERT INTO `test_err` VALUES ('717972', '20', '2021-11-04 09:37:25', '', '');
+INSERT INTO `test_err` VALUES ('717973', '1=1', '2021-11-04 09:37:25', '', '');
+INSERT INTO `test_err` VALUES ('717974', '20', '2021-11-04 09:40:21', '', '');
+INSERT INTO `test_err` VALUES ('717975', '1=1', '2021-11-04 09:40:21', '', '');
+INSERT INTO `test_err` VALUES ('717976', '20', '2021-11-04 09:41:27', '', '');
+INSERT INTO `test_err` VALUES ('717977', '1=1', '2021-11-04 09:41:27', '', '');
+INSERT INTO `test_err` VALUES ('717978', '20', '2021-11-04 09:48:18', '', '');
+INSERT INTO `test_err` VALUES ('717979', '1=1', '2021-11-04 09:48:18', '', '');
+INSERT INTO `test_err` VALUES ('717980', '20', '2021-11-04 09:48:18', '', '');
+INSERT INTO `test_err` VALUES ('717981', '1=1', '2021-11-04 09:48:18', '', '');
+INSERT INTO `test_err` VALUES ('717982', '21', '2021-11-04 09:51:50', '', '');
+INSERT INTO `test_err` VALUES ('717983', '1=1', '2021-11-04 09:51:50', '', '');
 
 -- ----------------------------
 -- Table structure for `user`
@@ -6211,7 +6247,7 @@ CREATE TABLE `workcommit` (
 -- ----------------------------
 -- Records of workcommit
 -- ----------------------------
-INSERT INTO `workcommit` VALUES ('1', '2020-2021', '上学期', '33333', '1', '1', '1', '', '10', '1', '1', '程序设计基础', '2021-11-03 17:16:13');
+INSERT INTO `workcommit` VALUES ('1', '2020-2021', '上学期', '00001', '1', '1', '1', '', '100', '1', '1', '程序设计基础', '2021-11-03 17:16:13');
 DROP TRIGGER IF EXISTS `insert_num`;
 DELIMITER ;;
 CREATE TRIGGER `insert_num` AFTER INSERT ON `article` FOR EACH ROW begin
