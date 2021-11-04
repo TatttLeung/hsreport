@@ -1,5 +1,7 @@
 <?php
  $stu=studentfile::model()->findALL();
+  $terms=base_term::model()->findALL();
+  $years=base_year::model()->findALL();
 ?>
 <div class="box">
      <div class="box-title c"><h1><i class="fa fa-table"></i>学生信息列表</h1></div><!--box-title end-->
@@ -15,23 +17,22 @@
 
       <label style="margin-right:20px;">
         <span>学年</span>
-        <select name="cyear"> <!-- 更改这里的选择项目，必须同时更改对应controller的actionindex -->
+        <select name="styear">
             <option value="">请选择</option>
-            <?php foreach($stu as $v){?>
-            <option value="<?php echo $v->cyear;?>"><?php echo $v->cyear;?></option>
+            <?php foreach($years as $v){?>
+            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_NAME;?></option>
             <?php }?>
         </select>
     </label>
-
     <label style="margin-right:20px;">
         <span>学期</span>
-        <select name="cterm"> <!-- 更改这里的选择项目，必须同时更改对应controller的actionindex -->
+        <select name="sterm">
             <option value="">请选择</option>
-            <?php foreach($stu as $v){?>
-            <option value="<?php echo $v->cterm;?>"><?php echo $v->cterm;?></option>
+            <?php foreach($terms as $v){?>
+            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_NAME;?></option>
             <?php }?>
         </select>
-    </label>
+      </label>
 
 
         <button class="btn btn-blue" type="submit">查询</button>

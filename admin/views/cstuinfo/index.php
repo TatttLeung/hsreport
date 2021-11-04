@@ -1,5 +1,8 @@
 <?php
  $stu=cstuinfo::model()->findALL();
+  $years=base_year::model()->findALL();
+ //$stu=teainfo::model()->findALL();
+ $terms=base_term::model()->findALL();
 ?>
 <div class="box">
      <div class="box-title c"><h1><i class="fa fa-table"></i>课程学生信息</h1></div><!--box-title end-->
@@ -16,17 +19,17 @@
         <span>学年</span>
         <select name="styear">
             <option value="">请选择</option>
-            <?php foreach($stu as $v){?>
-            <option value="<?php echo $v->cyear;?>"><?php echo $v->cyear;?></option>
+            <?php foreach($years as $v){?>
+            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_NAME;?></option>
             <?php }?>
         </select>
     </label>
     <label style="margin-right:20px;">
-        <span>学段</span>
+        <span>学期</span>
         <select name="sterm">
             <option value="">请选择</option>
-            <?php foreach($stu as $v){?>
-            <option value="<?php echo $v->cterm;?>"><?php echo $v->cterm;?></option>
+            <?php foreach($terms as $v){?>
+            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_NAME;?></option>
             <?php }?>
         </select>
       </label>
