@@ -10,6 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
+
 Date: 2021-11-04 13:10:44
 */
 
@@ -6180,6 +6181,7 @@ CREATE TABLE `test_err` (
   `f_username` char(20) DEFAULT '' COMMENT '测试员',
   `f_callname` varchar(200) DEFAULT '' COMMENT '调用函数名称',
   PRIMARY KEY (`f_id`)
+2
 ) ENGINE=InnoDB AUTO_INCREMENT=718208 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -6457,6 +6459,7 @@ INSERT INTO `test_err` VALUES ('718204', '21', '2021-11-04 13:09:37', '', '');
 INSERT INTO `test_err` VALUES ('718205', '1=1', '2021-11-04 13:09:37', '', '');
 INSERT INTO `test_err` VALUES ('718206', '21', '2021-11-04 13:09:40', '', '');
 INSERT INTO `test_err` VALUES ('718207', '1=1 and stugrade=\"2022\"', '2021-11-04 13:09:40', '', '');
+
 
 -- ----------------------------
 -- Table structure for `user`
