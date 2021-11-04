@@ -25,7 +25,7 @@
                          <tr>
                         <td ><?php echo $form->labelEx($model, 'workid'); ?></td>
                         <td >
-                            <?php echo $form->textField($model, 'workid', array('class' => 'input-text')); ?>
+                             <?php echo $form->dropDownList($model, 'workid', Chtml::listData(base_num::model()->findALL(),'number', 'number'), array('prompt'=>'请选择')); ?>
                             <?php echo $form->error($model, 'workid', $htmlOptions = array()); ?>
                         </td>
                     </tr>

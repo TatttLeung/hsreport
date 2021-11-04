@@ -54,21 +54,21 @@
                     <tr>
                         <td ><?php echo $form->labelEx($model, 'reportcnt'); ?></td>
                         <td >
-                            <?php echo $form->textField($model, 'reportcnt', array('class' => 'input-text')); ?>
+                            <?php echo $form->dropDownList($model, 'reportcnt', Chtml::listData(base_num::model()->findALL(),'number', 'number'), array('prompt'=>'请选择')); ?>
                             <?php echo $form->error($model, 'reportcnt', $htmlOptions = array()); ?>
                         </td>
                     </tr>
                     <tr>
                         <td ><?php echo $form->labelEx($model, 'homeworkcnt'); ?></td>
                         <td >
-                            <?php echo $form->textField($model, 'homeworkcnt', array('class' => 'input-text')); ?>
+                            <?php echo $form->dropDownList($model, 'homeworkcnt', Chtml::listData(base_num::model()->findALL(),'number', 'number'), array('prompt'=>'请选择')); ?>
                             <?php echo $form->error($model, 'homeworkcnt', $htmlOptions = array()); ?>
                         </td>
                     </tr>
                     <tr>
                         <td ><?php echo $form->labelEx($model, 'examcnt'); ?></td>
                         <td >
-                            <?php echo $form->textField($model, 'examcnt', array('class' => 'input-text')); ?>
+                            <?php echo $form->dropDownList($model, 'examcnt', Chtml::listData(base_num::model()->findALL(),'number', 'number'), array('prompt'=>'请选择')); ?>
                             <?php echo $form->error($model, 'examcnt', $htmlOptions = array()); ?>
                         </td>
                     </tr>
