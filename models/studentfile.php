@@ -63,4 +63,8 @@ class studentfile extends BaseModel {
         return true;
     }
 
+    public function picLabels() {
+        return 'cpath';//缩略图要加这一个函数
+    }
+
 }

@@ -48,10 +48,24 @@
                             <?php echo $form->error($model, 'cworkid', $htmlOptions = array()); ?>
                         </td>
                     </tr>
-                    <tr>
-                        <td ><?php echo $form->labelEx($model, 'cpath'); ?></td>
-                        <td >
-                            <?php echo $form->textField($model, 'cpath', array('class' => 'input-text')); ?>
+                     <tr>
+                         <td><?php echo $form->labelEx($model, 'cpath'); ?></td>
+                        <td>
+                            <?php echo $form->hiddenField($model, 'cpath', array('class' => 'input-text fl')); ?>
+                            <!-- 改缩略图这里要改 -->
+                            <!-- face_game_bigpic -->
+                            <?php /*$basepath=BasePath::model()->getPath();*/
+                            $picprefix='';
+                            //$model->news_pic='t1234.jpg';
+                            //if($basepath){ $picprefix=$basepath; }?>
+                         <div class="upload_img fl" id="upload_pic_studentfile_cpath"> 
+                          <?php if(!empty($model->cpath)) {?>
+                             <a href="<?php echo $model->cpath;?>" target="_blank">
+                             <img src="<?php echo $model->cpath;?>" width="100">
+                             </a>
+                             <?php }?>
+                             </div>
+                            <script>we.uploadpic('<?php echo get_class($model);?>_cpath','<?php echo $picprefix;?>','','','',0);</script>
                             <?php echo $form->error($model, 'cpath', $htmlOptions = array()); ?>
                         </td>
                     </tr>
