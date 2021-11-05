@@ -59,7 +59,7 @@ foreach($arclist as $v){
                         <td style='text-align: center;'><?php echo $v->cworkid; ?></td>
                         <td style='text-align: center;'><?php echo $v->cstuname; ?></td>
                         <td style='text-align: center;'><?php echo $v->cstuid; ?></td>
-                        <td style='text-align: center;'><?php echo $v->cpath; ?></td>
+                        <td style='text-align: center;'><?php echo BaseLib::model()->show_pic($v->cpath);?></td>
                         <td style='text-align: center;'><?php echo $v->cscore; ?></td>
                         <td style='text-align: center;'>
      

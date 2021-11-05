@@ -96,12 +96,20 @@ sexid
 ##### 	stuscore
 
 #### 课程作业（coursework）
-##### 	workyear
-##### 	workterm 
-##### 	workid
-##### 	workname
-#####  workstart
-#####  workend
+##### 	workyear 学年
+##### 	workterm 学期
+##### 	workid 作业序号
+##### 	workname 作业名字
+#####  workstart 开始时间
+#####  workend 结束时间
+
+**workcourse 课程名字**
+
+**workcourseid 课程编码**
+
+**workteacher 任课老师**
+
+**worktype 作业类型**
 
 #### 作业提交（workcommit）
 ##### 	cyear  学年

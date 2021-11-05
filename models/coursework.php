@@ -18,8 +18,10 @@ class coursework extends BaseModel {
           array('workname', 'required', 'message' => '{attribute} 不能為空'),
           array('workstart', 'required', 'message' => '{attribute} 不能為空'),
           array('workend', 'required', 'message' => '{attribute} 不能為空'),
-      
-          array('workyear,workterm,workid,workname,workstart,workend,workcourse','safe'),
+          array('workcourseid', 'required', 'message' => '{attribute} 不能為空'),
+          array('workteacher', 'required', 'message' => '{attribute} 不能為空'),
+          array('worktype', 'required', 'message' => '{attribute} 不能為空'),
+          array('workyear,workterm,workid,workname,workstart,workend,workcourse,workcourseid,workteacher,worktype','safe'),
 
            // array('f_year,f_term,news_title,news_content_temp','safe'),
         );
@@ -49,6 +51,9 @@ class coursework extends BaseModel {
         'workstart'=>'开始提交时间',
         'workend'=>'提交结束时间',
         'workcourse'=>'绑定课程',
+        'workcourseid'=>'课程编码',
+        'workteacher'=>'课程老师',
+        'worktype'=>'作业类型',
         );
     }
 

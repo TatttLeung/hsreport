@@ -77,8 +77,8 @@ foreach($arclist as $v){
     <td style='text-align: center;'><?php echo $v->courseteacher; ?></td>
     <td style='text-align: center;'>
      
-        <a class="btn" href="<?php echo $this->createUrl('update', array('id'=>$v->id,'news_type'=>Yii::app()->request->getParam('news_type')));?>" title="编辑"><i class="fa fa-edit"></i></a>
-        <a class="btn" href="<?php echo $this->createUrl('coursework/update', array('id'=>$v->id,'news_type'=>Yii::app()->request->getParam('news_type')));?>" title="编辑"><i class="fa fa-edit"></i></a>
+        <a class="btn" href="<?php echo $this->createUrl('update', array('id'=>$v->id,'news_type'=>Yii::app()->request->getParam('news_type')));?>" title="编辑"><i class="fa fa-edit">课程编辑</i></a>
+        <a class="btn btn-blue" href="<?php echo $this->createUrl('coursework/create', array('id'=>$v->id,));?>" title="作业添加"><i class="fa fa-plus">作业添加</i></a>
         <a class="btn" href="javascript:;" onclick="we.dele('<?php echo $v->id;?>', deleteUrl);" title="删除"><i class="fa fa-trash-o"></i></a>
     </td>
 </tr>

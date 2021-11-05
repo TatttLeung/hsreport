@@ -329,7 +329,7 @@ we.uploadpic = function(op,file_prefix,file_savepath,file_sitepath,fnback,limit)
 			if (data.status==1) {
 				if(fnback==undefined || fnback==''){
 					$('#'+op).val(data.savename).trigger('blur');
-					$('#upload_pic_'+op).html('<a href="'+data.allpath+'" target="_blank"><img src="'+data.allpath+'" width="100">'+delete_btn+'</a>');
+					$('#upload_pic_'+op).html('<a href="'+data.allpath+'" target="_blank">上传完成'+delete_btn+'</a>');
 				}else{
 					fnback.call(this,data);
 					$('#'+op).trigger('blur');

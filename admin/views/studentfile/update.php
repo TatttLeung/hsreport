@@ -44,7 +44,12 @@
                     <tr>
                         <td ><?php echo $form->labelEx($model, 'cworkid'); ?></td>
                         <td >
-                            <?php echo $form->textField($model, 'cworkid', array('class' => 'input-text')); ?>
+                             <?php 
+/*
+                             $dn=5;
+                             if(!empty($model->cworkid)) $dn=$model->cworkid;*/
+                             $t = base_num::model()->findALL("number<=5");
+                             echo $form->dropDownList($model, 'cworkid', Chtml::listData($t,'number', 'number'), array('prompt'=>'请选择')); ?>
                             <?php echo $form->error($model, 'cworkid', $htmlOptions = array()); ?>
                         </td>
                     </tr>
@@ -60,8 +65,11 @@
                             //if($basepath){ $picprefix=$basepath; }?>
                          <div class="upload_img fl" id="upload_pic_studentfile_cpath"> 
                           <?php if(!empty($model->cpath)) {?>
-                             <a href="<?php echo $model->cpath;?>" target="_blank">
-                             <img src="<?php echo $model->cpath;?>" width="100">
+                             <a href="<?php echo $model->cpath?>" target="_blank">
+                             <img src="<?php if (substr($model->cpath,-3,3)=='pdf') 
+                             echo '/hsreport/uploads/image/pdf.png';
+                                else if(substr($model->cpath,-4,4)=='docx')
+                                echo '/hsreport/uploads/image/WORD.png';?>", width="50">
                              </a>
                              <?php }?>
                              </div>

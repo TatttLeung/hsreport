@@ -11,22 +11,50 @@
                     <tr>
                         <td ><?php echo $form->labelEx($model, 'workyear'); ?></td>
                         <td >
-                            <?php echo $form->dropDownList($model, 'workyear', Chtml::listData(base_year::model()->findALL(),'F_NAME', 'F_NAME'), array('prompt'=>'请选择')); ?>
+                            <?php echo $model->workyear; ?>
                             <?php echo $form->error($model, 'workyear', $htmlOptions = array()); ?>
                         </td>
                     </tr>
                     <tr>
                         <td ><?php echo $form->labelEx($model, 'workterm'); ?></td>
                         <td >
-                            <?php echo $form->dropDownList($model, 'workterm', Chtml::listData(base_term::model()->findALL(),'F_NAME', 'F_NAME'), array('prompt'=>'请选择')); ?>
+                            <?php echo $model->workterm; ?>
                             <?php echo $form->error($model, 'workterm', $htmlOptions = array()); ?>
                         </td>
+                    <tr>
+                        <td ><?php echo $form->labelEx($model, 'workcourseid'); ?></td>
+                        <td >
+                            <?php echo $model->workcourseid; ?>
+                            <?php echo $form->error($model, 'workcourseid', $htmlOptions = array()); ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td ><?php echo $form->labelEx($model, 'workcourse'); ?></td>
+                        <td >
+                            <?php echo $model->workcourse; ?>
+                            <?php echo $form->error($model, 'workcourse', $htmlOptions = array()); ?>
+                        </td>
+                    </tr>
                       </tr>
                          <tr>
+                        <td ><?php echo $form->labelEx($model, 'workteacher'); ?></td>
+                        <td >
+                             <?php echo $model->workteacher; ?>
+                            <?php echo $form->error($model, 'workteacher', $htmlOptions = array()); ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td ><?php echo $form->labelEx($model, 'worktype'); ?></td>
+                        <td >
+                             <?php echo $form->dropDownList($model, 'worktype', ['实验报告' => '实验报告', '平时作业' => '平时作业', '考试' => '考试'], array('prompt'=>'请选择')); ?>
+                            <?php echo $form->error($model, 'worktype', $htmlOptions = array()); ?>
+                        </td>
+                    </tr>
+                     <tr>
                         <td ><?php echo $form->labelEx($model, 'workid'); ?></td>
                         <td >
                              <?php 
-                             $t = base_num::model()->findALL("number<5");
+                             $t = base_num::model()->findALL("number<=20");
                              echo $form->dropDownList($model, 'workid', Chtml::listData($t,'number', 'number'), array('prompt'=>'请选择')); ?>
                             <?php echo $form->error($model, 'workid', $htmlOptions = array()); ?>
                         </td>
@@ -38,13 +66,7 @@
                             <?php echo $form->error($model, 'workname', $htmlOptions = array()); ?>
                         </td>
                     </tr>
-                    <tr>
-                        <td ><?php echo $form->labelEx($model, 'workcourse'); ?></td>
-                        <td >
-                            <?php echo $form->dropDownList($model, 'workcourse', Chtml::listData(courseinfo::model()->findALL(),'coursename', 'coursename'), array('prompt'=>'请选择')); ?>
-                            <?php echo $form->error($model, 'workcourse', $htmlOptions = array()); ?>
-                        </td>
-                    </tr>
+                    
                     <tr>
                         <td><?php echo $form->labelEx($model, 'workstart'); ?></td>
                         <td>

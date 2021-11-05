@@ -77,4 +77,7 @@ class teaconfirm extends BaseModel {
     public function getCode() {
         return $this->findAll('1=1');
     }
+    public function picLabels() {
+        return 'cpath';//缩略图要加这一个函数
+    }
 }
