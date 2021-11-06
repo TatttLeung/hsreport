@@ -167,7 +167,7 @@ public function title($vt,$vt1='') {
 function show_pic($flie='',$id=''){
     $html='';
     if($flie){
-        $html=empty($id)?'<div style="max-width:80px; max-height:70px;overflow:hidden;">':
+        $html=empty($id)?'<div style="text-align:center">':
             '<div style="float: left; margin-right:10px" id="upload_pic_'.$id.'">';
         $html.= '<a href="'.$flie.'" target="_blank" title="点击查看">';
         $html.= substr($flie,-3,3)=='pdf'?
@@ -177,7 +177,7 @@ function show_pic($flie='',$id=''){
         $html.= substr($flie,-3,3)=='doc'?
             '<img src="'.'/hsreport/uploads/image/WORD.png'.'" style="max-height:30px; max-width:20px;">':'';
          $html.= substr($flie,-4,4)!='docx' && substr($flie,-3,3)!='pdf' && substr($flie,-3,3)!='doc'?
-            '<img src="'.'/hsreport/uploads/image/fail.png'.'" style="max-height:30px; max-width:20px;">':'';
+            '<img src="'.'/hsreport/uploads/image/fail.png'.'" style="max-height:30px; max-width:20px;text-align:center;">'.'文件格式错误':'';
         $html.='</a></div>';
     }
     return $html;
