@@ -65,7 +65,10 @@
                             //if($basepath){ $picprefix=$basepath; }?>
                          <div class="upload_img fl" id="upload_pic_studentfile_cpath"> 
                           <?php if(!empty($model->cpath)) {?>
-                             <a href="<?php echo $model->cpath?>" target="_blank">
+                             <a href="<?php  if(substr($model->cpath,-3,3)=='pdf' || substr($model->cpath,-4,4)=='docx' || substr($model->cpath,-3,3)=='doc')
+                                     echo $model->cpath;
+                              else
+                                     echo   'https://z3.ax1x.com/2021/11/06/IMh0XT.png'; ?>" target="_blank">
                              <img src="<?php if (substr($model->cpath,-3,3)=='pdf') 
                              echo '/hsreport/uploads/image/pdf.png';
                                 else if(substr($model->cpath,-4,4)=='docx')
