@@ -69,7 +69,12 @@
                              <img src="<?php if (substr($model->cpath,-3,3)=='pdf') 
                              echo '/hsreport/uploads/image/pdf.png';
                                 else if(substr($model->cpath,-4,4)=='docx')
-                                echo '/hsreport/uploads/image/WORD.png';?>", width="50">
+                                echo '/hsreport/uploads/image/WORD.png';
+                                else if(substr($model->cpath,-3,3)=='doc')
+                                echo '/hsreport/uploads/image/WORD.png';
+                                else 
+                                echo '/hsreport/uploads/image/fail.png';
+                                ?>", width="50">
                              </a>
                              <?php }?>
                              </div>

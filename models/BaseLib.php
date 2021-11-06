@@ -174,6 +174,10 @@ function show_pic($flie='',$id=''){
             '<img src="'.'/hsreport/uploads/image/pdf.png'.'" style="max-height:30px; max-width:20px;">':'';
          $html.= substr($flie,-4,4)=='docx'?
             '<img src="'.'/hsreport/uploads/image/WORD.png'.'" style="max-height:30px; max-width:20px;">':'';
+        $html.= substr($flie,-3,3)=='doc'?
+            '<img src="'.'/hsreport/uploads/image/WORD.png'.'" style="max-height:30px; max-width:20px;">':'';
+         $html.= substr($flie,-4,4)!='docx' && substr($flie,-3,3)!='pdf' && substr($flie,-3,3)!='doc'?
+            '<img src="'.'/hsreport/uploads/image/fail.png'.'" style="max-height:30px; max-width:20px;">':'';
         $html.='</a></div>';
     }
     return $html;
