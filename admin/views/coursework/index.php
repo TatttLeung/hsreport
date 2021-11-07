@@ -1,12 +1,15 @@
 <?php
- $cw=coursework::model()->findALL();
+ //$cw=coursework::model()->findALL();
  $terms=base_term::model()->findALL();
-  $years=base_year::model()->findALL();
+ $years=base_year::model()->findALL();
+ $teachers=teainfo::model()->findALL();
+ $courses=courseinfo::model()->findALL();
 ?>
 <div class="box">
      <div class="box-title c"><h1><i class="fa fa-table"></i>课程作业信息列表</h1></div><!--box-title end-->
     <div class="box-content">
         <div class="box-header">
+            <a class="btn" href="<?php echo $this->createUrl('create');?>"><i class="fa fa-plus"></i>添加</a>
             <a class="btn" href="javascript:;" onclick="we.reload();"><i class="fa fa-refresh"></i>刷新</a>
             <a style="display:none;" id="j-delete" class="btn" href="javascript:;" onclick="we.dele(we.checkval('.check-item input:checked'), deleteUrl);"><i class="fa fa-trash-o"></i>刪除</a>
         </div><!--box-header end-->
@@ -14,26 +17,51 @@
      <form action="<?php echo Yii::app()->request->url;?>" method="get">
     <input type="hidden" name="r" value="<?php echo Yii::app()->request->getParam('r');?>">
 
-      <label style="margin-right:20px;">
+    <label style="margin-right:20px;">
         <span>学年</span>
         <select name="styear">
-            <option value="">请选择</option>
+            <option value="<?php echo $model->workyear;?>"><?php echo $model->workyear;?></option>
             <?php foreach($years as $v){?>
             <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_NAME;?></option>
             <?php }?>
         </select>
     </label>
+
     <label style="margin-right:20px;">
         <span>学期</span>
         <select name="sterm">
-            <option value="">请选择</option>
+            <option value="<?php echo $model->workterm;?>"><?php echo $model->workterm;?></option>
             <?php foreach($terms as $v){?>
             <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_NAME;?></option>
             <?php }?>
         </select>
       </label>
-  
 
+      <label style="margin-right:20px;">
+        <span>课程</span>
+        <select name="scourse">
+            <option value="<?php echo $model->workcourse;?>"><?php echo $model->workcourse;?></option>
+            <?php foreach($courses as $v){?>
+            <option value="<?php echo $v->coursename;?>"><?php echo $v->coursename;?></option>
+            <?php }?>
+        </select>
+      </label>
+
+      <label style="margin-right:20px;">
+        <span>执教老师</span>
+        <select name="steacher">
+            <option value="<?php echo $model->workteacher;?>"><?php echo $model->workteacher;?></option>
+            <?php foreach($teachers as $v){?>
+            <option value="<?php echo $v->teaname;?>"><?php echo $v->teaname;?></option>
+            <?php }?>
+        </select>
+      </label>
+  
+     <?php $_SESSION["workyear"]=$model->workyear;
+     $_SESSION["workterm"]=$model->workterm;
+     $_SESSION["workcourse"]=$model->workcourse;
+     $_SESSION["workteacher"]=$model->workteacher;
+     $_SESSION["workcourseid"]=$model->workcourseid;?>
      
         <button class="btn btn-blue" type="submit">查询</button>
     </form>
@@ -78,7 +106,7 @@ foreach($arclist as $v){
     <td style='text-align: center;'><?php echo $v->workend; ?></td>
     <td style='text-align: center;'>
      
-        <a class="btn" href="<?php echo $this->createUrl('update', array('id'=>$v->id,'news_type'=>Yii::app()->request->getParam('news_type')));?>" title="编辑"><i class="fa fa-edit"></i></a>
+        <a class="btn" href="<?php echo $this->createUrl('update', array('id'=>$v->id,));?>" title="编辑"><i class="fa fa-edit"></i></a>
         <a class="btn" href="javascript:;" onclick="we.dele('<?php echo $v->id;?>', deleteUrl);" title="删除"><i class="fa fa-trash-o"></i></a>
     </td>
 </tr>

@@ -11,27 +11,27 @@
                     <tr>
                         <td ><?php echo $form->labelEx($model, 'workyear'); ?></td>
                         <td >
-                            <?php echo $model->workyear; ?>
+                            <?php echo $form->textField($model, 'workyear', array('class'=>'input-text','value'=>$_SESSION["workyear"])); ?>              
                             <?php echo $form->error($model, 'workyear', $htmlOptions = array()); ?>
                         </td>
                     </tr>
                     <tr>
                         <td ><?php echo $form->labelEx($model, 'workterm'); ?></td>
                         <td >
-                            <?php echo $model->workterm; ?>
+                            <?php echo $form->textField($model, 'workterm', array('class'=>'input-text','value'=>$_SESSION["workterm"])); ?>      
                             <?php echo $form->error($model, 'workterm', $htmlOptions = array()); ?>
                         </td>
                     <tr>
                         <td ><?php echo $form->labelEx($model, 'workcourseid'); ?></td>
                         <td >
-                            <?php echo $model->workcourseid; ?>
+                            <?php echo $form->textField($model, 'workcourseid', array('class'=>'input-text','value'=>$_SESSION["workcourseid"])); ?>      
                             <?php echo $form->error($model, 'workcourseid', $htmlOptions = array()); ?>
                         </td>
                     </tr>
                     <tr>
                         <td ><?php echo $form->labelEx($model, 'workcourse'); ?></td>
                         <td >
-                            <?php echo $model->workcourse; ?>
+                            <?php echo $form->textField($model, 'workcourse', array('class'=>'input-text','value'=>$_SESSION["workcourse"])); ?>      
                             <?php echo $form->error($model, 'workcourse', $htmlOptions = array()); ?>
                         </td>
                     </tr>
@@ -39,7 +39,7 @@
                          <tr>
                         <td ><?php echo $form->labelEx($model, 'workteacher'); ?></td>
                         <td >
-                             <?php echo $model->workteacher; ?>
+                             <?php echo $form->textField($model, 'workteacher', array('class'=>'input-text','value'=>$_SESSION["workteacher"])); ?>      
                             <?php echo $form->error($model, 'workteacher', $htmlOptions = array()); ?>
                         </td>
                     </tr>
