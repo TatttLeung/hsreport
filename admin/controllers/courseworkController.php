@@ -24,7 +24,7 @@ class courseworkController extends BaseController {
         parent::_list($model, $criteria, 'index', array()); //调用S
     }
 
-   public function actionCreate($id=0) {
+   public function actionCreate($id=0) {    //跨页面传id，从courseinfo->coursework
         $a = courseinfo::model()->find('id='.$id);
         $modelName = $this->model;
         $model = new $modelName('create');

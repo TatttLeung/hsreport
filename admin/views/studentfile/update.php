@@ -37,7 +37,7 @@
                     <tr>
                         <td ><?php echo $form->labelEx($model, 'ccoursename'); ?></td>
                         <td >
-                            <?php echo $form->dropDownList($model, 'ccoursename', Chtml::listData(courseinfo::model()->findALL(), 'coursename', 'coursename'), array('prompt'=>'请选择')); ?>
+                            <?php echo $form->dropDownList($model, 'ccoursename', Chtml::listData(courseinfo::model()->findALL(), 'chose_name', 'chose_name'), array('prompt'=>'请选择')); ?>
                             <?php echo $form->error($model, 'ccoursename', $htmlOptions = array()); ?>
                         </td>
                     </tr>

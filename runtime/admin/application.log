@@ -1,0 +1,78 @@
+2021/11/07 14:27:59 [error] [php] Missing argument 1 for BasePath::getPath(), called in F:\wamp64\www\hsreport\admin\views\newsColumn\update.php on line 50 and defined (F:\wamp64\www\hsreport\models\BasePath.php:45)
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CBaseController.php(95): NewsColumnController->renderInternal()
+#1 F:\wamp64\www\hsreport\framework\web\CController.php(872): NewsColumnController->renderFile()
+#2 F:\wamp64\www\hsreport\framework\web\CController.php(785): NewsColumnController->renderPartial()
+#3 F:\wamp64\www\hsreport\admin\controllers\NewsColumnController.php(66): NewsColumnController->render()
+#4 unknown(0): NewsColumnController->actionUpdate()
+#5 F:\wamp64\www\hsreport\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#6 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 F:\wamp64\www\hsreport\framework\web\CController.php(286): NewsColumnController->runAction()
+#9 F:\wamp64\www\hsreport\framework\web\CController.php(265): NewsColumnController->runActionWithFilters()
+#10 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): NewsColumnController->run()
+#11 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 F:\wamp64\www\hsreport\index.php(33): CWebApplication->run()
+REQUEST_URI=/hsreport/index.php?r=newsColumn/update&id=20
+2021/11/07 14:28:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "update" 动作.' in F:\wamp64\www\hsreport\framework\web\CController.php:486
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CController.php(270): CController->missingAction('update')
+#1 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): CController->run('update')
+#2 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController('schoolList/upda...')
+#3 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 F:\wamp64\www\hsreport\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/hsreport/index.php?r=schoolList/update&id=1
+HTTP_REFERER=http://127.0.0.1/hsreport/index.php?r=schoolList/index
+---
+2021/11/07 14:28:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "update" 动作.' in F:\wamp64\www\hsreport\framework\web\CController.php:486
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CController.php(270): CController->missingAction('update')
+#1 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): CController->run('update')
+#2 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController('scoredetail/upd...')
+#3 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 F:\wamp64\www\hsreport\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/hsreport/index.php?r=scoredetail/update&id=2
+HTTP_REFERER=http://127.0.0.1/hsreport/index.php?r=scoredetail/index
+---
+2021/11/07 14:28:32 [error] [php] Missing argument 1 for BasePath::getPath(), called in F:\wamp64\www\hsreport\admin\views\newsColumn\update.php on line 50 and defined (F:\wamp64\www\hsreport\models\BasePath.php:45)
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CBaseController.php(95): NewsColumnController->renderInternal()
+#1 F:\wamp64\www\hsreport\framework\web\CController.php(872): NewsColumnController->renderFile()
+#2 F:\wamp64\www\hsreport\framework\web\CController.php(785): NewsColumnController->renderPartial()
+#3 F:\wamp64\www\hsreport\admin\controllers\NewsColumnController.php(66): NewsColumnController->render()
+#4 unknown(0): NewsColumnController->actionUpdate()
+#5 F:\wamp64\www\hsreport\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#6 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 F:\wamp64\www\hsreport\framework\web\CController.php(286): NewsColumnController->runAction()
+#9 F:\wamp64\www\hsreport\framework\web\CController.php(265): NewsColumnController->runActionWithFilters()
+#10 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): NewsColumnController->run()
+#11 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 F:\wamp64\www\hsreport\index.php(33): CWebApplication->run()
+REQUEST_URI=/hsreport/index.php?r=newsColumn/update&id=20
+2021/11/07 14:28:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "getLocation" 动作.' in F:\wamp64\www\hsreport\framework\web\CController.php:486
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CController.php(270): CController->missingAction('getLocation')
+#1 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): CController->run('getLocation')
+#2 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController('select/getLocat...')
+#3 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 F:\wamp64\www\hsreport\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/hsreport/index.php?r=select/getLocation&code=120000
+HTTP_REFERER=http://127.0.0.1/hsreport/index.php?r=schoolList/create
+---
+2021/11/07 14:28:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "getLocation" 动作.' in F:\wamp64\www\hsreport\framework\web\CController.php:486
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CController.php(270): CController->missingAction('getLocation')
+#1 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): CController->run('getLocation')
+#2 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController('select/getLocat...')
+#3 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 F:\wamp64\www\hsreport\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/hsreport/index.php?r=select/getLocation&code=230000
+HTTP_REFERER=http://127.0.0.1/hsreport/index.php?r=schoolList/create
+---

@@ -2,6 +2,7 @@
 
 class courseinfo extends BaseModel {
     public $news_content_temp = '';
+        public $chose_name = '';
     public function tableName() {
         return '{{courseinfo}}';
     }
@@ -62,6 +63,7 @@ class courseinfo extends BaseModel {
 
     protected function afterFind() {
         parent::afterFind();
+        $this->chose_name=$this->courseteacher.'-'.$this->coursename;
         return true;
     } 
 
