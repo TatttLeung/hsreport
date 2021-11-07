@@ -169,7 +169,8 @@ function show_pic($flie='',$id=''){
     if($flie){
         $html=empty($id)?'<div style="text-align:center">':
             '<div style="float: left; margin-right:10px" id="upload_pic_'.$id.'">';
-        if(substr($flie,-3,3)=='pdf' || substr($flie,-4,4)=='docx' || substr($flie,-3,3)=='doc' )
+        if(substr($flie,-3,3)=='pdf' || substr($flie,-4,4)=='docx' || substr($flie,-3,3)=='doc' 
+           || substr($flie,-3,3)=='zip' || substr($flie,-3,3)=='rar')
         $html.= '<a href="'.$flie.'" target="_blank" title="点击查看">';
         else
            $html.= '<a href="https://z3.ax1x.com/2021/11/06/IMh0XT.png" target="_blank" title="格式错误">';
@@ -182,7 +183,11 @@ function show_pic($flie='',$id=''){
             '<img src="'.'/hsreport/uploads/image/WORD.png'.'" style="max-height:30px; max-width:20px;">':'';
         $html.= substr($flie,-3,3)=='doc'?
             '<img src="'.'/hsreport/uploads/image/WORD.png'.'" style="max-height:30px; max-width:20px;">':'';
-         $html.= substr($flie,-4,4)!='docx' && substr($flie,-3,3)!='pdf' && substr($flie,-3,3)!='doc'?
+         $html.= substr($flie,-3,3)=='zip'?
+            '<img src="'.'/hsreport/uploads/image/zip.png'.'" style="max-height:30px; max-width:20px;">':'';
+         $html.= substr($flie,-3,3)=='rar'?
+            '<img src="'.'/hsreport/uploads/image/rar.png'.'" style="max-height:30px; max-width:20px;">':'';
+         $html.= substr($flie,-4,4)!='docx' && substr($flie,-3,3)!='pdf' && substr($flie,-3,3)!='doc' && substr($flie,-3,3)!='zip' && substr($flie,-3,3)!='rar' ?
             '<img src="'.'/hsreport/uploads/image/fail.png'.'" style="max-height:30px; max-width:20px;text-align:center;">'.'文件格式错误':'';
         $html.='</a></div>';
     }

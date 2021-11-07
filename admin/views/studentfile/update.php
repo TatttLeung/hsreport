@@ -54,9 +54,11 @@
                         </td>
                     </tr>
                      <tr>
+
                          <td><?php echo $form->labelEx($model, 'cpath'); ?></td>
                         <td>
                             <?php echo $form->hiddenField($model, 'cpath', array('class' => 'input-text fl')); ?>
+                            <div>只能上传 doc docx pdf zip rar 格式文件</div>
                             <!-- 改缩略图这里要改 -->
                             <!-- face_game_bigpic -->
                             <?php /*$basepath=BasePath::model()->getPath();*/
@@ -65,16 +67,20 @@
                             //if($basepath){ $picprefix=$basepath; }?>
                          <div class="upload_img fl" id="upload_pic_studentfile_cpath"> 
                           <?php if(!empty($model->cpath)) {?>
-                             <a href="<?php  if(substr($model->cpath,-3,3)=='pdf' || substr($model->cpath,-4,4)=='docx' || substr($model->cpath,-3,3)=='doc')
+                             <a href="<?php  if(substr($model->cpath,-3,3)=='pdf' || substr($model->cpath,-4,4)=='docx' || substr($model->cpath,-3,3)=='doc' || substr($model->cpath,-3,3)=='zip' || substr($model->cpath,-3,3)=='rar')
                                      echo $model->cpath;
                               else
                                      echo   'https://z3.ax1x.com/2021/11/06/IMh0XT.png'; ?>" target="_blank">
                              <img src="<?php if (substr($model->cpath,-3,3)=='pdf') 
-                             echo '/hsreport/uploads/image/pdf.png';
+                                echo '/hsreport/uploads/image/pdf.png';
                                 else if(substr($model->cpath,-4,4)=='docx')
                                 echo '/hsreport/uploads/image/WORD.png';
                                 else if(substr($model->cpath,-3,3)=='doc')
                                 echo '/hsreport/uploads/image/WORD.png';
+                                else if(substr($model->cpath,-3,3)=='zip')
+                                echo '/hsreport/uploads/image/zip.png';
+                                else if(substr($model->cpath,-3,3)=='rar')
+                                echo '/hsreport/uploads/image/rar.png';
                                 else 
                                 echo '/hsreport/uploads/image/fail.png';
                                 ?>", width="50">
