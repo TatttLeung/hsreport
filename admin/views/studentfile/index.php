@@ -51,6 +51,7 @@
         <th style='text-align: center;'>学号</th>
         <th style='text-align: center;'>姓名</th>
         <th style='text-align: center;'>课程名称</th>
+        <th style='text-align: center;'>作业类型</th>
         <th style='text-align: center;'>作业序号</th>
         <th style='text-align: center;'>提交文件</th>
         <th style='text-align: center;'>分数</th>
@@ -73,6 +74,7 @@ foreach($arclist as $v){
     <td style='text-align: center;'><?php echo $v->cstuid; ?></td>
     <td style='text-align: center;'><?php echo $v->cstuname; ?></td>
     <td style='text-align: center;'><?php echo $v->ccoursename; ?></td>
+    <td style='text-align: center;'><?php echo $v->worktype; ?></td>
     <td style='text-align: center;'><?php echo $v->cworkid; ?></td>
     <td style='text-align: center;'><?php echo BaseLib::model()->show_pic($v->cpath);?></td>
     <td style='text-align: center;'><?php echo $v->cscore; ?></td>

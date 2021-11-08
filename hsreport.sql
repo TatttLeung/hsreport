@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : mydb
+Source Server         : mydp
 Source Server Version : 50714
 Source Host           : localhost:3306
 Source Database       : hsreport
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2021-11-06 00:29:46
+Date: 2021-11-08 12:12:38
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -1104,6 +1104,49 @@ INSERT INTO `article` VALUES ('145', '班干部竞选\r', null, '今天下午，
 INSERT INTO `article` VALUES ('146', '我心爱的“甜筒”', null, '我家养了一只人见人爱，花见花开的小仓鼠，它的名字叫“甜筒”。', '　　我家养了一只人见人爱，花见花开的小仓鼠，它的名字叫“甜筒”。\r\n　　甜筒小小的身体，穿着棕黄色的毛衣，只要摸上去就会让你爱不释手。它滚圆的身体，从远处看就像一个小绒球，可爱极了！\r\n　　别看甜筒小小的，可是它的食量可是真的可以雷倒每个人。甜筒不仅能吃，而且非常贪吃，绝对是仓鼠家族中名副其实的小吃货，\r\n不信我把甜筒一天的食谱亮出来，给大家看看：半碟花生碎、半块钙片、一勺松肉、三颗杏仁、两块小饼干、五块小鱼干……怎么样？\r\n说它是大胃王是不是一点都不夸张呀！\r\n　　甜筒很有个性，它最讨厌有人摸它乳红色的小爪子，只要你一摸，它就全身充满了杀气，用一双大眼睛怒视着你，好像在说：“别\r\n碰我，这粉嫩嫩的小爪子，可是我的宝贝，碰脏了，你赔得起呀？”\r\n　　甜筒非常怕黑，夜晚，你只要一关灯，它就一刻都不得安宁，又跳又蹦，甚至把笼子磕得“吱吱”响，直闹到你为它把灯打开，他\r\n才肯罢休。\r\n　　甜筒不仅长得可爱，趣事也很多，这不，最近学会爬笼子顶了，所以时不时就会炫技，瞧，又开始施展才艺了，看它抓着一根铁\r\n丝，使劲一窜，顺利爬上了笼顶，这时的甜筒，头抬得高高的，骄傲地看着四周，嘴里还发出了“吱吱呀呀”的叫声，好像在向全世界\r\n宣布：“看，我——甜筒，轻松征服了世界第一峰！”哈哈，也许是乐极生悲，前一秒还神气十足的甜筒，后一秒就从笼顶跌落下来，\r\n摔了个四脚朝天，幸亏下边是保暖的木屑堆。\r\n　　甜筒不仅是我的开心果还是我的玩伴，我会永远爱它。\r\r', '4db94fffd7b0393ad781ba259cb4df2.png', null, '繁露', '4', '2021-07-24 16:07:36', null, '07', '待收稿', '2021/07/24/1_60fbca47d09767.59329688.docx', null, null, '写物', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
 
 -- ----------------------------
+-- Table structure for `article_status`
+-- ----------------------------
+DROP TABLE IF EXISTS `article_status`;
+CREATE TABLE `article_status` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `status_name` varchar(12) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of article_status
+-- ----------------------------
+INSERT INTO `article_status` VALUES ('1', '未审核');
+INSERT INTO `article_status` VALUES ('2', '一审通过');
+INSERT INTO `article_status` VALUES ('3', '退稿重改');
+INSERT INTO `article_status` VALUES ('4', '收稿');
+INSERT INTO `article_status` VALUES ('5', '淘汰');
+INSERT INTO `article_status` VALUES ('6', '二审通过');
+INSERT INTO `article_status` VALUES ('7', '录用');
+INSERT INTO `article_status` VALUES ('8', '发表');
+
+-- ----------------------------
+-- Table structure for `article_type`
+-- ----------------------------
+DROP TABLE IF EXISTS `article_type`;
+CREATE TABLE `article_type` (
+  `id` int(11) NOT NULL,
+  `type` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of article_type
+-- ----------------------------
+INSERT INTO `article_type` VALUES ('1', '写人');
+INSERT INTO `article_type` VALUES ('2', '写事');
+INSERT INTO `article_type` VALUES ('3', '写景');
+INSERT INTO `article_type` VALUES ('4', '状物');
+INSERT INTO `article_type` VALUES ('5', '想象文');
+INSERT INTO `article_type` VALUES ('6', '应用文');
+INSERT INTO `article_type` VALUES ('7', '其他');
+
+-- ----------------------------
 -- Table structure for `articlenum_detail`
 -- ----------------------------
 DROP TABLE IF EXISTS `articlenum_detail`;
@@ -1210,49 +1253,6 @@ INSERT INTO `articlenum_detail` VALUES ('108', null, '1', '0', '0');
 INSERT INTO `articlenum_detail` VALUES ('109', null, '1', '0', '0');
 INSERT INTO `articlenum_detail` VALUES ('110', null, '1', '0', '0');
 INSERT INTO `articlenum_detail` VALUES ('111', null, '1', '0', '0');
-
--- ----------------------------
--- Table structure for `article_status`
--- ----------------------------
-DROP TABLE IF EXISTS `article_status`;
-CREATE TABLE `article_status` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `status_name` varchar(12) CHARACTER SET utf8 DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
-
--- ----------------------------
--- Records of article_status
--- ----------------------------
-INSERT INTO `article_status` VALUES ('1', '未审核');
-INSERT INTO `article_status` VALUES ('2', '一审通过');
-INSERT INTO `article_status` VALUES ('3', '退稿重改');
-INSERT INTO `article_status` VALUES ('4', '收稿');
-INSERT INTO `article_status` VALUES ('5', '淘汰');
-INSERT INTO `article_status` VALUES ('6', '二审通过');
-INSERT INTO `article_status` VALUES ('7', '录用');
-INSERT INTO `article_status` VALUES ('8', '发表');
-
--- ----------------------------
--- Table structure for `article_type`
--- ----------------------------
-DROP TABLE IF EXISTS `article_type`;
-CREATE TABLE `article_type` (
-  `id` int(11) NOT NULL,
-  `type` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- ----------------------------
--- Records of article_type
--- ----------------------------
-INSERT INTO `article_type` VALUES ('1', '写人');
-INSERT INTO `article_type` VALUES ('2', '写事');
-INSERT INTO `article_type` VALUES ('3', '写景');
-INSERT INTO `article_type` VALUES ('4', '状物');
-INSERT INTO `article_type` VALUES ('5', '想象文');
-INSERT INTO `article_type` VALUES ('6', '应用文');
-INSERT INTO `article_type` VALUES ('7', '其他');
 
 -- ----------------------------
 -- Table structure for `base_code`
@@ -1806,7 +1806,7 @@ CREATE TABLE `coursework` (
   `workteacher` varchar(20) DEFAULT '' COMMENT '教师姓名',
   `worktype` varchar(20) DEFAULT '' COMMENT '作业类型',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of coursework
@@ -1814,6 +1814,7 @@ CREATE TABLE `coursework` (
 INSERT INTO `coursework` VALUES ('3', '2020-2021', '下学期', '1', '1232123116', '2021-11-05 23:49:40', '2021-11-26 23:49:42', '离散数学', '00002', '陈寅', '');
 INSERT INTO `coursework` VALUES ('2', '2020-2021', '上学期', '3', '1232123', '2021-11-05 23:49:40', '2021-11-26 23:49:42', '程序设计基础', '00001', '曾锡山', '');
 INSERT INTO `coursework` VALUES ('4', '2020-2021', '上学期', '2', '第二次实验报告', '2021-11-05 23:49:40', '2021-11-26 23:49:42', '程序设计基础', '00001', '曾锡山', '实验报告');
+INSERT INTO `coursework` VALUES ('5', '2020-2021', '上学期', '15', '李达良', '2021-11-08 12:05:30', '2021-11-08 12:05:33', '程序设计基础', '000003', '陈寅', '实验报告');
 
 -- ----------------------------
 -- Table structure for `department`
@@ -6186,7 +6187,7 @@ CREATE TABLE `test_err` (
   `f_username` char(20) DEFAULT '' COMMENT '测试员',
   `f_callname` varchar(200) DEFAULT '' COMMENT '调用函数名称',
   PRIMARY KEY (`f_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=718734 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=718762 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of test_err
@@ -6261,6 +6262,34 @@ INSERT INTO `test_err` VALUES ('718730', '21', '2021-11-06 00:23:45', '', '');
 INSERT INTO `test_err` VALUES ('718731', '1=1', '2021-11-06 00:23:46', '', '');
 INSERT INTO `test_err` VALUES ('718732', '21', '2021-11-06 00:25:45', '', '');
 INSERT INTO `test_err` VALUES ('718733', '1=1', '2021-11-06 00:25:45', '', '');
+INSERT INTO `test_err` VALUES ('718734', '21', '2021-11-08 12:04:27', '', '');
+INSERT INTO `test_err` VALUES ('718735', '1=1', '2021-11-08 12:04:27', '', '');
+INSERT INTO `test_err` VALUES ('718736', '21', '2021-11-08 12:04:28', '', '');
+INSERT INTO `test_err` VALUES ('718737', '1=1', '2021-11-08 12:04:28', '', '');
+INSERT INTO `test_err` VALUES ('718738', '21', '2021-11-08 12:04:35', '', '');
+INSERT INTO `test_err` VALUES ('718739', '1=1', '2021-11-08 12:04:35', '', '');
+INSERT INTO `test_err` VALUES ('718740', '21', '2021-11-08 12:04:50', '', '');
+INSERT INTO `test_err` VALUES ('718741', '1=1', '2021-11-08 12:04:50', '', '');
+INSERT INTO `test_err` VALUES ('718742', '21', '2021-11-08 12:04:51', '', '');
+INSERT INTO `test_err` VALUES ('718743', '1=1', '2021-11-08 12:04:51', '', '');
+INSERT INTO `test_err` VALUES ('718744', '21', '2021-11-08 12:04:52', '', '');
+INSERT INTO `test_err` VALUES ('718745', '1=1', '2021-11-08 12:04:52', '', '');
+INSERT INTO `test_err` VALUES ('718746', '21', '2021-11-08 12:04:56', '', '');
+INSERT INTO `test_err` VALUES ('718747', '1=1', '2021-11-08 12:04:56', '', '');
+INSERT INTO `test_err` VALUES ('718748', '21', '2021-11-08 12:05:11', '', '');
+INSERT INTO `test_err` VALUES ('718749', '1=1', '2021-11-08 12:05:11', '', '');
+INSERT INTO `test_err` VALUES ('718750', '21', '2021-11-08 12:05:38', '', '');
+INSERT INTO `test_err` VALUES ('718751', '1=1', '2021-11-08 12:05:38', '', '');
+INSERT INTO `test_err` VALUES ('718752', '21', '2021-11-08 12:05:43', '', '');
+INSERT INTO `test_err` VALUES ('718753', '1=1', '2021-11-08 12:05:43', '', '');
+INSERT INTO `test_err` VALUES ('718754', '{\"studentfile\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0b\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u66fe\\u9521\\u5c71-\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cpath\":\"2021\\/11\\/08\\/1_6188a239a58b70.64008762.pdf\"},\"submitType\":\"baocun\"}', '2021-11-08 12:06:34', '', '');
+INSERT INTO `test_err` VALUES ('718755', '{\"studentfile\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0b\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u66fe\\u9521\\u5c71-\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cpath\":\"2021\\/11\\/08\\/1_6188a2601c61a2.91937091.docx\"},\"submitType\":\"baocun\"}', '2021-11-08 12:06:57', '', '');
+INSERT INTO `test_err` VALUES ('718756', '{\"studentfile\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0b\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u66fe\\u9521\\u5c71-\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cpath\":\"2021\\/11\\/08\\/1_6188a26e108578.92902243.xlsx\"},\"submitType\":\"baocun\"}', '2021-11-08 12:07:11', '', '');
+INSERT INTO `test_err` VALUES ('718757', '{\"studentfile\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0b\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u66fe\\u9521\\u5c71-\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"worktype\":\"\\u5e73\\u65f6\\u4f5c\\u4e1a\",\"cworkid\":\"1\",\"cpath\":\"http:\\/\\/127.0.0.1\\/hsreport\\/uploads\\/temp\\/2021\\/11\\/08\\/1_6188a26e108578.92902243.xlsx\"},\"submitType\":\"baocun\"}', '2021-11-08 12:10:54', '', '');
+INSERT INTO `test_err` VALUES ('718758', '21', '2021-11-08 12:11:04', '', '');
+INSERT INTO `test_err` VALUES ('718759', '1=1', '2021-11-08 12:11:04', '', '');
+INSERT INTO `test_err` VALUES ('718760', '21', '2021-11-08 12:11:06', '', '');
+INSERT INTO `test_err` VALUES ('718761', '1=1', '2021-11-08 12:11:06', '', '');
 
 -- ----------------------------
 -- Table structure for `user`
@@ -6342,13 +6371,16 @@ CREATE TABLE `workcommit` (
   `copinion` text COMMENT '审核意见',
   `ccoursename` varchar(20) DEFAULT '' COMMENT '课程名称',
   `ctime` datetime DEFAULT NULL COMMENT '审核时间',
+  `worktype` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT '' COMMENT '作业类型',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of workcommit
 -- ----------------------------
-INSERT INTO `workcommit` VALUES ('1', '2020-2021', '上学期', '00001', '1', '1', '1', '2021/11/05/1_61853adb9b3b36.57362628.pdf', '100', '1', '1', '程序设计基础', '2021-11-03 17:16:13');
+INSERT INTO `workcommit` VALUES ('1', '2020-2021', '下学期', '00001', '1', '1', '1', '2021/11/08/1_6188a26e108578.92902243.xlsx', '100', '1', '1', '曾锡山-程序设计基础', '2021-11-03 17:16:13', '平时作业');
+INSERT INTO `workcommit` VALUES ('2', '2020-2021', '下学期', '', '3', '翁行', '2', '2021/11/08/1_6188a3707857e1.43327924.docx', '', '', null, '陈寅-离散数学', null, '考试');
+INSERT INTO `workcommit` VALUES ('3', '2020-2021', '下学期', '', '1', '良叔', '3', '2021/11/08/1_6188a39a68a1a1.01004287.docx', '', '', null, '曾锡山-程序设计基础', null, '考试');
 DROP TRIGGER IF EXISTS `insert_num`;
 DELIMITER ;;
 CREATE TRIGGER `insert_num` AFTER INSERT ON `article` FOR EACH ROW begin

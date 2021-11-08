@@ -17,7 +17,8 @@ class studentfile extends BaseModel {
           array('cstuname', 'required', 'message' => '{attribute} 不能為空'),
           array('ccoursename', 'required', 'message' => '{attribute} 不能為空'),
           array('cworkid', 'required', 'message' => '{attribute} 不能為空'),
-          array('cpath', 'required', 'message' => '{attribute} 不能為空'),     
+          array('cpath', 'required', 'message' => '{attribute} 不能為空'),  
+           array('worktype', 'required', 'message' => '{attribute} 不能為空'),   
           array('cyear,cterm,cstuid,cstuname,ccoursename,cworkid,cpath','safe'),
         );
     }
@@ -48,6 +49,7 @@ class studentfile extends BaseModel {
         'cworkid'=>'作业序号',
         'cpath'=>'提交文件',
         'cscore'=>'分数',
+        'worktype'=>'分数',
         );
     }
  
