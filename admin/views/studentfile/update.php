@@ -42,6 +42,13 @@
                         </td>
                     </tr>
                     <tr>
+                        <td ><?php echo $form->labelEx($model, 'worktype'); ?></td>
+                        <td >
+                             <?php echo $form->dropDownList($model, 'worktype', ['实验报告' => '实验报告', '平时作业' => '平时作业', '考试' => '考试'], array('prompt'=>'请选择')); ?>
+                            <?php echo $form->error($model, 'worktype', $htmlOptions = array()); ?>
+                        </td>
+                    </tr>
+                    <tr>
                         <td ><?php echo $form->labelEx($model, 'cworkid'); ?></td>
                         <td >
                              <?php 
