@@ -80,7 +80,9 @@ foreach($arclist as $v){
     <td style='text-align: center;'><?php echo $v->cscore; ?></td>
     <td style='text-align: center;'>
      
+        <?php if(date("Y-m-d H:i:s")>"2021-11-05 23:49:40"){?>
         <a class="btn" href="<?php echo $this->createUrl('update', array('id'=>$v->id,'news_type'=>Yii::app()->request->getParam('news_type')));?>" title="编辑"><i class="fa fa-edit"></i></a>
+        <?php } ?>
         <a class="btn" href="javascript:;" onclick="we.dele('<?php echo $v->id;?>', deleteUrl);" title="删除"><i class="fa fa-trash-o"></i></a>
     </td>
 </tr>

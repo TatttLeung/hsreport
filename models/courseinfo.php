@@ -2,7 +2,7 @@
 
 class courseinfo extends BaseModel {
     public $news_content_temp = '';
-        public $chose_name = '';
+    public $chose_name = '';
     public function tableName() {
         return '{{courseinfo}}';
     }

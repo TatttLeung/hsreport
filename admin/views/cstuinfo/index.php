@@ -36,6 +36,8 @@
 
      
         <button class="btn btn-blue" type="submit">查询</button>
+
+        <button class="btn btn-blue" >查询</button>
     </form>
 </div><!--box-search end-->
 

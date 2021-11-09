@@ -1,6 +1,7 @@
 <?php
 
 class base_year extends BaseModel {
+    public $chose_name = '';
 
     public static function model($className = __CLASS__) {
         return parent::model($className);
@@ -47,6 +48,18 @@ class base_year extends BaseModel {
      * Returns the static model of the specified AR class.
      */
  
+
+    public function now() {
+        $time=getdate();
+        if($time['mon']>=9)
+        {
+            return $this->find("F_value=".$time['year'])->F_NAME;
+        }
+        else
+        {
+            return $this->find("F_value=".($time['year']-1))->F_NAME;
+        }
+    } 
 
     protected function beforeSave() {
         parent::beforeSave();

@@ -32,6 +32,7 @@ class courseworkController extends BaseController {
         $w2=get_where($w1,$sterm,'workterm',$sterm,'"');
         $w3=get_where($w2,$scourse,'workcourse',$scourse,'"');
         $criteria->condition=get_where($w3,$steacher,'workteacher',$steacher,'"');
+        put_msg($criteria->condition);
         }
         else
         {

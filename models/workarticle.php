@@ -24,7 +24,7 @@ class workarticle extends BaseModel {
           array('copinion', 'required', 'message' => '{attribute} 不能為空'),
           array('ctime', 'required', 'message' => '{attribute} 不能為空'),
           //array('cpath', 'required', 'message' => '{attribute} 不能為空')
-          array('cyear,cterm,ccoursename,cstuid,cscore,cpath,cstuname,ccourseid,cworkid,cstatus,copinion,ctime','safe'),
+          array('cyear,cterm,ccoursename,cstuid,cscore,cpath,cstuname,ccourseid,cworkid,cstatus,copinion,ctime,cpath','safe'),
         );
 
     }

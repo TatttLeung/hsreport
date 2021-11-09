@@ -47,6 +47,17 @@ class base_term extends BaseModel {
      * Returns the static model of the specified AR class.
      */
  
+    public function now() {
+        $time=getdate();
+        if($time['mon']>=9)
+        {
+            return $this->find("F_value=".'1')->F_NAME;
+        }
+        else
+        {
+            return $this->find("F_value=".'2')->F_NAME;
+        }
+    }
 
     protected function beforeSave() {
         parent::beforeSave();

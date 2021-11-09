@@ -20,7 +20,7 @@
     <label style="margin-right:20px;">
         <span>学年</span>
         <select name="styear">
-            <option value="<?php echo $model->workyear;?>"><?php echo $model->workyear;?></option>
+            <option value="<?php echo $model->workyear?$model->workyear:base_year::model()->now();?>"><?php echo $model->workyear?$model->workyear:base_year::model()->now();?></option>
             <?php foreach($years as $v){?>
             <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_NAME;?></option>
             <?php }?>
@@ -30,7 +30,7 @@
     <label style="margin-right:20px;">
         <span>学期</span>
         <select name="sterm">
-            <option value="<?php echo $model->workterm;?>"><?php echo $model->workterm;?></option>
+            <option value="<?php echo $model->workterm?$model->workterm:base_term::model()->now();?>"><?php echo $model->workterm?$model->workterm:base_term::model()->now();?></option>
             <?php foreach($terms as $v){?>
             <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_NAME;?></option>
             <?php }?>
@@ -40,7 +40,7 @@
       <label style="margin-right:20px;">
         <span>课程</span>
         <select name="scourse">
-            <option value="<?php echo $model->workcourse;?>"><?php echo $model->workcourse;?></option>
+            <option value="<?php echo $model->workcourse;?>"><?php echo $model->workcourse?$model->workcourse:"请选择";?></option>
             <?php foreach($courses as $v){?>
             <option value="<?php echo $v->coursename;?>"><?php echo $v->coursename;?></option>
             <?php }?>
@@ -50,7 +50,7 @@
       <label style="margin-right:20px;">
         <span>执教老师</span>
         <select name="steacher">
-            <option value="<?php echo $model->workteacher;?>"><?php echo $model->workteacher;?></option>
+            <option value="<?php echo $model->workteacher;?>"><?php echo $model->workteacher?$model->workteacher:"请选择";?></option>
             <?php foreach($teachers as $v){?>
             <option value="<?php echo $v->teaname;?>"><?php echo $v->teaname;?></option>
             <?php }?>
@@ -61,7 +61,7 @@
      $_SESSION["workterm"]=$model->workterm;
      $_SESSION["workcourse"]=$model->workcourse;
      $_SESSION["workteacher"]=$model->workteacher;
-     $_SESSION["workcourseid"]=$model->workcourseid;?>
+     $_SESSION["workcourseid"]=$model->workcourseid;?>  <!-- 储存session，供create页面使用 -->
      
         <button class="btn btn-blue" type="submit">查询</button>
     </form>
