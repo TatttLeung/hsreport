@@ -90,6 +90,7 @@ foreach($arclist as $v){
     </div><!--box-content end-->
 </div><!--box end-->
 
+
 <script>
 var deleteUrl = '<?php echo $this->createUrl('delete', array('id'=>'ID'));?>';
 
