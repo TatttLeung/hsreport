@@ -79,7 +79,6 @@
           <button onclick="submitType='baocun'" class="btn btn-blue" type="submit">保存</button>
           <button class="btn" type="button" onclick="we.back();">取消</button>
          </div>
-         
     
             <?php $this->endWidget();?>
   </div><!--box-detail end-->
