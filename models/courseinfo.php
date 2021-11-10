@@ -67,4 +67,5 @@ class courseinfo extends BaseModel {
         return true;
     } 
 
+
 }

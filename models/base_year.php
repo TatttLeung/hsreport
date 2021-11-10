@@ -49,11 +49,12 @@ class base_year extends BaseModel {
      */
  
 
-    public function now() {
+    public function now() {//获取当前时间
         $time=getdate();
         if($time['mon']>=9)
         {
             return $this->find("F_value=".$time['year'])->F_NAME;
+            //找到数据库里面当前
         }
         else
         {
