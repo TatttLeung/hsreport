@@ -11,8 +11,8 @@ class teaclass extends BaseModel {
      */
     public function rules() {
         return array(
-          array('courseyear', 'required', 'message' => '{attribute} 不能為空'),
-          array('courseterm', 'required', 'message' => '{attribute} 不能為空'),
+         // array('courseyear', 'required', 'message' => '{attribute} 不能為空'),
+         // array('courseterm', 'required', 'message' => '{attribute} 不能為空'),
           array('courseteacher', 'required', 'message' => '{attribute} 不能為空'),
           array('coursename', 'required', 'message' => '{attribute} 不能為空'),
     );
@@ -35,8 +35,8 @@ class teaclass extends BaseModel {
      */
     public function attributeLabels() {
         return array(
-        'courseyear'=>'学年',
-        'courseterm'=>'学期',
+        //'courseyear'=>'学年',
+        //'courseterm'=>'学期',
         'courseteacher'=>'课程教师',
         'coursename'=>'课程名称',
         );
