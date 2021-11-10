@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : mydp
+Source Server         : mydb
 Source Server Version : 50714
 Source Host           : localhost:3306
 Source Database       : hsreport
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2021-11-08 12:12:38
+Date: 2021-11-10 22:13:29
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -1104,49 +1104,6 @@ INSERT INTO `article` VALUES ('145', '班干部竞选\r', null, '今天下午，
 INSERT INTO `article` VALUES ('146', '我心爱的“甜筒”', null, '我家养了一只人见人爱，花见花开的小仓鼠，它的名字叫“甜筒”。', '　　我家养了一只人见人爱，花见花开的小仓鼠，它的名字叫“甜筒”。\r\n　　甜筒小小的身体，穿着棕黄色的毛衣，只要摸上去就会让你爱不释手。它滚圆的身体，从远处看就像一个小绒球，可爱极了！\r\n　　别看甜筒小小的，可是它的食量可是真的可以雷倒每个人。甜筒不仅能吃，而且非常贪吃，绝对是仓鼠家族中名副其实的小吃货，\r\n不信我把甜筒一天的食谱亮出来，给大家看看：半碟花生碎、半块钙片、一勺松肉、三颗杏仁、两块小饼干、五块小鱼干……怎么样？\r\n说它是大胃王是不是一点都不夸张呀！\r\n　　甜筒很有个性，它最讨厌有人摸它乳红色的小爪子，只要你一摸，它就全身充满了杀气，用一双大眼睛怒视着你，好像在说：“别\r\n碰我，这粉嫩嫩的小爪子，可是我的宝贝，碰脏了，你赔得起呀？”\r\n　　甜筒非常怕黑，夜晚，你只要一关灯，它就一刻都不得安宁，又跳又蹦，甚至把笼子磕得“吱吱”响，直闹到你为它把灯打开，他\r\n才肯罢休。\r\n　　甜筒不仅长得可爱，趣事也很多，这不，最近学会爬笼子顶了，所以时不时就会炫技，瞧，又开始施展才艺了，看它抓着一根铁\r\n丝，使劲一窜，顺利爬上了笼顶，这时的甜筒，头抬得高高的，骄傲地看着四周，嘴里还发出了“吱吱呀呀”的叫声，好像在向全世界\r\n宣布：“看，我——甜筒，轻松征服了世界第一峰！”哈哈，也许是乐极生悲，前一秒还神气十足的甜筒，后一秒就从笼顶跌落下来，\r\n摔了个四脚朝天，幸亏下边是保暖的木屑堆。\r\n　　甜筒不仅是我的开心果还是我的玩伴，我会永远爱它。\r\r', '4db94fffd7b0393ad781ba259cb4df2.png', null, '繁露', '4', '2021-07-24 16:07:36', null, '07', '待收稿', '2021/07/24/1_60fbca47d09767.59329688.docx', null, null, '写物', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
 
 -- ----------------------------
--- Table structure for `article_status`
--- ----------------------------
-DROP TABLE IF EXISTS `article_status`;
-CREATE TABLE `article_status` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `status_name` varchar(12) CHARACTER SET utf8 DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
-
--- ----------------------------
--- Records of article_status
--- ----------------------------
-INSERT INTO `article_status` VALUES ('1', '未审核');
-INSERT INTO `article_status` VALUES ('2', '一审通过');
-INSERT INTO `article_status` VALUES ('3', '退稿重改');
-INSERT INTO `article_status` VALUES ('4', '收稿');
-INSERT INTO `article_status` VALUES ('5', '淘汰');
-INSERT INTO `article_status` VALUES ('6', '二审通过');
-INSERT INTO `article_status` VALUES ('7', '录用');
-INSERT INTO `article_status` VALUES ('8', '发表');
-
--- ----------------------------
--- Table structure for `article_type`
--- ----------------------------
-DROP TABLE IF EXISTS `article_type`;
-CREATE TABLE `article_type` (
-  `id` int(11) NOT NULL,
-  `type` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- ----------------------------
--- Records of article_type
--- ----------------------------
-INSERT INTO `article_type` VALUES ('1', '写人');
-INSERT INTO `article_type` VALUES ('2', '写事');
-INSERT INTO `article_type` VALUES ('3', '写景');
-INSERT INTO `article_type` VALUES ('4', '状物');
-INSERT INTO `article_type` VALUES ('5', '想象文');
-INSERT INTO `article_type` VALUES ('6', '应用文');
-INSERT INTO `article_type` VALUES ('7', '其他');
-
--- ----------------------------
 -- Table structure for `articlenum_detail`
 -- ----------------------------
 DROP TABLE IF EXISTS `articlenum_detail`;
@@ -1253,6 +1210,49 @@ INSERT INTO `articlenum_detail` VALUES ('108', null, '1', '0', '0');
 INSERT INTO `articlenum_detail` VALUES ('109', null, '1', '0', '0');
 INSERT INTO `articlenum_detail` VALUES ('110', null, '1', '0', '0');
 INSERT INTO `articlenum_detail` VALUES ('111', null, '1', '0', '0');
+
+-- ----------------------------
+-- Table structure for `article_status`
+-- ----------------------------
+DROP TABLE IF EXISTS `article_status`;
+CREATE TABLE `article_status` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `status_name` varchar(12) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of article_status
+-- ----------------------------
+INSERT INTO `article_status` VALUES ('1', '未审核');
+INSERT INTO `article_status` VALUES ('2', '一审通过');
+INSERT INTO `article_status` VALUES ('3', '退稿重改');
+INSERT INTO `article_status` VALUES ('4', '收稿');
+INSERT INTO `article_status` VALUES ('5', '淘汰');
+INSERT INTO `article_status` VALUES ('6', '二审通过');
+INSERT INTO `article_status` VALUES ('7', '录用');
+INSERT INTO `article_status` VALUES ('8', '发表');
+
+-- ----------------------------
+-- Table structure for `article_type`
+-- ----------------------------
+DROP TABLE IF EXISTS `article_type`;
+CREATE TABLE `article_type` (
+  `id` int(11) NOT NULL,
+  `type` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of article_type
+-- ----------------------------
+INSERT INTO `article_type` VALUES ('1', '写人');
+INSERT INTO `article_type` VALUES ('2', '写事');
+INSERT INTO `article_type` VALUES ('3', '写景');
+INSERT INTO `article_type` VALUES ('4', '状物');
+INSERT INTO `article_type` VALUES ('5', '想象文');
+INSERT INTO `article_type` VALUES ('6', '应用文');
+INSERT INTO `article_type` VALUES ('7', '其他');
 
 -- ----------------------------
 -- Table structure for `base_code`
@@ -1611,7 +1611,7 @@ CREATE TABLE `base_term` (
   `F_CODE` char(4) DEFAULT '' COMMENT '类型内部编码',
   `F_NAME` char(30) DEFAULT '' COMMENT '类型内的名称',
   `F_value` char(20) DEFAULT '' COMMENT '短名称，用于输入时使用',
-  `F_SHOW` int(4) DEFAULT '0',
+  `F_SHOW` char(4) DEFAULT '',
   `F_NEXTTERM` varchar(10) DEFAULT '' COMMENT '下一段',
   `F_COL1` int(4) DEFAULT '0' COMMENT '表单位置1',
   `F_COL2` int(4) DEFAULT '0' COMMENT '表单位置2',
@@ -1621,8 +1621,9 @@ CREATE TABLE `base_term` (
 -- ----------------------------
 -- Records of base_term
 -- ----------------------------
-INSERT INTO `base_term` VALUES ('229', '25', '上学期', '1', '0', '30', '1', '1');
-INSERT INTO `base_term` VALUES ('230', '45', '下学期', '2', '0', '50', '1', '1');
+INSERT INTO `base_term` VALUES ('228', '0', '', '', '全选', '', '0', '0');
+INSERT INTO `base_term` VALUES ('229', '25', '上学期', '1', '上学期', '30', '1', '1');
+INSERT INTO `base_term` VALUES ('230', '45', '下学期', '2', '下学期', '50', '1', '1');
 
 -- ----------------------------
 -- Table structure for `base_year`
@@ -1633,17 +1634,19 @@ CREATE TABLE `base_year` (
   `F_CODE` char(20) DEFAULT '' COMMENT 'l类型编码 树结构',
   `F_NAME` char(30) DEFAULT '' COMMENT '类型内的名称',
   `F_value` char(20) DEFAULT '' COMMENT '短名称，用于输入时使用',
+  `F_view` char(255) DEFAULT '' COMMENT '显示出来的名字',
   PRIMARY KEY (`f_id`),
   UNIQUE KEY `TYPECODE` (`F_CODE`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=231 DEFAULT CHARSET=utf8 COMMENT='各类代码规范表说明，是公共基础表';
+) ENGINE=InnoDB AUTO_INCREMENT=232 DEFAULT CHARSET=utf8 COMMENT='各类代码规范表说明，是公共基础表';
 
 -- ----------------------------
 -- Records of base_year
 -- ----------------------------
-INSERT INTO `base_year` VALUES ('227', '1', '2020-2021', '2020-2021');
-INSERT INTO `base_year` VALUES ('228', '2', '2021-2022', '2021-2022');
-INSERT INTO `base_year` VALUES ('229', '3', '2022-2023', '2022-2023');
-INSERT INTO `base_year` VALUES ('230', '4', '2023-2024', '2023-2024');
+INSERT INTO `base_year` VALUES ('226', '0', '', '', '全选');
+INSERT INTO `base_year` VALUES ('227', '1', '2020-2021', '2020', '2020-2021');
+INSERT INTO `base_year` VALUES ('228', '2', '2021-2022', '2021', '2021-2022');
+INSERT INTO `base_year` VALUES ('229', '3', '2022-2023', '2022', '2022-2023');
+INSERT INTO `base_year` VALUES ('230', '4', '2023-2024', '2023', '2023-2024');
 
 -- ----------------------------
 -- Table structure for `club_list`
@@ -1759,7 +1762,7 @@ CREATE TABLE `courseinfo` (
   `homeworkcnt` int(4) DEFAULT NULL COMMENT '作业提交次数',
   `examcnt` int(4) DEFAULT NULL COMMENT '考试次数',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of courseinfo
@@ -1767,6 +1770,7 @@ CREATE TABLE `courseinfo` (
 INSERT INTO `courseinfo` VALUES ('1', '2020-2021', '上学期', '00001', '程序设计基础', '曾锡山', '周五下午 19:00', '3', '3', '1');
 INSERT INTO `courseinfo` VALUES ('2', '2020-2021', '下学期', '00002', '离散数学', '陈寅', '周五下午 18:00', '1', '5', '1');
 INSERT INTO `courseinfo` VALUES ('3', '2020-2021', '上学期', '000003', '程序设计基础', '陈寅', '周五下午 19:00', '1', '3', '1');
+INSERT INTO `courseinfo` VALUES ('4', '2021-2022', '上学期', '000034', '离散数学', '陈寅', '周五下午 19:00', '7', '1', '0');
 
 -- ----------------------------
 -- Table structure for `coursestu`
@@ -1806,7 +1810,7 @@ CREATE TABLE `coursework` (
   `workteacher` varchar(20) DEFAULT '' COMMENT '教师姓名',
   `worktype` varchar(20) DEFAULT '' COMMENT '作业类型',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of coursework
@@ -1815,6 +1819,7 @@ INSERT INTO `coursework` VALUES ('3', '2020-2021', '下学期', '1', '1232123116
 INSERT INTO `coursework` VALUES ('2', '2020-2021', '上学期', '3', '1232123', '2021-11-05 23:49:40', '2021-11-26 23:49:42', '程序设计基础', '00001', '曾锡山', '');
 INSERT INTO `coursework` VALUES ('4', '2020-2021', '上学期', '2', '第二次实验报告', '2021-11-05 23:49:40', '2021-11-26 23:49:42', '程序设计基础', '00001', '曾锡山', '实验报告');
 INSERT INTO `coursework` VALUES ('5', '2020-2021', '上学期', '15', '李达良', '2021-11-08 12:05:30', '2021-11-08 12:05:33', '程序设计基础', '000003', '陈寅', '实验报告');
+INSERT INTO `coursework` VALUES ('6', '2021-2022', '上学期', '1', '1', '2021-11-12 00:05:29', '2021-12-31 00:05:31', '离散数学', '000034', '陈寅', '实验报告');
 
 -- ----------------------------
 -- Table structure for `department`
@@ -6187,109 +6192,63 @@ CREATE TABLE `test_err` (
   `f_username` char(20) DEFAULT '' COMMENT '测试员',
   `f_callname` varchar(200) DEFAULT '' COMMENT '调用函数名称',
   PRIMARY KEY (`f_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=718762 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=719261 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of test_err
 -- ----------------------------
-INSERT INTO `test_err` VALUES ('718664', '21', '2021-11-06 00:04:55', '', '');
-INSERT INTO `test_err` VALUES ('718665', '1=1', '2021-11-06 00:04:56', '', '');
-INSERT INTO `test_err` VALUES ('718666', '3', '2021-11-06 00:04:57', '', '');
-INSERT INTO `test_err` VALUES ('718667', '21', '2021-11-06 00:05:07', '', '');
-INSERT INTO `test_err` VALUES ('718668', '1=1', '2021-11-06 00:05:07', '', '');
-INSERT INTO `test_err` VALUES ('718669', '3', '2021-11-06 00:05:08', '', '');
-INSERT INTO `test_err` VALUES ('718670', '21', '2021-11-06 00:05:34', '', '');
-INSERT INTO `test_err` VALUES ('718671', '1=1', '2021-11-06 00:05:35', '', '');
-INSERT INTO `test_err` VALUES ('718672', '3', '2021-11-06 00:05:36', '', '');
-INSERT INTO `test_err` VALUES ('718673', '21', '2021-11-06 00:05:58', '', '');
-INSERT INTO `test_err` VALUES ('718674', '1=1', '2021-11-06 00:05:58', '', '');
-INSERT INTO `test_err` VALUES ('718675', '3', '2021-11-06 00:05:59', '', '');
-INSERT INTO `test_err` VALUES ('718676', '21', '2021-11-06 00:09:56', '', '');
-INSERT INTO `test_err` VALUES ('718677', '1=1', '2021-11-06 00:09:57', '', '');
-INSERT INTO `test_err` VALUES ('718678', '3', '2021-11-06 00:09:58', '', '');
-INSERT INTO `test_err` VALUES ('718679', '21', '2021-11-06 00:14:26', '', '');
-INSERT INTO `test_err` VALUES ('718680', '1=1', '2021-11-06 00:14:26', '', '');
-INSERT INTO `test_err` VALUES ('718681', '3', '2021-11-06 00:14:27', '', '');
-INSERT INTO `test_err` VALUES ('718682', '21', '2021-11-06 00:15:03', '', '');
-INSERT INTO `test_err` VALUES ('718683', '1=1', '2021-11-06 00:15:03', '', '');
-INSERT INTO `test_err` VALUES ('718684', '3', '2021-11-06 00:15:04', '', '');
-INSERT INTO `test_err` VALUES ('718685', '21', '2021-11-06 00:15:26', '', '');
-INSERT INTO `test_err` VALUES ('718686', '1=1', '2021-11-06 00:15:26', '', '');
-INSERT INTO `test_err` VALUES ('718687', '3', '2021-11-06 00:15:27', '', '');
-INSERT INTO `test_err` VALUES ('718688', '3', '2021-11-06 00:15:45', '', '');
-INSERT INTO `test_err` VALUES ('718689', '21', '2021-11-06 00:15:47', '', '');
-INSERT INTO `test_err` VALUES ('718690', '1=1', '2021-11-06 00:15:47', '', '');
-INSERT INTO `test_err` VALUES ('718691', '{\"coursework\":{\"worktype\":\"\\u5b9e\\u9a8c\\u62a5\\u544a\",\"workid\":\"2\",\"workname\":\"\\u7b2c\\u4e8c\\u6b21\\u5b9e\\u9a8c\\u62a5\\u544a\",\"workstart\":\"2021-11-05 23:49:40\",\"workend\":\"2021-11-26 23:49:42\"},\"submitType\":\"baocun\"}', '2021-11-06 00:16:21', '', '');
-INSERT INTO `test_err` VALUES ('718692', '21', '2021-11-06 00:16:26', '', '');
-INSERT INTO `test_err` VALUES ('718693', '1=1', '2021-11-06 00:16:26', '', '');
-INSERT INTO `test_err` VALUES ('718694', '3', '2021-11-06 00:16:28', '', '');
-INSERT INTO `test_err` VALUES ('718695', '21', '2021-11-06 00:16:34', '', '');
-INSERT INTO `test_err` VALUES ('718696', '1=1', '2021-11-06 00:16:34', '', '');
-INSERT INTO `test_err` VALUES ('718697', '21', '2021-11-06 00:17:34', '', '');
-INSERT INTO `test_err` VALUES ('718698', '1=1', '2021-11-06 00:17:34', '', '');
-INSERT INTO `test_err` VALUES ('718699', '3', '2021-11-06 00:17:35', '', '');
-INSERT INTO `test_err` VALUES ('718700', '21', '2021-11-06 00:18:20', '', '');
-INSERT INTO `test_err` VALUES ('718701', '1=1', '2021-11-06 00:18:20', '', '');
-INSERT INTO `test_err` VALUES ('718702', '3', '2021-11-06 00:18:21', '', '');
-INSERT INTO `test_err` VALUES ('718703', '21', '2021-11-06 00:18:29', '', '');
-INSERT INTO `test_err` VALUES ('718704', '1=1', '2021-11-06 00:18:30', '', '');
-INSERT INTO `test_err` VALUES ('718705', '3', '2021-11-06 00:18:31', '', '');
-INSERT INTO `test_err` VALUES ('718706', '21', '2021-11-06 00:20:29', '', '');
-INSERT INTO `test_err` VALUES ('718707', '1=1', '2021-11-06 00:20:29', '', '');
-INSERT INTO `test_err` VALUES ('718708', '21', '2021-11-06 00:20:40', '', '');
-INSERT INTO `test_err` VALUES ('718709', '1=1', '2021-11-06 00:20:40', '', '');
-INSERT INTO `test_err` VALUES ('718710', '21', '2021-11-06 00:20:44', '', '');
-INSERT INTO `test_err` VALUES ('718711', '1=1', '2021-11-06 00:20:44', '', '');
-INSERT INTO `test_err` VALUES ('718712', '21', '2021-11-06 00:20:47', '', '');
-INSERT INTO `test_err` VALUES ('718713', '1=1', '2021-11-06 00:20:47', '', '');
-INSERT INTO `test_err` VALUES ('718714', '21', '2021-11-06 00:20:49', '', '');
-INSERT INTO `test_err` VALUES ('718715', '1=1', '2021-11-06 00:20:49', '', '');
-INSERT INTO `test_err` VALUES ('718716', '21', '2021-11-06 00:21:03', '', '');
-INSERT INTO `test_err` VALUES ('718717', '1=1', '2021-11-06 00:21:03', '', '');
-INSERT INTO `test_err` VALUES ('718718', '21', '2021-11-06 00:21:05', '', '');
-INSERT INTO `test_err` VALUES ('718719', '1=1', '2021-11-06 00:21:06', '', '');
-INSERT INTO `test_err` VALUES ('718720', '21', '2021-11-06 00:21:09', '', '');
-INSERT INTO `test_err` VALUES ('718721', '1=1', '2021-11-06 00:21:09', '', '');
-INSERT INTO `test_err` VALUES ('718722', '21', '2021-11-06 00:21:13', '', '');
-INSERT INTO `test_err` VALUES ('718723', '1=1', '2021-11-06 00:21:14', '', '');
-INSERT INTO `test_err` VALUES ('718724', '21', '2021-11-06 00:21:49', '', '');
-INSERT INTO `test_err` VALUES ('718725', '1=1', '2021-11-06 00:21:49', '', '');
-INSERT INTO `test_err` VALUES ('718726', '21', '2021-11-06 00:21:51', '', '');
-INSERT INTO `test_err` VALUES ('718727', '1=1', '2021-11-06 00:21:51', '', '');
-INSERT INTO `test_err` VALUES ('718728', '21', '2021-11-06 00:23:37', '', '');
-INSERT INTO `test_err` VALUES ('718729', '1=1', '2021-11-06 00:23:37', '', '');
-INSERT INTO `test_err` VALUES ('718730', '21', '2021-11-06 00:23:45', '', '');
-INSERT INTO `test_err` VALUES ('718731', '1=1', '2021-11-06 00:23:46', '', '');
-INSERT INTO `test_err` VALUES ('718732', '21', '2021-11-06 00:25:45', '', '');
-INSERT INTO `test_err` VALUES ('718733', '1=1', '2021-11-06 00:25:45', '', '');
-INSERT INTO `test_err` VALUES ('718734', '21', '2021-11-08 12:04:27', '', '');
-INSERT INTO `test_err` VALUES ('718735', '1=1', '2021-11-08 12:04:27', '', '');
-INSERT INTO `test_err` VALUES ('718736', '21', '2021-11-08 12:04:28', '', '');
-INSERT INTO `test_err` VALUES ('718737', '1=1', '2021-11-08 12:04:28', '', '');
-INSERT INTO `test_err` VALUES ('718738', '21', '2021-11-08 12:04:35', '', '');
-INSERT INTO `test_err` VALUES ('718739', '1=1', '2021-11-08 12:04:35', '', '');
-INSERT INTO `test_err` VALUES ('718740', '21', '2021-11-08 12:04:50', '', '');
-INSERT INTO `test_err` VALUES ('718741', '1=1', '2021-11-08 12:04:50', '', '');
-INSERT INTO `test_err` VALUES ('718742', '21', '2021-11-08 12:04:51', '', '');
-INSERT INTO `test_err` VALUES ('718743', '1=1', '2021-11-08 12:04:51', '', '');
-INSERT INTO `test_err` VALUES ('718744', '21', '2021-11-08 12:04:52', '', '');
-INSERT INTO `test_err` VALUES ('718745', '1=1', '2021-11-08 12:04:52', '', '');
-INSERT INTO `test_err` VALUES ('718746', '21', '2021-11-08 12:04:56', '', '');
-INSERT INTO `test_err` VALUES ('718747', '1=1', '2021-11-08 12:04:56', '', '');
-INSERT INTO `test_err` VALUES ('718748', '21', '2021-11-08 12:05:11', '', '');
-INSERT INTO `test_err` VALUES ('718749', '1=1', '2021-11-08 12:05:11', '', '');
-INSERT INTO `test_err` VALUES ('718750', '21', '2021-11-08 12:05:38', '', '');
-INSERT INTO `test_err` VALUES ('718751', '1=1', '2021-11-08 12:05:38', '', '');
-INSERT INTO `test_err` VALUES ('718752', '21', '2021-11-08 12:05:43', '', '');
-INSERT INTO `test_err` VALUES ('718753', '1=1', '2021-11-08 12:05:43', '', '');
-INSERT INTO `test_err` VALUES ('718754', '{\"studentfile\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0b\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u66fe\\u9521\\u5c71-\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cpath\":\"2021\\/11\\/08\\/1_6188a239a58b70.64008762.pdf\"},\"submitType\":\"baocun\"}', '2021-11-08 12:06:34', '', '');
-INSERT INTO `test_err` VALUES ('718755', '{\"studentfile\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0b\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u66fe\\u9521\\u5c71-\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cpath\":\"2021\\/11\\/08\\/1_6188a2601c61a2.91937091.docx\"},\"submitType\":\"baocun\"}', '2021-11-08 12:06:57', '', '');
-INSERT INTO `test_err` VALUES ('718756', '{\"studentfile\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0b\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u66fe\\u9521\\u5c71-\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"cworkid\":\"1\",\"cpath\":\"2021\\/11\\/08\\/1_6188a26e108578.92902243.xlsx\"},\"submitType\":\"baocun\"}', '2021-11-08 12:07:11', '', '');
-INSERT INTO `test_err` VALUES ('718757', '{\"studentfile\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0b\\u5b66\\u671f\",\"cstuid\":\"1\",\"cstuname\":\"1\",\"ccoursename\":\"\\u66fe\\u9521\\u5c71-\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"worktype\":\"\\u5e73\\u65f6\\u4f5c\\u4e1a\",\"cworkid\":\"1\",\"cpath\":\"http:\\/\\/127.0.0.1\\/hsreport\\/uploads\\/temp\\/2021\\/11\\/08\\/1_6188a26e108578.92902243.xlsx\"},\"submitType\":\"baocun\"}', '2021-11-08 12:10:54', '', '');
-INSERT INTO `test_err` VALUES ('718758', '21', '2021-11-08 12:11:04', '', '');
-INSERT INTO `test_err` VALUES ('718759', '1=1', '2021-11-08 12:11:04', '', '');
-INSERT INTO `test_err` VALUES ('718760', '21', '2021-11-08 12:11:06', '', '');
-INSERT INTO `test_err` VALUES ('718761', '1=1', '2021-11-08 12:11:06', '', '');
+INSERT INTO `test_err` VALUES ('719209', '19 1=1 and courseyear=\"\'base_year::model()->now()\'\"', '2021-11-10 21:25:24', '', '');
+INSERT INTO `test_err` VALUES ('719210', '21 1=1 and courseyear=\"\'base_year::model()->now()\'\" and courseterm=\"\'base_term::model()->now()\'\"', '2021-11-10 21:25:24', '', '');
+INSERT INTO `test_err` VALUES ('719211', '19 1=1 and courseyear=\"2021-2022\"', '2021-11-10 21:28:34', '', '');
+INSERT INTO `test_err` VALUES ('719212', '21 1=1 and courseyear=\"2021-2022\" and courseterm=\"上学期\"', '2021-11-10 21:28:35', '', '');
+INSERT INTO `test_err` VALUES ('719213', '19 1=1 and courseyear=\"2021-2022\"', '2021-11-10 21:29:22', '', '');
+INSERT INTO `test_err` VALUES ('719214', '21 1=1 and courseyear=\"2021-2022\" and courseterm=\"上学期\"', '2021-11-10 21:29:22', '', '');
+INSERT INTO `test_err` VALUES ('719215', '19 1=1 and courseyear=\"2021-2022\"', '2021-11-10 21:29:23', '', '');
+INSERT INTO `test_err` VALUES ('719216', '21 1=1 and courseyear=\"2021-2022\" and courseterm=\"上学期\"', '2021-11-10 21:29:24', '', '');
+INSERT INTO `test_err` VALUES ('719217', '19 1=1 and courseyear=\"2021-2022\"', '2021-11-10 21:29:42', '', '');
+INSERT INTO `test_err` VALUES ('719218', '21 1=1 and courseyear=\"2021-2022\" and courseterm=\"上学期\"', '2021-11-10 21:29:42', '', '');
+INSERT INTO `test_err` VALUES ('719219', '19 1=1 and courseyear=\"2021-2022\"', '2021-11-10 21:31:07', '', '');
+INSERT INTO `test_err` VALUES ('719220', '21 1=1 and courseyear=\"2021-2022\" and courseterm=\"上学期\"', '2021-11-10 21:31:07', '', '');
+INSERT INTO `test_err` VALUES ('719221', '19 1=1 and courseyear=\"2021-2022\"', '2021-11-10 21:31:48', '', '');
+INSERT INTO `test_err` VALUES ('719222', '21 1=1 and courseyear=\"2021-2022\" and courseterm=\"上学期\"', '2021-11-10 21:31:48', '', '');
+INSERT INTO `test_err` VALUES ('719223', '19 1=1 and courseyear=\"2021-2022\"', '2021-11-10 21:31:54', '', '');
+INSERT INTO `test_err` VALUES ('719224', '21 1=1 and courseyear=\"2021-2022\" and courseterm=\"上学期\"', '2021-11-10 21:31:54', '', '');
+INSERT INTO `test_err` VALUES ('719225', '19 1=1 and courseyear=\"2021-2022\"', '2021-11-10 21:32:37', '', '');
+INSERT INTO `test_err` VALUES ('719226', '21 1=1 and courseyear=\"2021-2022\" and courseterm=\"上学期\"', '2021-11-10 21:32:37', '', '');
+INSERT INTO `test_err` VALUES ('719227', '19 1=1 and courseyear=\"2021-2022\"', '2021-11-10 21:32:45', '', '');
+INSERT INTO `test_err` VALUES ('719228', '21 1=1 and courseyear=\"2021-2022\" and courseterm=\"上学期\"', '2021-11-10 21:32:45', '', '');
+INSERT INTO `test_err` VALUES ('719229', '19 1=1 and courseyear=\"2021-2022\"', '2021-11-10 21:32:46', '', '');
+INSERT INTO `test_err` VALUES ('719230', '21 1=1 and courseyear=\"2021-2022\" and courseterm=\"上学期\"', '2021-11-10 21:32:46', '', '');
+INSERT INTO `test_err` VALUES ('719231', '19 1=1 and courseyear=\"2021-2022\"', '2021-11-10 21:32:46', '', '');
+INSERT INTO `test_err` VALUES ('719232', '21 1=1 and courseyear=\"2021-2022\" and courseterm=\"上学期\"', '2021-11-10 21:32:46', '', '');
+INSERT INTO `test_err` VALUES ('719233', '19 1=1 and courseyear=\"2021-2022\"', '2021-11-10 21:33:06', '', '');
+INSERT INTO `test_err` VALUES ('719234', '21 1=1 and courseyear=\"2021-2022\" and courseterm=\"上学期\"', '2021-11-10 21:33:06', '', '');
+INSERT INTO `test_err` VALUES ('719235', '19 1=1 and courseyear=\"2021-2022\"', '2021-11-10 21:33:37', '', '');
+INSERT INTO `test_err` VALUES ('719236', '21 1=1 and courseyear=\"2021-2022\" and courseterm=\"上学期\"', '2021-11-10 21:33:37', '', '');
+INSERT INTO `test_err` VALUES ('719237', '19 1=1 and courseyear=\"2021-2022\"', '2021-11-10 21:33:40', '', '');
+INSERT INTO `test_err` VALUES ('719238', '21 1=1 and courseyear=\"2021-2022\" and courseterm=\"上学期\"', '2021-11-10 21:33:40', '', '');
+INSERT INTO `test_err` VALUES ('719239', '19 1=1 and courseyear=\"2021-2022\"', '2021-11-10 21:36:31', '', '');
+INSERT INTO `test_err` VALUES ('719240', '21 1=1 and courseyear=\"2021-2022\" and courseterm=\"上学期\"', '2021-11-10 21:36:31', '', '');
+INSERT INTO `test_err` VALUES ('719241', '19 1=1 and courseyear=\"全选\"', '2021-11-10 21:36:33', '', '');
+INSERT INTO `test_err` VALUES ('719242', '21 1=1 and courseyear=\"全选\" and courseterm=\"上学期\"', '2021-11-10 21:36:33', '', '');
+INSERT INTO `test_err` VALUES ('719243', '19 1=1 and courseyear=\"2021-2022\"', '2021-11-10 21:38:17', '', '');
+INSERT INTO `test_err` VALUES ('719244', '21 1=1 and courseyear=\"2021-2022\" and courseterm=\"上学期\"', '2021-11-10 21:38:17', '', '');
+INSERT INTO `test_err` VALUES ('719245', '19 1=1', '2021-11-10 21:38:20', '', '');
+INSERT INTO `test_err` VALUES ('719246', '21 1=1 and courseterm=\"上学期\"', '2021-11-10 21:38:20', '', '');
+INSERT INTO `test_err` VALUES ('719247', '19 1=1', '2021-11-10 21:38:31', '', '');
+INSERT INTO `test_err` VALUES ('719248', '21 1=1 and courseterm=\"上学期\"', '2021-11-10 21:38:31', '', '');
+INSERT INTO `test_err` VALUES ('719249', '19 1=1 and courseyear=\"2021-2022\"', '2021-11-10 21:41:14', '', '');
+INSERT INTO `test_err` VALUES ('719250', '21 1=1 and courseyear=\"2021-2022\" and courseterm=\"上学期\"', '2021-11-10 21:41:14', '', '');
+INSERT INTO `test_err` VALUES ('719251', '19 1=1 and courseyear=\"2021-2022\"', '2021-11-10 21:41:27', '', '');
+INSERT INTO `test_err` VALUES ('719252', '21 1=1 and courseyear=\"2021-2022\" and courseterm=\"上学期\"', '2021-11-10 21:41:27', '', '');
+INSERT INTO `test_err` VALUES ('719253', '19 1=1 and courseyear=\"2021-2022\"', '2021-11-10 21:41:30', '', '');
+INSERT INTO `test_err` VALUES ('719254', '21 1=1 and courseyear=\"2021-2022\" and courseterm=\"上学期\"', '2021-11-10 21:41:30', '', '');
+INSERT INTO `test_err` VALUES ('719255', '19 1=1', '2021-11-10 21:41:33', '', '');
+INSERT INTO `test_err` VALUES ('719256', '21 1=1 and courseterm=\"上学期\"', '2021-11-10 21:41:33', '', '');
+INSERT INTO `test_err` VALUES ('719257', '19 1=1', '2021-11-10 21:41:35', '', '');
+INSERT INTO `test_err` VALUES ('719258', '21 1=1 and courseterm=\"上学期\"', '2021-11-10 21:41:35', '', '');
+INSERT INTO `test_err` VALUES ('719259', '21', '2021-11-10 22:11:54', '', '');
+INSERT INTO `test_err` VALUES ('719260', '1=1', '2021-11-10 22:11:54', '', '');
 
 -- ----------------------------
 -- Table structure for `user`
@@ -6378,8 +6337,8 @@ CREATE TABLE `workcommit` (
 -- ----------------------------
 -- Records of workcommit
 -- ----------------------------
-INSERT INTO `workcommit` VALUES ('1', '2020-2021', '下学期', '00001', '1', '1', '1', '2021/11/08/1_6188a26e108578.92902243.xlsx', '100', '1', '1', '曾锡山-程序设计基础', '2021-11-03 17:16:13', '平时作业');
-INSERT INTO `workcommit` VALUES ('2', '2020-2021', '下学期', '', '3', '翁行', '2', '2021/11/08/1_6188a3707857e1.43327924.docx', '', '', null, '陈寅-离散数学', null, '考试');
+INSERT INTO `workcommit` VALUES ('1', '2020-2021', '下学期', '00001', '1', '1', '1', '2021/11/08/1_6188e4ffcfa9d9.18841132.docx', '100', '1', '1', '曾锡山-程序设计基础', '2021-11-03 17:16:13', '平时作业');
+INSERT INTO `workcommit` VALUES ('2', '2020-2021', '下学期', '00001', '3', '翁行', '2', '2021/11/08/1_6188a3707857e1.43327924.docx', '10', '1', '1', '程序设计基础', '2021-11-03 17:13:53', '考试');
 INSERT INTO `workcommit` VALUES ('3', '2020-2021', '下学期', '', '1', '良叔', '3', '2021/11/08/1_6188a39a68a1a1.01004287.docx', '', '', null, '曾锡山-程序设计基础', null, '考试');
 DROP TRIGGER IF EXISTS `insert_num`;
 DELIMITER ;;

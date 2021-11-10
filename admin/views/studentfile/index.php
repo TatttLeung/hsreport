@@ -15,9 +15,7 @@
      <form action="<?php echo Yii::app()->request->url;?>" method="get">
     <input type="hidden" name="r" value="<?php echo Yii::app()->request->getParam('r');?>">
 
-    <label style="margin-right:20px;">
-        <span>当前筛选条件：</span>
-    </label>
+    
     
       <label style="margin-right:20px;">
         <span>学年</span>

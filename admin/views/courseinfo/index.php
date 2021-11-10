@@ -33,6 +33,7 @@
             <?php }?>
         </select>
     </label>
+    
     <label style="margin-right:20px;">
         <span>学期</span>
         <select name="sterm">
