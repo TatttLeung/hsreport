@@ -15,25 +15,27 @@
      <form action="<?php echo Yii::app()->request->url;?>" method="get">
     <input type="hidden" name="r" value="<?php echo Yii::app()->request->getParam('r');?>">
 
-     <label style="margin-right:20px;">
+    <label style="margin-right:20px;">
         <span>学年</span>
         <select name="styear">
-            <option value="<?php echo $model->courseyear?$model->courseyear:base_year::model()->now();?>"><?php echo $model->courseyear?$model->courseyear:base_year::model()->now();?></option>
+            <option value="<?php echo $model->courseyear!="-1"?$model->courseyear:base_year::model()->now(); ?>"><?php echo $model->courseyear!="-1"?$model->courseyear:base_year::model()->now(); ?></option>
             <?php foreach($years as $v){?>
-            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_NAME;?></option>
+                <?php if($model->courseyear==$v->F_NAME) continue;?>
+            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_view;?></option>
             <?php }?>
         </select>
     </label>
-
+    
     <label style="margin-right:20px;">
         <span>学期</span>
         <select name="sterm">
-            <option value="<?php echo $model->courseterm?$model->courseterm:base_term::model()->now();?>"><?php echo $model->courseterm?$model->courseterm:base_term::model()->now();?></option>
+            <option value="<?php echo $model->courseterm!="-1"?$model->courseterm:base_year::model()->now(); ?>"><?php echo $model->courseterm!="-1"?$model->courseterm:base_year::model()->now(); ?></option>
             <?php foreach($terms as $v){?>
-            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_NAME;?></option>
+                <?php if($model->courseterm==$v->F_NAME) continue;?>
+            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_SHOW;?></option>
             <?php }?>
         </select>
-      </label>
+    </label>
 
      
         <button class="btn btn-blue" type="submit">查询</button>
