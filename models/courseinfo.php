@@ -14,12 +14,11 @@ class courseinfo extends BaseModel {
         return array(
           array('courseid', 'required', 'message' => '{attribute} 不能為空'),
           array('coursename', 'required', 'message' => '{attribute} 不能為空'),
-          array('courseteacher', 'required', 'message' => '{attribute} 不能為空'),
+          array('teaname', 'required', 'message' => '{attribute} 不能為空'),
           array('coursetime', 'required', 'message' => '{attribute} 不能為空'),
           array('reportcnt', 'required', 'message' => '{attribute} 不能為空'),
           array('homeworkcnt', 'required', 'message' => '{attribute} 不能為空'),
           array('examcnt', 'required', 'message' => '{attribute} 不能為空'),
-         // array('teaname', 'required', 'message' => '{attribute} 不能為空'),
           array('courseyear', 'required', 'message' => '{attribute} 不能為空'),
           array('courseterm', 'required', 'message' => '{attribute} 不能為空')
         );
@@ -44,7 +43,7 @@ class courseinfo extends BaseModel {
         return array(
         'courseid'=>'课程编号',
         'coursename'=>'课程名称',
-        'courseteacher'=>'课程教师',
+        'teaname'=>'教师姓名',
         'coursetime'=>'课程时间',
         'reportcnt'=>'报告提交次数',
         'homeworkcnt'=>'作业提交次数',
@@ -63,9 +62,8 @@ class courseinfo extends BaseModel {
 
     protected function afterFind() {
         parent::afterFind();
-        $this->chose_name=$this->courseteacher.'-'.$this->coursename;
+        $this->chose_name=$this->teaname.'-'.$this->coursename;
         return true;
-    } 
-
+    }
 
 }

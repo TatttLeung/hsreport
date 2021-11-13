@@ -28,6 +28,9 @@ if (isset($_GET['debug']) && $_GET['debug'] == 1) {
 // 禁止Yii来处理错误和异常
 // defined('YII_ENABLE_ERROR_HANDLER') or define('YII_ENABLE_ERROR_HANDLER', false);
 // defined('YII_ENABLE_EXCEPTION_HANDLER') or define('YII_ENABLE_EXCEPTION_HANDLER', false);
-
+//加select2要加下面的语句
 require_once($yii);
+require_once(ROOT_PATH .'/admin/extensions/yiiSelect2/Select2.php');
+//require_once(ROOT_PATH .'/admin/extensions/PHPMailer/PHPMailerAutoload.php');
 Yii::createWebApplication($config)->run();
+

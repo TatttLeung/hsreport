@@ -19,7 +19,7 @@ class MyCaptchaAction extends CCaptchaAction {
        for($i=0;$i<$length;++$i)
        {
            $code.=$letters[rand(0,9)];
-       }
+      }
  
        return $code;
    }
