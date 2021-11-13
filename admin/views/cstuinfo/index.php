@@ -1,3 +1,4 @@
+
 <?php
  $stu=cstuinfo::model()->findALL();
   $years=base_year::model()->findALL();
@@ -96,5 +97,4 @@ foreach($arclist as $v){
 
 <script>
 var deleteUrl = '<?php echo $this->createUrl('delete', array('id'=>'ID'));?>';
-
 </script>

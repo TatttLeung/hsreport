@@ -15,9 +15,6 @@ class workarticleController extends BaseController {
         $modelName = $this->model;
         $model = $modelName::model();
         $criteria = new CDbCriteria;
-
-
-        
         $styear=="-1"?$styear=base_year::model()->now():"";
         $sterm=="-1"?$sterm=base_term::model()->now():"";
         if($styear!="-1") $model->cyear = $styear;
