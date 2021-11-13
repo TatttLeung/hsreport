@@ -14,12 +14,13 @@ class cstuinfoController extends BaseController {
         set_cookie('_currentUrl_', Yii::app()->request->url);
         $modelName = $this->model;
         $model = $modelName::model();
+        $this->open();
         $criteria = new CDbCriteria;
-        $w1=get_where('1=1',$styear,'cyear',$styear,'"');
+        $w1=get_where('1=1',$styear,'courseyear',$styear,'"');
         //put_msg("19"." ".$w1);
-        $criteria->condition=get_where($w1,$sterm,'cterm',$sterm,'"');
-        put_msg(21);
-        put_msg($criteria->condition);
+        $criteria->condition=get_where($w1,$sterm,'courseterm',$sterm,'"');
+
+
         //put_msg("21"." ".$criteria->condition);
         /*criteria为筛选条件，更改对条件即可完成筛选，第一个不用改，第二个改成index里面对应命名
         （即参数，应设置为默认0），第三个为此模块中的筛选的表名，第四个为index里面对应命名（即参数）*/
@@ -73,4 +74,27 @@ class cstuinfoController extends BaseController {
         
     }
 
+    public function open($file = '')
+    {
+        
+    Yii::$enableIncludePath = false;
+                Yii::import('application.extensions.PHPExcel.PHPExcel', 1);
+                $phpexcel = new PHPExcel;
+                $extension="xlsx";
+                if ($extension=='xls') {
+                    $excelReader = PHPExcel_IOFactory::createReader('Excel5');
+                } else {
+                    $excelReader = PHPExcel_IOFactory::createReader('Excel2007');
+                }
+                      $excelFile = "F:\wamp64\www\hsreport\uploads\a.xlsx";
+                      $objPHPExcel = $excelReader->load($excelFile);//
+                        $sheet = $objPHPExcel->getSheet(0);
+                        $highestRow = $sheet->getHighestRow(); // 取得总行数
+                        
+                            for ($row = 2; $row <= $highestRow; $row++){
+                                $project_name = $sheet->getCell('B'.$row)->getValue();  // 项目
+                                
+                                
+                            }
+    }
 }

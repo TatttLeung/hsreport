@@ -490,5 +490,7 @@ public function listBox($pkeyword,$titlname,$pfields){
       $content = preg_replace("/face=.+?['|\"]/", '', $content); //去除样式 只允许小写 正则匹配没有带 i 参数
       return $content;
     }
+
+    
 }  //end class
 
