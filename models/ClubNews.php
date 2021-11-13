@@ -90,30 +90,15 @@ class ClubNews extends BaseModel {
 
     protected function afterFind() {
         parent::afterFind();
+        $news_content_temp = $this->news_content;
+        put_msg($news_content_temp);
         return true;
     } 
 
     protected function beforeSave() {
         parent::beforeSave();
         // 圖文描述處理
-        if (1==1){
-            $name = ClubList::model()->find('club_code='.$this->club_id);
-            $this->news_club_name=$name->club_name;
-            $basepath = BasePath::model()->getPath(124);
-        if ($this->news_content_temp != '') {
-            // 判斷是否存儲過，沒有存儲過則保存新文件
-            if ($this->news_content != '') {
-                set_html($this->news_content, $this->news_content_temp, $basepath);
-            } else {
-                $rs = set_html('', $this->news_content_temp, $basepath);
-                if ($rs['news_code'] == 0) {
-                    $this->news_content = $rs['filename'];
-                }
-            }
-        } else {
-            $this->news_content = '';
-        }
-     }
+
         $this->uDate = date('Y-m-d H:i:s');  
         return true;
     }
