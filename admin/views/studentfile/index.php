@@ -20,9 +20,10 @@
       <label style="margin-right:20px;">
         <span>学年</span>
         <select name="styear">
-            <option value="<?php echo $model->cyear?$model->cyear:base_year::model()->now(); ?>"><?php echo $model->cyear?$model->cyear:base_year::model()->now();  ?></option>
+            <option value="<?php echo $model->cyear!="-1"?$model->cyear:base_year::model()->now(); ?>"><?php echo $model->cyear!="-1"?$model->cyear:base_year::model()->now();  ?></option>
             <?php foreach($years as $v){?>
-            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_NAME;?></option>
+                <?php if( $model->cyear==$v->F_NAME) continue; ?>
+            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_view;?></option>
             <?php }?>
         </select>
     </label>
@@ -30,13 +31,16 @@
     <label style="margin-right:20px;">
         <span>学期</span>
         <select name="sterm">
-            <option value="<?php echo $model->cterm?$model->cterm:base_term::model()->now(); ?>"><?php echo $model->cterm?$model->cterm:base_term::model()->now();  ?></option>
+            <option value="<?php echo $model->cterm!="-1"?$model->cterm:base_year::model()->now(); ?>"><?php echo $model->cterm!="-1"?$model->cterm:base_year::model()->now(); ?></option>
             <?php foreach($terms as $v){?>
-            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_NAME;?></option>
+                <?php if($model->cterm==$v->F_NAME) continue;?>
+            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_SHOW;?></option>
             <?php }?>
         </select>
-      </label>
+    </label>
 
+    <?php $_SESSION["cyear"]=$model->cyear;
+     $_SESSION["cterm"]=$model->cterm;?>
 
         <button class="btn btn-blue" type="submit">查询</button>
     </form>

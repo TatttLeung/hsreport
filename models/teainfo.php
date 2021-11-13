@@ -68,6 +68,9 @@ class teainfo extends BaseModel {
         parent::afterFind();
         return true;
     }
-
+   public function downSelect($form,$m,$atts,$onchange='',$noneshow=''){
+     $data=$this->findAll('1 order by id');
+     return BaseLib::model()->selectByData($form,$m,$atts,$data,'teaname',$onchange,$noneshow);
+    } 
 
 }
