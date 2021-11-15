@@ -116,3 +116,51 @@ Stack trace:
 REQUEST_URI=/hsreport/index.php?r=cstuinfo/create
 =======
 >>>>>>> 0f395328a68d62640194328c33a193c847640f7f
+2021/11/15 10:31:20 [error] [exception.CException] exception 'CException' with message '属性 "cstuinfo.cterm" 未被定义.' in F:\wamp64\www\hsreport\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\db\ar\CActiveRecord.php(145): CComponent->__get('cterm')
+#1 F:\wamp64\www\hsreport\admin\views\cstuinfo\index.php(44): CActiveRecord->__get('cterm')
+#2 F:\wamp64\www\hsreport\framework\web\CBaseController.php(126): require('F:\\wamp64\\www\\h...')
+#3 F:\wamp64\www\hsreport\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\\wamp64\\www\\h...', Array, true)
+#4 F:\wamp64\www\hsreport\framework\web\CController.php(872): CBaseController->renderFile('F:\\wamp64\\www\\h...', Array, true)
+#5 F:\wamp64\www\hsreport\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#6 F:\wamp64\www\hsreport\admin\components\BaseController.php(34): CController->render('index', Array)
+#7 F:\wamp64\www\hsreport\admin\controllers\cstuinfoController.php(30): BaseController->_list(Object(cstuinfo), Object(CDbCriteria), 'index', Array)
+#8 [internal function]: cstuinfoController->actionIndex('-1', '-1')
+#9 F:\wamp64\www\hsreport\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(cstuinfoController), Array)
+#10 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(cstuinfoController), Object(ReflectionMethod), Array)
+#11 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 F:\wamp64\www\hsreport\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 F:\wamp64\www\hsreport\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): CController->run('index')
+#15 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController('cstuinfo/index')
+#16 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 F:\wamp64\www\hsreport\index.php(35): CApplication->run()
+#18 {main}
+REQUEST_URI=/hsreport/index.php?r=cstuinfo/index
+HTTP_REFERER=http://127.0.0.1/hsreport/index.php
+---
+2021/11/15 10:31:22 [error] [exception.CException] exception 'CException' with message '属性 "cstuinfo.cterm" 未被定义.' in F:\wamp64\www\hsreport\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\db\ar\CActiveRecord.php(145): CComponent->__get('cterm')
+#1 F:\wamp64\www\hsreport\admin\views\cstuinfo\index.php(44): CActiveRecord->__get('cterm')
+#2 F:\wamp64\www\hsreport\framework\web\CBaseController.php(126): require('F:\\wamp64\\www\\h...')
+#3 F:\wamp64\www\hsreport\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\\wamp64\\www\\h...', Array, true)
+#4 F:\wamp64\www\hsreport\framework\web\CController.php(872): CBaseController->renderFile('F:\\wamp64\\www\\h...', Array, true)
+#5 F:\wamp64\www\hsreport\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#6 F:\wamp64\www\hsreport\admin\components\BaseController.php(34): CController->render('index', Array)
+#7 F:\wamp64\www\hsreport\admin\controllers\cstuinfoController.php(30): BaseController->_list(Object(cstuinfo), Object(CDbCriteria), 'index', Array)
+#8 [internal function]: cstuinfoController->actionIndex('-1', '-1')
+#9 F:\wamp64\www\hsreport\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(cstuinfoController), Array)
+#10 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(cstuinfoController), Object(ReflectionMethod), Array)
+#11 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 F:\wamp64\www\hsreport\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 F:\wamp64\www\hsreport\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): CController->run('index')
+#15 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController('cstuinfo/index')
+#16 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 F:\wamp64\www\hsreport\index.php(35): CApplication->run()
+#18 {main}
+REQUEST_URI=/hsreport/index.php?r=cstuinfo/index
+HTTP_REFERER=http://127.0.0.1/hsreport/index.php
+---

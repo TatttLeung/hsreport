@@ -21,18 +21,6 @@
                             //$model->news_pic='t1234.jpg';
                             //if($basepath){ $picprefix=$basepath; }?>
                          <div class="upload_img fl" id="upload_pic_cstuifo_excelPath"> 
-                          <?php if(!empty($model->excelPath)) {?>
-                             <a href="<?php  if(substr($model->excelPath,-3,3)=='xls' || substr($model->excelPath,-4,4)=='xlsx')
-                                     echo $model->excelPath;
-                              else
-                                     echo   'https://z3.ax1x.com/2021/11/06/IMh0XT.png'; ?>" target="_blank">
-                             <img src="<?php if (substr($model->excelPath,-4,4)=='xlsx') 
-                                echo '/hsreport/uploads/image/pdf.png';
-                                else 
-                                echo '/hsreport/uploads/image/fail.png';
-                                ?>", width="50">
-                             </a>
-                             <?php }?>
                              </div>
                             <script>we.uploadpic('<?php echo get_class($model);?>_excelPath','<?php echo $picprefix;?>','','','',0);</script>
                             <?php echo $form->error($model, 'excelPath', $htmlOptions = array()); ?>
