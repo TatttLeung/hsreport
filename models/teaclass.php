@@ -13,7 +13,7 @@ class teaclass extends BaseModel {
         return array(
          // array('courseyear', 'required', 'message' => '{attribute} 不能為空'),
          // array('courseterm', 'required', 'message' => '{attribute} 不能為空'),
-          array('courseteacher', 'required', 'message' => '{attribute} 不能為空'),
+          array('teaname', 'required', 'message' => '{attribute} 不能為空'),
           array('coursename', 'required', 'message' => '{attribute} 不能為空'),
     );
     }
@@ -37,7 +37,7 @@ class teaclass extends BaseModel {
         return array(
         //'courseyear'=>'学年',
         //'courseterm'=>'学期',
-        'courseteacher'=>'课程教师',
+        'teaname'=>'课程教师',
         'coursename'=>'课程名称',
         );
     }

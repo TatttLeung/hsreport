@@ -62,7 +62,7 @@ foreach($arclist as $v){
 <tr>
     <td class="check check-item"><input class="input-check" type="checkbox" value="<?php echo CHtml::encode($v->id); ?>"></td>
     <td style='text-align: center;'><span class="num num-1"><?php echo $index ?></span></td>
-    <td style='text-align: center;'><?php echo $v->courseteacher; ?></td>
+    <td style='text-align: center;'><?php echo $v->teaname; ?></td>
     <td style='text-align: center;'><?php echo $v->coursename; ?></td>
 </tr>
 <?php $index++; } ?>
