@@ -21,7 +21,7 @@ class courseworkController extends BaseController {
             $model->workterm = $a->courseterm;
             $model->workcourseid = $a->courseid;
             $model->workcourse = $a->coursename;
-            $model->workteacher = $a->courseteacher;
+            $model->workteacher = $a->teaname;
         }
         $criteria = new CDbCriteria;
 
@@ -36,7 +36,7 @@ class courseworkController extends BaseController {
         }
         else
         {
-            $criteria->condition="1=1 and workyear="."'$a->courseyear'"." and workterm="."'$a->courseterm'"." and workcourse="."'$a->coursename'"." and workteacher="."'$a->courseteacher'";
+            $criteria->condition="1=1 and workyear="."'$a->courseyear'"." and workterm="."'$a->courseterm'"." and workcourse="."'$a->coursename'"." and workteacher="."'$a->teaname'";
         }
         
 

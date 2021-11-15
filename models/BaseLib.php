@@ -250,9 +250,9 @@ public function trInput($form,$m,$str,$tr="1",$rd='') {
 //str=name:1:2,其中NAME为知道，1表示跨表格，2是右边 
 public function tdInput($form,$m,$str) {
     $ln=$this->ln();
-    $ad=array('class'=>'input-text','style'=>'height:25px');
+    $ad=array('class'=>'input-text','style'=>'height:20px');
     $ds=explode(':',$str.":1:1");
-    $td0='<td  style="padding:15px;" '.(($ds[1]=='1') ? "" :' colspan="'.$ds[1].'"').' > ';
+    $td0='<td  style="padding:10px;" '.(($ds[1]=='1') ? "" :' colspan="'.$ds[1].'"').' > ';
     $td1='<td '.(($ds[2]=='1') ? "" :' colspan="'.$ds[2].'"').' > '; 
     $s1=$form->labelEx($m,$ds[0]);
     $s1=$td0.$s1.'</td>'.$ln;

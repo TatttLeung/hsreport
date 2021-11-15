@@ -74,9 +74,19 @@ class cstuinfoController extends BaseController {
            //put_msg(62);
            $model->attributes =$post;
            //put_msg('F:/wamp64/www/hsreport/uploads/temp/'.$model->excelPath);
-           $this->open('F:/wamp64/www/hsreport/uploads/temp/'.$model->excelPath);
+           $status = 0;
+           if(!(substr($model->excelPath,-4,4)=='xlsx'||substr($model->excelPath,-3,3)=='xls'))
+            {
+                $status = 0;
+            }
+            else
+            {
+                $this->open('F:/wamp64/www/hsreport/uploads/temp/'.$model->excelPath);
+                $status = 1;
+            }
+           
            //put_msg(64);
-           show_status(1,'保存成功', get_cookie('_currentUrl_'),'保存失败');  
+           show_status($status,'保存成功', get_cookie("_currentUrl_"),'文件类型错误');  
      }
 
      private function DeleteImage($id)

@@ -59,8 +59,5 @@ class cstuinfo extends BaseModel {
         return true;
     }
 
-    public function picLabels() {
-        return 'excelPath';//缩略图要加这一个函数
-    }
-
+   
 }

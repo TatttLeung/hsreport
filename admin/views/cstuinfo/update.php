@@ -14,14 +14,25 @@
                         <td>
                             <?php echo $form->hiddenField($model, 'excelPath', array('class' => 'input-text fl')); ?>
                             <div>只能上传 xlsx xls 格式文件</div>
+                             <br>
+                             
+                            
+                            <?php  {?>
+                             <a href="<?php  echo "/hsreport/uploads/moban.xlsx" ?>" target="_blank">模版下载
+                             <img src="<?php echo '/hsreport/uploads/image/EXCEL.png';
+                                ?>", width="20">
+                             </a>
+                             <?php }?>
+
+                            </br>
                             <!-- 改缩略图这里要改 -->
                             <!-- face_game_bigpic -->
                             <?php /*$basepath=BasePath::model()->getPath();*/
                             $picprefix='';
                             //$model->news_pic='t1234.jpg';
                             //if($basepath){ $picprefix=$basepath; }?>
-                         <div class="upload_img fl" id="upload_pic_cstuifo_excelPath"> 
-                             </div>
+                         <div class="upload_img fl" id="upload_pic_cstuifo_excelPath"> </div>
+
                             <script>we.uploadpic('<?php echo get_class($model);?>_excelPath','<?php echo $picprefix;?>','','','',0);</script>
                             <?php echo $form->error($model, 'excelPath', $htmlOptions = array()); ?>
                         </td>
