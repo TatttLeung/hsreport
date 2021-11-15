@@ -4,6 +4,7 @@ class cstuinfo extends BaseModel {
     public function tableName() {
         return '{{coursestu}}';
     }
+    public $excelPath="";
 
     /**
      * 模型驗證規則
@@ -11,7 +12,7 @@ class cstuinfo extends BaseModel {
     public function rules() {
         return array(
 
-          array('courseyear,courseterm,courseid,coursename,courseteacher,stuid,stugrade,stuscore,stuname','safe'),
+          array('excelPath','safe'),
         );
     }
 
@@ -56,6 +57,10 @@ class cstuinfo extends BaseModel {
     protected function afterFind() {
         parent::afterFind();
         return true;
+    }
+
+    public function picLabels() {
+        return 'excelPath';//缩略图要加这一个函数
     }
 
 }

@@ -43,8 +43,9 @@ class studentfileController extends BaseController {
            $data['model'] = $model;
            $this->render('update', $data);
         } else {
-            put_msg($_POST);
+            
             $temp=$_POST[$modelName];
+            put_msg($temp);
            $this-> saveData($model,$temp);
         }
     }
