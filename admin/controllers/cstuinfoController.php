@@ -1,3 +1,4 @@
+
 <?php
 
 class cstuinfoController extends BaseController {
@@ -14,7 +15,10 @@ class cstuinfoController extends BaseController {
         set_cookie('_currentUrl_', Yii::app()->request->url);
         $modelName = $this->model;
         $model = $modelName::model();
+<<<<<<< HEAD
         //$this->open();
+=======
+>>>>>>> 0f395328a68d62640194328c33a193c847640f7f
         $criteria = new CDbCriteria;
         $styear=="-1"?$styear=base_year::model()->now():"";
         $sterm=="-1"?$sterm=base_term::model()->now():"";
@@ -22,8 +26,12 @@ class cstuinfoController extends BaseController {
         if($sterm!="-1") $model->courseterm = $sterm;
         $w1=get_where('1=1',$styear,'courseyear',$styear,'"');
         //put_msg("19"." ".$w1);
+<<<<<<< HEAD
         $criteria->condition=get_where($w1,$sterm,'courseterm',$sterm,'"');
 
+=======
+        $criteria->condition=get_where($w1,$sterm,'cterm',$sterm,'"');
+>>>>>>> 0f395328a68d62640194328c33a193c847640f7f
         //put_msg("21"." ".$criteria->condition);
         /*criteria为筛选条件，更改对条件即可完成筛选，第一个不用改，第二个改成index里面对应命名
         （即参数，应设置为默认0），第三个为此模块中的筛选的表名，第四个为index里面对应命名（即参数）*/
@@ -93,6 +101,7 @@ class cstuinfoController extends BaseController {
         
     }
 
+<<<<<<< HEAD
     public function open($excelFile = "")
     {
 
@@ -125,4 +134,7 @@ class cstuinfoController extends BaseController {
                             }
 
     }
+=======
+
+>>>>>>> 0f395328a68d62640194328c33a193c847640f7f
 }

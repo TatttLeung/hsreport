@@ -23,33 +23,18 @@
                         </td>
                     </tr>
                     <tr>
-                        <td ><?php echo $form->labelEx($model, 'courseid'); ?></td>
-                        <td >
-                            <?php echo $form->textField($model, 'courseid', array('class' => 'input-text')); ?>
-                            <?php echo $form->error($model, 'courseid', $htmlOptions = array()); ?>
-                        </td>
+                       <?php echo BaseLib::model()->tdInput($form,$model,'courseid');?>
                     </tr>
                     <tr>
-                        <td ><?php echo $form->labelEx($model, 'coursename'); ?></td>
-                        <td >
-                            <?php echo $form->textField($model, 'coursename', array('class' => 'input-text')); ?>
-                            <?php echo $form->error($model, 'coursename', $htmlOptions = array()); ?>
-                        </td>
+                          <?php echo BaseLib::model()->tdInput($form,$model,'coursename');?>
+                          <!--简化版填写框-->
                     </tr>
 
                     <tr>
-                        <td ><?php echo $form->labelEx($model, 'coursetime'); ?></td>
-                        <td >
-                            <?php echo $form->textField($model, 'coursetime', array('class' => 'input-text')); ?>
-                            <?php echo $form->error($model, 'coursetime', $htmlOptions = array()); ?>
-                        </td>
+                       <?php echo BaseLib::model()->tdInput($form,$model,'coursetime');?>
                     </tr>
                    <tr>
-                        <td ><?php echo $form->labelEx($model, 'courseteacher'); ?></td>
-                        <td >
-                            <?php echo $form->dropDownList($model, 'courseteacher', Chtml::listData(teainfo::model()->findALL(),'teaname', 'teaname'), array('prompt'=>'请选择')); ?>
-                            <?php echo $form->error($model, 'courseteacher', $htmlOptions = array()); ?>
-                        </td>
+                       <?php echo teainfo::model()->downSelect($form,$model,'teaname'); ?>
                     </tr>
                     <tr>
                         <td ><?php echo $form->labelEx($model, 'reportcnt'); ?></td>

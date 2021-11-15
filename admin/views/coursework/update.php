@@ -9,11 +9,7 @@
             <div style="display:block;" class="box-detail-tab-item">
                 <table class="mt15">
                     <tr>
-                        <td ><?php echo $form->labelEx($model, 'workyear'); ?></td>
-                        <td >
-                            <?php echo $form->textField($model, 'workyear', array('class'=>'input-text','value'=>$_SESSION["workyear"])); ?>              
-                            <?php echo $form->error($model, 'workyear', $htmlOptions = array()); ?>
-                        </td>
+                       <?php echo BaseLib::model()->tdInput($form,$model,'[]workyear:1:1');?>
                     </tr>
                     <tr>
                         <td ><?php echo $form->labelEx($model, 'workterm'); ?></td>

@@ -79,7 +79,7 @@ foreach($arclist as $v){
     <td style='text-align: center;'><?php echo $v->courseid; ?></td>
     <td style='text-align: center;'><?php echo $v->coursename; ?></td>
     <td style='text-align: center;'><?php echo $v->coursetime; ?></td>
-    <td style='text-align: center;'><?php echo $v->courseteacher; ?></td>
+    <td style='text-align: center;'><?php echo $v->teaname; ?></td>
     <td style='text-align: center;'>
      
         <a class="btn" href="<?php echo $this->createUrl('update', array('id'=>$v->id,'news_type'=>Yii::app()->request->getParam('news_type')));?>" title="编辑"><i class="fa fa-edit">课程编辑</i></a>
