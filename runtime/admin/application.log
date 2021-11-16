@@ -794,3 +794,42 @@ Stack trace:
 REQUEST_URI=/hsreport/index.php?r=courseinfo/update&id=4&news_type=
 HTTP_REFERER=http://127.0.0.1/hsreport/index.php?r=courseinfo/index
 ---
+2021/11/16 15:37:22 [error] [php] Undefined variable: course (F:\wamp64\www\hsreport\admin\views\cstuinfo\index.php:47)
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\CController.php(872): cstuinfoController->renderFile()
+#1 F:\wamp64\www\hsreport\framework\web\CController.php(785): cstuinfoController->renderPartial()
+#2 F:\wamp64\www\hsreport\admin\components\BaseController.php(34): cstuinfoController->render()
+#3 F:\wamp64\www\hsreport\admin\controllers\cstuinfoController.php(31): cstuinfoController->_list()
+#4 unknown(0): cstuinfoController->actionIndex()
+#5 F:\wamp64\www\hsreport\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#6 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 F:\wamp64\www\hsreport\framework\web\CController.php(286): cstuinfoController->runAction()
+#9 F:\wamp64\www\hsreport\framework\web\CController.php(265): cstuinfoController->runActionWithFilters()
+#10 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): cstuinfoController->run()
+#11 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 F:\wamp64\www\hsreport\index.php(35): CWebApplication->run()
+REQUEST_URI=/hsreport/index.php?r=cstuinfo/index
+2021/11/16 15:44:36 [error] [php] Undefined variable: scourse (F:\wamp64\www\hsreport\admin\controllers\cstuinfoController.php:23)
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 F:\wamp64\www\hsreport\framework\web\CController.php(286): cstuinfoController->runAction()
+#3 F:\wamp64\www\hsreport\framework\web\CController.php(265): cstuinfoController->runActionWithFilters()
+#4 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): cstuinfoController->run()
+#5 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 F:\wamp64\www\hsreport\index.php(35): CWebApplication->run()
+REQUEST_URI=/hsreport/index.php?r=cstuinfo/index
+2021/11/16 15:44:54 [error] [php] Undefined variable: coursename (F:\wamp64\www\hsreport\admin\controllers\cstuinfoController.php:23)
+Stack trace:
+#0 F:\wamp64\www\hsreport\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 F:\wamp64\www\hsreport\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 F:\wamp64\www\hsreport\framework\web\CController.php(286): cstuinfoController->runAction()
+#3 F:\wamp64\www\hsreport\framework\web\CController.php(265): cstuinfoController->runActionWithFilters()
+#4 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(282): cstuinfoController->run()
+#5 F:\wamp64\www\hsreport\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 F:\wamp64\www\hsreport\index.php(35): CWebApplication->run()
+REQUEST_URI=/hsreport/index.php?r=cstuinfo%2Findex&styear=2021-2022&sterm=%E4%B8%8A%E5%AD%A6%E6%9C%9F&scoursename=%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80
