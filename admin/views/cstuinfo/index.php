@@ -3,6 +3,7 @@
   $years=base_year::model()->findALL();
  //$stu=teainfo::model()->findALL();
  $terms=base_term::model()->findALL();
+ $courses=courseinfo::model()->findALL();
 ?>
 
 
@@ -40,6 +41,16 @@
         </select>
     </label>
 
+    <label style="margin-right:20px;">
+        <span>课程名称</span>
+        <select name="scoursename">
+            <option value="<?php echo $model->coursename; ?>"><?php echo $model->coursename; ?></option>
+            <?php foreach($courses as $v){?>
+                <?php if($model->coursename==$v->coursename) continue;?>
+            <option value="<?php echo $v->coursename;?>"><?php echo $v->coursename;?></option>
+            <?php }?>
+        </select>
+    </label>
      
         <button class="btn btn-blue" type="submit">查询</button>
         

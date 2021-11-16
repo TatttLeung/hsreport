@@ -10,7 +10,7 @@ class cstuinfoController extends BaseController {
         //dump(Yii::app()->request->isPostRequest);
     }
 
-     public function actionIndex($styear="-1",$sterm="-1") {
+     public function actionIndex($styear="-1",$sterm="-1",$scoursename="") {
         set_cookie('_currentUrl_', Yii::app()->request->url);
         $modelName = $this->model;
         $model = $modelName::model();
@@ -20,9 +20,11 @@ class cstuinfoController extends BaseController {
         $sterm=="-1"?$sterm=base_term::model()->now():"";
         if($styear!="-1") $model->courseyear = $styear;
         if($sterm!="-1") $model->courseterm = $sterm;
+        if($scoursename!="") $model->coursename = $scoursename;
         $w1=get_where('1=1',$styear,'courseyear',$styear,'"');
         //put_msg("19"." ".$w1);
-        $criteria->condition=get_where($w1,$sterm,'courseterm',$sterm,'"');
+        $w2=get_where('1=1',$sterm,'courseterm',$sterm,'"');
+        $criteria->condition=get_where($w2,$scoursename,'coursename',$scoursename,'"');
 
         //put_msg("21"." ".$criteria->condition);
         /*criteria为筛选条件，更改对条件即可完成筛选，第一个不用改，第二个改成index里面对应命名
