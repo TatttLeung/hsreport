@@ -83,7 +83,7 @@ class cstuinfoController extends BaseController {
             }
             else
             {
-                $this->open('F:/wamp64/www/hsreport/uploads/temp/'.$model->excelPath);
+                $this->open('D:/wamp64/www/hsreport/uploads/temp/'.$model->excelPath);
                 $status = 1;
             }
            
@@ -121,19 +121,28 @@ class cstuinfoController extends BaseController {
                       $objPHPExcel = $excelReader->load($excelFile);//
                         $sheet = $objPHPExcel->getSheet(0);
                         $highestRow = $sheet->getHighestRow(); // 取得总行数
+                        $nameArray=array('courseteacher','courseterm','courseid','coursename','courseteacher','stuname','stuid');
+                        $col=array('B','C','D','E','F','G','H');
                         
                             for ($row = 2; $row <= $highestRow; $row++){
                                 $modelName = $this->model;
                                 $a = new $modelName('create');
                                 $data = array();
-                                $a->courseyear=$sheet->getCell('B'.$row)->getValue();//学年
+/*                                $a->courseyear=$sheet->getCell('B'.$row)->getValue();//学年
                                 $a->courseterm=$sheet->getCell('C'.$row)->getValue();//学期
                                 $a->courseid = $sheet->getCell('D'.$row)->getValue();  // 课程编码
                                 $a->coursename = $sheet->getCell('E'.$row)->getValue();  // 课程名称
                                 $a->courseteacher = $sheet->getCell('F'.$row)->getValue();  // 任课老师
                                 $a->stuname = $sheet->getCell('G'.$row)->getValue();  // 学生姓名
                                 $a->stuid = $sheet->getCell('H'.$row)->getValue();  // 学生学号
+                                $a->save();*/
+                                /*$col = 'B';*/
+                                for($i=0 ; $i<7;$i++)
+                                {
+                                    $a->{$nameArray[$i]}=$sheet->getCell($col[$i].$row)->getValue();
+                                }
                                 $a->save();
+
                             }
 
     }
