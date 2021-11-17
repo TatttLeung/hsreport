@@ -10,7 +10,7 @@ class cstuinfoController extends BaseController {
         //dump(Yii::app()->request->isPostRequest);
     }
 
-     public function actionIndex($styear="-1",$sterm="-1",$scoursename="") {
+     public function actionIndex($styear="-1",$sterm="-1",$scoursename="",$scourseteacher="") {
         set_cookie('_currentUrl_', Yii::app()->request->url);
         $modelName = $this->model;
         $model = $modelName::model();
@@ -18,18 +18,25 @@ class cstuinfoController extends BaseController {
         $criteria = new CDbCriteria;
         $styear=="-1"?$styear=base_year::model()->now():"";
         $sterm=="-1"?$sterm=base_term::model()->now():"";
+        if($scourseteacher=="") $scourseteacher = "陈寅";
+        $w1="teaname='".$scourseteacher."' and "."courseyear='".$styear."' and "."courseterm='".$sterm."'";
+             $w1=get_where($w1,$scoursename,'coursename',$scoursename,'"');
+        put_msg($w1);
+        $a=courseinfo::model()->find($w1);
         if($styear!="-1") $model->courseyear = $styear;
         if($sterm!="-1") $model->courseterm = $sterm;
         if($scoursename!="") $model->coursename = $scoursename;
+        if($scourseteacher!="") $model->courseteacher = $scourseteacher;
         $w1=get_where('1=1',$styear,'courseyear',$styear,'"');
         //put_msg("19"." ".$w1);
-        $w2=get_where('1=1',$sterm,'courseterm',$sterm,'"');
-        $criteria->condition=get_where($w2,$scoursename,'coursename',$scoursename,'"');
-
+        $w2=get_where($w1,$sterm,'courseterm',$sterm,'"');
+         $w3=get_where($w2,$scourseteacher,'courseteacher',$scourseteacher,'"');
+        $criteria->condition=get_where($w3,$scoursename,'coursename',$scoursename,'"');
+        $data['cnt']=$a;
         //put_msg("21"." ".$criteria->condition);
         /*criteria为筛选条件，更改对条件即可完成筛选，第一个不用改，第二个改成index里面对应命名
         （即参数，应设置为默认0），第三个为此模块中的筛选的表名，第四个为index里面对应命名（即参数）*/
-        parent::_list($model, $criteria, 'index', array()); //调用S
+        parent::_list($model, $criteria, 'index', $data); //调用S
     }
 
    public function actionCreate() {
@@ -121,7 +128,7 @@ class cstuinfoController extends BaseController {
                       $objPHPExcel = $excelReader->load($excelFile);//
                         $sheet = $objPHPExcel->getSheet(0);
                         $highestRow = $sheet->getHighestRow(); // 取得总行数
-                        $nameArray=array('courseteacher','courseterm','courseid','coursename','courseteacher','stuname','stuid');
+                        $nameArray=array('courseyear','courseterm','courseid','coursename','courseteacher','stuname','stuid');
                         $col=array('B','C','D','E','F','G','H');
                         
                             for ($row = 2; $row <= $highestRow; $row++){
