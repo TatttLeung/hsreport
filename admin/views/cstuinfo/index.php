@@ -3,7 +3,8 @@
   $years=base_year::model()->findALL();
  //$stu=teainfo::model()->findALL();
  $terms=base_term::model()->findALL();
- $courses=courseinfo::model()->findALL();
+$courses=courseinfo::model()->findALL();
+ $teachers=teainfo::model()->findALL();
 ?>
 
 
@@ -44,7 +45,7 @@
     <label style="margin-right:20px;">
         <span>课程名称</span>
         <select name="scoursename">
-            <option value="<?php echo $model->coursename; ?>"><?php echo $model->coursename; ?></option>
+            <option value="<?php echo $model->coursename?>"><?php echo $model->coursename; ?></option>
             <?php foreach($courses as $v){?>
                 <?php if($model->coursename==$v->coursename) continue;?>
             <option value="<?php echo $v->coursename;?>"><?php echo $v->coursename;?></option>
@@ -52,13 +53,23 @@
         </select>
     </label>
      
+    <label style="margin-right:20px;">
+        <span>任课老师</span>
+        <select name="scourseteacher">
+            <option value="<?php echo $model->courseteacher?>"><?php echo $model->courseteacher ; ?></option>
+            <?php foreach($teachers as $w){?>
+                <?php if($model->courseteacher==$w->teaname) continue;?>
+            <option value="<?php echo $w->teaname;?>"><?php echo $w->teaname;?></option>
+            <?php }?>
+        </select>
+    </label>
         <button class="btn btn-blue" type="submit">查询</button>
         
-
     </form>
 </div><!--box-search end-->
 
-
+<?php $homeworkcnt=$cnt->homeworkcnt?>
+ 
 <div class="box-table">
     <table class="list">
 <thead>
@@ -66,12 +77,16 @@
     <tr>
         <th class="check"><input id="j-checkall" class="input-check" type="checkbox"></th>
         <th style='text-align: center;'>序号</th>
-        <th style='text-align: center;'>课程编码</th>
-        <th style='text-align: center;'>课程名称</th>
-        <th style='text-align: center;'>任课老师</th>
+        <!-- <th style='text-align: center;'>课程编码</th> -->
+        <!-- <th style='text-align: center;'>课程名称</th> -->
+        <!-- <th style='text-align: center;'>任课老师</th> -->
         <th style='text-align: center;'>学生姓名</th>
         <th style='text-align: center;'>学号</th>        
-        <th style='text-align: center;'>作业分数</th>               
+        <?php for($i=1 ; $i <= $homeworkcnt ; $i++ )      
+             echo "<th style='text-align: center;'>第".$i."次</th>";
+        ?>
+
+        <!-- <th style='text-align: center;'>作业分数</th>  -->              
     </tr>
 </thead>
         <tbody>
@@ -79,16 +94,17 @@
 <?php 
 $index = 1;
 foreach($arclist as $v){ 
+
 ?>
 <tr>
     <td class="check check-item"><input class="input-check" type="checkbox" value="<?php echo CHtml::encode($v->id); ?>"></td>
     <td style='text-align: center;'><span class="num num-1"><?php echo $index ?></span></td>
-    <td style='text-align: center;'><?php echo $v->courseid; ?></td>
-    <td style='text-align: center;'><?php echo $v->coursename; ?></td>
-    <td style='text-align: center;'><?php echo $v->courseteacher; ?></td>  
     <td style='text-align: center;'><?php echo $v->stuname; ?></td>
     <td style='text-align: center;'><?php echo $v->stuid; ?></td>
-    <td style='text-align: center;'><?php echo $v->stuscore; ?></td>
+
+    <?php for($i = 1;$i <= $homeworkcnt ;$i++ ) 
+         echo "<td style='text-align: center;'><?php echo $v->stuscore; ?></td>";
+    ?> 
     </td>
 </tr>
 <?php $index++; } ?>
