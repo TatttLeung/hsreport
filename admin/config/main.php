@@ -68,6 +68,12 @@ $st="";
             'award_index327' => array('教师提交确认', 'teaconfirm/index'), 
             'award_index328' => array('材料审核进度查询', 'workarticle/index'),
          )
+    ),
+    array(
+     '工程申报材料',
+        array(
+            'award_index331' => array('工程申报材料提交', 'Projectcommit/index'),
+         )
     )
   );
 
