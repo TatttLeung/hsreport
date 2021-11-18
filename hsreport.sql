@@ -10,7 +10,8 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2021-11-17 19:10:13
+
+Date: 2021-11-18 16:56:47
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -1789,14 +1790,17 @@ CREATE TABLE `coursestu` (
   `stuscore` varchar(20) DEFAULT '' COMMENT '学生分数',
   `stuname` varchar(20) DEFAULT '' COMMENT '学生姓名',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=utf8;
+
+) ENGINE=MyISAM AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of coursestu
 -- ----------------------------
-INSERT INTO `coursestu` VALUES ('40', '2021-2022', '上学期', '000034', '离散数学', '陈寅', '20201111001', '', '', '张三');
-INSERT INTO `coursestu` VALUES ('41', '2021-2022', '上学期', '000034', '离散数学', '陈寅', '20201111002', '', '', '李四');
-INSERT INTO `coursestu` VALUES ('42', '2021-2022', '上学期', '000034', '离散数学', '陈寅', '20201111003', '', '', '黄莉');
+
+INSERT INTO `coursestu` VALUES ('45', '2021-2022', '上学期', '000034', '离散数学', '陈寅', '20201111003', '', '·100', '黄莉');
+INSERT INTO `coursestu` VALUES ('44', '2021-2022', '上学期', '000034', '离散数学', '陈寅', '20201111002', '', '', '李四');
+INSERT INTO `coursestu` VALUES ('43', '2021-2022', '上学期', '000034', '离散数学', '陈寅', '20201111001', '', '', '张三');
+INSERT INTO `coursestu` VALUES ('46', '2021-2022', '上学期', '35', '程序设计基础', '曾锡山', '20202231011', '', '', '张敬康');
 
 -- ----------------------------
 -- Table structure for `coursework`
@@ -6198,7 +6202,9 @@ CREATE TABLE `test_err` (
   `f_username` char(20) DEFAULT '' COMMENT '测试员',
   `f_callname` varchar(200) DEFAULT '' COMMENT '调用函数名称',
   PRIMARY KEY (`f_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=719358 DEFAULT CHARSET=utf8;
+
+) ENGINE=InnoDB AUTO_INCREMENT=719400 DEFAULT CHARSET=utf8;
+
 
 -- ----------------------------
 -- Records of test_err
@@ -6352,6 +6358,49 @@ INSERT INTO `test_err` VALUES ('719354', 'teaname=\'陈寅\' and courseyear=\'20
 INSERT INTO `test_err` VALUES ('719355', 'teaname=\'陈寅\' and courseyear=\'2021-2022\' and courseterm=\'上学期\'', '2021-11-17 17:47:55', '', '');
 INSERT INTO `test_err` VALUES ('719356', 'teaname=\'曾锡山\' and courseyear=\'2021-2022\' and courseterm=\'上学期\'', '2021-11-17 17:48:04', '', '');
 INSERT INTO `test_err` VALUES ('719357', 'teaname=\'陈寅\' and courseyear=\'2021-2022\' and courseterm=\'上学期\'', '2021-11-17 17:48:07', '', '');
+INSERT INTO `test_err` VALUES ('719358', 'teaname=\'陈寅\' and courseyear=\'2021-2022\' and courseterm=\'上学期\'', '2021-11-17 20:00:38', '', '');
+INSERT INTO `test_err` VALUES ('719359', 'teaname=\'曾锡山\' and courseyear=\'2021-2022\' and courseterm=\'上学期\'', '2021-11-17 20:04:02', '', '');
+INSERT INTO `test_err` VALUES ('719360', 'teaname=\'曾锡山\' and courseyear=\'2021-2022\' and courseterm=\'上学期\'', '2021-11-17 20:04:03', '', '');
+INSERT INTO `test_err` VALUES ('719361', 'teaname=\'曾锡山\' and courseyear=\'2021-2022\' and courseterm=\'\'', '2021-11-17 20:04:06', '', '');
+INSERT INTO `test_err` VALUES ('719362', 'teaname=\'陈寅\' and courseyear=\'2021-2022\' and courseterm=\'上学期\'', '2021-11-17 20:04:12', '', '');
+INSERT INTO `test_err` VALUES ('719363', 'teaname=\'陈寅\' and courseyear=\'\' and courseterm=\'上学期\'', '2021-11-17 20:04:15', '', '');
+INSERT INTO `test_err` VALUES ('719364', 'teaname=\'陈寅\' and courseyear=\'2021-2022\' and courseterm=\'上学期\'', '2021-11-17 20:04:17', '', '');
+INSERT INTO `test_err` VALUES ('719365', 'teaname=\'陈寅\' and courseyear=\'2021-2022\' and courseterm=\'上学期\' and coursename=\"程序设计基础\"', '2021-11-17 20:04:21', '', '');
+INSERT INTO `test_err` VALUES ('719366', 'teaname=\'陈寅\' and courseyear=\'2021-2022\' and courseterm=\'上学期\'', '2021-11-17 20:04:31', '', '');
+INSERT INTO `test_err` VALUES ('719367', 'teaname=\'曾锡山\' and courseyear=\'2021-2022\' and courseterm=\'上学期\'', '2021-11-17 20:04:36', '', '');
+INSERT INTO `test_err` VALUES ('719368', 'teaname=\'曾锡山\' and courseyear=\'2021-2022\' and courseterm=\'上学期\'', '2021-11-17 20:08:21', '', '');
+INSERT INTO `test_err` VALUES ('719369', 'teaname=\'陈寅\' and courseyear=\'2021-2022\' and courseterm=\'上学期\'', '2021-11-17 20:08:23', '', '');
+INSERT INTO `test_err` VALUES ('719370', 'teaname=\'陈寅\' and courseyear=\'2021-2022\' and courseterm=\'上学期\' and coursename=\"程序设计基础\"', '2021-11-17 20:08:26', '', '');
+INSERT INTO `test_err` VALUES ('719371', 'teaname=\'陈寅\' and courseyear=\'2021-2022\' and courseterm=\'上学期\'', '2021-11-17 20:08:28', '', '');
+INSERT INTO `test_err` VALUES ('719372', 'teaname=\'陈寅\' and courseyear=\'2021-2022\' and courseterm=\'上学期\' and coursename=\"程序设计基础\"', '2021-11-17 20:08:31', '', '');
+INSERT INTO `test_err` VALUES ('719373', 'teaname=\'陈寅\' and courseyear=\'2021-2022\' and courseterm=\'上学期\'', '2021-11-17 20:08:32', '', '');
+INSERT INTO `test_err` VALUES ('719374', 'teaname=\'陈寅\' and courseyear=\'2021-2022\' and courseterm=\'上学期\' and coursename=\"程序设计基础\"', '2021-11-17 20:34:22', '', '');
+INSERT INTO `test_err` VALUES ('719375', 'teaname=\'陈寅\' and courseyear=\'2021-2022\' and courseterm=\'上学期\'', '2021-11-17 20:36:16', '', '');
+INSERT INTO `test_err` VALUES ('719376', 'teaname=\'陈寅\' and courseyear=\'2021-2022\' and courseterm=\'上学期\'', '2021-11-17 20:36:16', '', '');
+INSERT INTO `test_err` VALUES ('719377', '21', '2021-11-17 20:37:53', '', '');
+INSERT INTO `test_err` VALUES ('719378', '1=1', '2021-11-17 20:37:53', '', '');
+INSERT INTO `test_err` VALUES ('719379', 'teaname=\'陈寅\' and courseyear=\'2021-2022\' and courseterm=\'上学期\'', '2021-11-17 20:37:55', '', '');
+INSERT INTO `test_err` VALUES ('719380', '21', '2021-11-18 15:05:41', '', '');
+INSERT INTO `test_err` VALUES ('719381', '1=1', '2021-11-18 15:05:41', '', '');
+INSERT INTO `test_err` VALUES ('719382', 'CLUB_ID<2000', '2021-11-18 15:05:52', '', '');
+INSERT INTO `test_err` VALUES ('719383', '1=1', '2021-11-18 15:34:43', '', '');
+INSERT INTO `test_err` VALUES ('719384', '1=1', '2021-11-18 15:34:49', '', '');
+INSERT INTO `test_err` VALUES ('719385', '21', '2021-11-18 15:39:07', '', '');
+INSERT INTO `test_err` VALUES ('719386', '1=1', '2021-11-18 15:39:07', '', '');
+INSERT INTO `test_err` VALUES ('719387', '1=1', '2021-11-18 15:44:08', '', '');
+INSERT INTO `test_err` VALUES ('719388', '1=1', '2021-11-18 15:44:15', '', '');
+INSERT INTO `test_err` VALUES ('719389', '1=1', '2021-11-18 15:45:37', '', '');
+INSERT INTO `test_err` VALUES ('719390', '1=1', '2021-11-18 15:45:40', '', '');
+INSERT INTO `test_err` VALUES ('719391', '1=1', '2021-11-18 15:51:54', '', '');
+INSERT INTO `test_err` VALUES ('719392', '1=1', '2021-11-18 15:51:55', '', '');
+INSERT INTO `test_err` VALUES ('719393', '{\"teaconfirm\":{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0a\\u5b66\\u671f\",\"cstuid\":\"88\",\"cstuname\":\"\\u9648\\u5fd7\\u5b87\",\"ccoursename\":\"\\u79bb\\u6563\\u6570\\u5b66\",\"cworkid\":\"1\",\"cscore\":\"100\"},\"submitType\":\"baocun\"}', '2021-11-18 16:15:16', '', '');
+INSERT INTO `test_err` VALUES ('719394', '67', '2021-11-18 16:15:16', '', '');
+INSERT INTO `test_err` VALUES ('719395', 'coursename=\'离散数学\'', '2021-11-18 16:15:16', '', '');
+INSERT INTO `test_err` VALUES ('719396', '68', '2021-11-18 16:15:16', '', '');
+INSERT INTO `test_err` VALUES ('719397', '{\"workarticle\":{\"ctime\":\"2021-11-18 16:15:43\",\"cstatus\":\"\\u901a\\u8fc7\",\"copinion\":\"\\u63d0\\u9ad8\"},\"submitType\":\"baocun\"}', '2021-11-18 16:15:49', '', '');
+INSERT INTO `test_err` VALUES ('719398', '1=1', '2021-11-18 16:16:01', '', '');
+INSERT INTO `test_err` VALUES ('719399', '1=1', '2021-11-18 16:17:06', '', '');
+
 
 -- ----------------------------
 -- Table structure for `user`
@@ -6443,7 +6492,7 @@ CREATE TABLE `workcommit` (
 INSERT INTO `workcommit` VALUES ('1', '2020-2021', '下学期', '00001', '1', '1', '1', '2021/11/08/1_6188e4ffcfa9d9.18841132.docx', '100', '1', '1', '曾锡山-程序设计基础', '2021-11-03 17:16:13', '平时作业');
 INSERT INTO `workcommit` VALUES ('2', '2020-2021', '下学期', '00001', '3', '翁行', '2', '2021/11/08/1_6188a3707857e1.43327924.docx', '10', '1', '1', '程序设计基础', '2021-11-03 17:13:53', '考试');
 INSERT INTO `workcommit` VALUES ('3', '2020-2021', '下学期', '', '1', '良叔', '3', '2021/11/08/1_6188a39a68a1a1.01004287.docx', '100', '', null, '曾锡山-程序设计基础', null, '考试');
-INSERT INTO `workcommit` VALUES ('4', '2020-2021', '上学期', '', '1', '陈志宇', '88', '2021/11/10/1_618bd9af5f8df5.25642755.pdf', '', '', null, '曾锡山-程序设计基础', null, '实验报告');
+INSERT INTO `workcommit` VALUES ('4', '2020-2021', '上学期', '00002', '1', '陈志宇', '88', '2021/11/10/1_618bd9af5f8df5.25642755.pdf', '100', '通过', '提高', '离散数学', '2021-11-18 16:15:43', '实验报告');
 INSERT INTO `workcommit` VALUES ('5', '2020-2021', '上学期', '', '0', '刘源', '2', '2021/11/15/1_6191d0401a8f47.54149806.docx', '', '', null, '曾锡山-程序设计基础', null, '实验报告');
 INSERT INTO `workcommit` VALUES ('6', '2021-2022', '下学期', '', '0', '刘源', '2', '2021/11/15/1_6191d058593602.94328173.docx', '', '', null, '曾锡山-程序设计基础', null, '实验报告');
 DROP TRIGGER IF EXISTS `insert_num`;
