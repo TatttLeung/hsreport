@@ -103,7 +103,7 @@ foreach($arclist as $v){
     <td style='text-align: center;'><?php echo $v->stuid; ?></td>
 
     <?php for($i = 1;$i <= $homeworkcnt ;$i++ ) 
-         echo "<td style='text-align: center;'><?php $v->stuscore; ?></td>";
+         echo "<td style='text-align: center;'><?php echo $v->stuscore; ?></td>";
     ?> 
     </td>
 </tr>

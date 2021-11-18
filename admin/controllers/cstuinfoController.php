@@ -10,6 +10,7 @@ class cstuinfoController extends BaseController {
         //dump(Yii::app()->request->isPostRequest);
     }
 
+
      public function actionIndex($styear="-1",$sterm="-1",$scoursename="",$scourseteacher="",$sscore="") {
         set_cookie('_currentUrl_', Yii::app()->request->url);
         $modelName = $this->model;
@@ -51,7 +52,6 @@ class cstuinfoController extends BaseController {
             exit;
         }
 
-       
     }
 
    public function actionCreate() {

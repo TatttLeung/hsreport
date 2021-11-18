@@ -10,6 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
+
 Date: 2021-11-18 16:56:47
 */
 
@@ -1789,11 +1790,13 @@ CREATE TABLE `coursestu` (
   `stuscore` varchar(20) DEFAULT '' COMMENT '学生分数',
   `stuname` varchar(20) DEFAULT '' COMMENT '学生姓名',
   PRIMARY KEY (`id`)
+
 ) ENGINE=MyISAM AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of coursestu
 -- ----------------------------
+
 INSERT INTO `coursestu` VALUES ('45', '2021-2022', '上学期', '000034', '离散数学', '陈寅', '20201111003', '', '·100', '黄莉');
 INSERT INTO `coursestu` VALUES ('44', '2021-2022', '上学期', '000034', '离散数学', '陈寅', '20201111002', '', '', '李四');
 INSERT INTO `coursestu` VALUES ('43', '2021-2022', '上学期', '000034', '离散数学', '陈寅', '20201111001', '', '', '张三');
@@ -6199,7 +6202,9 @@ CREATE TABLE `test_err` (
   `f_username` char(20) DEFAULT '' COMMENT '测试员',
   `f_callname` varchar(200) DEFAULT '' COMMENT '调用函数名称',
   PRIMARY KEY (`f_id`)
+
 ) ENGINE=InnoDB AUTO_INCREMENT=719400 DEFAULT CHARSET=utf8;
+
 
 -- ----------------------------
 -- Records of test_err
@@ -6395,6 +6400,7 @@ INSERT INTO `test_err` VALUES ('719396', '68', '2021-11-18 16:15:16', '', '');
 INSERT INTO `test_err` VALUES ('719397', '{\"workarticle\":{\"ctime\":\"2021-11-18 16:15:43\",\"cstatus\":\"\\u901a\\u8fc7\",\"copinion\":\"\\u63d0\\u9ad8\"},\"submitType\":\"baocun\"}', '2021-11-18 16:15:49', '', '');
 INSERT INTO `test_err` VALUES ('719398', '1=1', '2021-11-18 16:16:01', '', '');
 INSERT INTO `test_err` VALUES ('719399', '1=1', '2021-11-18 16:17:06', '', '');
+
 
 -- ----------------------------
 -- Table structure for `user`
