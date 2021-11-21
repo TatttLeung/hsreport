@@ -102,13 +102,21 @@ foreach($arclist as $v){
     <td style='text-align: center;'><?php echo $v->stuname; ?></td>
     <td style='text-align: center;'><?php echo $v->stuid; ?></td>
 
-    <?php for($i = 1;$i <= $homeworkcnt ;$i++ ) 
-         echo "<td style='text-align: center;'><?php echo $v->stuscore; ?></td>";
+    <?php for($i = 1;$i <= $homeworkcnt ;$i++ ) {
+         $s1="<td style='text-align: center;'>";
+          
+         $s1.="<a class='btn' href='";
+         $s1.=$this->createUrl('cstuinfo/update1', array('id'=>$v->id,));
+         $s1.="'title='评分'>评分<i class='fa fa-edit'></i></a></td>";
+         echo $s1;
+         $s1="";
+         }
     ?> 
+
+
     </td>
 </tr>
-<?php $index++; } ?>
-                </tbody>
+<?php $index++; } ?>   </tbody>
             </table>
         </div><!--box-table end-->
         <div class="box-page c"><?php $this->page($pages);?></div>
