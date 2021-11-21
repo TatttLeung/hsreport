@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2021/11/21 11:21:09 [error] [exception.CException] exception 'CException' with message '属性 "achievement.filepath" 未被定义.' in F:\wamp64\www\hsreport\framework\base\CComponent.php:130
 Stack trace:
 #0 F:\wamp64\www\hsreport\framework\db\ar\CActiveRecord.php(145): CComponent->__get('filepath')
@@ -100,3 +101,5 @@ Stack trace:
 #13 F:\wamp64\www\hsreport\framework\base\CApplication.php(185): CWebApplication->processRequest()
 #14 F:\wamp64\www\hsreport\index.php(35): CWebApplication->run()
 REQUEST_URI=/hsreport/index.php?r=achievement/index
+=======
+>>>>>>> 3f65009b9c67549783381f7efa15affa00595863
