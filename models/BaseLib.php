@@ -166,7 +166,7 @@ public function title($vt,$vt1='') {
 //传入图片地址，id名（update用）
 function show_pic($flie='',$id=''){
     $html='';
-    if($flie){
+    if(strlen($flie)>40){
         $html=empty($id)?'<div style="text-align:center">':
             '<div style="float: left; margin-right:10px" id="upload_pic_'.$id.'">';
         if(substr($flie,-3,3)=='pdf' || substr($flie,-4,4)=='docx' || substr($flie,-3,3)=='doc' 
@@ -250,9 +250,9 @@ public function trInput($form,$m,$str,$tr="1",$rd='') {
 //str=name:1:2,其中NAME为知道，1表示跨表格，2是右边 
 public function tdInput($form,$m,$str) {
     $ln=$this->ln();
-    $ad=array('class'=>'input-text','style'=>'height:25px');
+    $ad=array('class'=>'input-text','style'=>'height:20px');
     $ds=explode(':',$str.":1:1");
-    $td0='<td  style="padding:15px;" '.(($ds[1]=='1') ? "" :' colspan="'.$ds[1].'"').' > ';
+    $td0='<td  style="padding:10px;" '.(($ds[1]=='1') ? "" :' colspan="'.$ds[1].'"').' > ';
     $td1='<td '.(($ds[2]=='1') ? "" :' colspan="'.$ds[2].'"').' > '; 
     $s1=$form->labelEx($m,$ds[0]);
     $s1=$td0.$s1.'</td>'.$ln;
@@ -490,5 +490,7 @@ public function listBox($pkeyword,$titlname,$pfields){
       $content = preg_replace("/face=.+?['|\"]/", '', $content); //去除样式 只允许小写 正则匹配没有带 i 参数
       return $content;
     }
+
+    
 }  //end class
 

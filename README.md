@@ -95,6 +95,8 @@ sexid
 ##### 	stugrade
 ##### 	stuscore
 
+stuname
+
 #### 课程作业（coursework）
 ##### 	workyear 学年
 ##### 	workterm 学期

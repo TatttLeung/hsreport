@@ -68,5 +68,8 @@ class studentfile extends BaseModel {
     public function picLabels() {
         return 'cpath';//缩略图要加这一个函数
     }
-
+    public function downSelect($form,$m,$atts,$onchange='',$noneshow=''){
+     $data=$this->findAll('1 order by F_CODE');
+     return BaseLib::model()->selectByData($form,$m,$atts,$data,'F_NAME',$onchange,$noneshow);
+    }
 }

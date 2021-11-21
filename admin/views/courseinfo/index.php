@@ -19,25 +19,35 @@
      <form action="<?php echo Yii::app()->request->url;?>" method="get">
     <input type="hidden" name="r" value="<?php echo Yii::app()->request->getParam('r');?>">
 
+    <label style="font-size: 15px;font-weight:bold;">
+        <span>当前筛选条件：</span>
+    </label>
 
-      <label style="margin-right:20px;">
+    <label style="margin-right:20px;">
         <span>学年</span>
         <select name="styear">
             <option value="<?php echo $model->courseyear?$model->courseyear:base_year::model()->now();?>"><?php echo $model->courseyear?$model->courseyear:base_year::model()->now();?></option>
+
             <?php foreach($years as $v){?>
-            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_NAME;?></option>
+                <?php if($model->courseyear==$v->F_NAME) continue;?>
+            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_view;?></option>
             <?php }?>
         </select>
     </label>
+    
     <label style="margin-right:20px;">
         <span>学期</span>
         <select name="sterm">
             <option value="<?php echo $model->courseterm?$model->courseterm:base_term::model()->now();?>"><?php echo $model->courseterm?$model->courseterm:base_term::model()->now();?></option>
             <?php foreach($terms as $v){?>
-            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_NAME;?></option>
+                <?php if($model->courseterm==$v->F_NAME) continue;?>
+            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_SHOW;?></option>
             <?php }?>
         </select>
-      </label>
+    </label>
+
+    <?php $_SESSION["courseyear"]=$model->courseyear;
+     $_SESSION["courseterm"]=$model->courseterm;?>
 
      
         <button class="btn btn-blue" type="submit">查询</button>
@@ -70,7 +80,7 @@ foreach($arclist as $v){
     <td style='text-align: center;'><?php echo $v->courseid; ?></td>
     <td style='text-align: center;'><?php echo $v->coursename; ?></td>
     <td style='text-align: center;'><?php echo $v->coursetime; ?></td>
-    <td style='text-align: center;'><?php echo $v->courseteacher; ?></td>
+    <td style='text-align: center;'><?php echo $v->teaname; ?></td>
     <td style='text-align: center;'>
      
         <a class="btn" href="<?php echo $this->createUrl('update', array('id'=>$v->id,'news_type'=>Yii::app()->request->getParam('news_type')));?>" title="编辑"><i class="fa fa-edit">课程编辑</i></a>
@@ -85,6 +95,7 @@ foreach($arclist as $v){
         <div class="box-page c"><?php $this->page($pages);?></div>
     </div><!--box-content end-->
 </div><!--box end-->
+
 
 <script>
 var deleteUrl = '<?php echo $this->createUrl('delete', array('id'=>'ID'));?>';

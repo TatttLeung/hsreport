@@ -43,6 +43,7 @@ $st="";
         array(
             'award_index317' => array('活动登记', 'ClubNews/index&news_type=0'),
             'award_index318' => array('活动审核', 'ClubNews/index&news_type=1'), 
+            'award_index332' => array('社會實踐報名名單', 'clubNewsSignList/index'),
             'award_index319' => array('服务机构名称', 'ClubList/index'),
             'award_index320' => array('中学教师查询','Teacher/index&clubtype=0'),
             'award_index321' => array('服务机构人员管理','Teacher/index&clubtype=1'),
@@ -67,6 +68,13 @@ $st="";
             'award_index326' => array('学生材料提交', 'studentfile/index'),
             'award_index327' => array('教师提交确认', 'teaconfirm/index'), 
             'award_index328' => array('材料审核进度查询', 'workarticle/index'),
+         )
+    ),
+    array(
+     '工程申报材料',
+        array(
+            'award_index331' => array('工程申报材料提交', 'Projectcommit/index'),
+            'award_index333' => array('达成度', 'achievement/index'),
          )
     )
   );

@@ -9,9 +9,9 @@
             <div style="display:block;" class="box-detail-tab-item">
                 <table class="mt15">
                     <tr>
-                        <td ><?php echo $form->labelEx($model, 'workyear'); ?></td>
+                       <td ><?php echo $form->labelEx($model, 'workyear'); ?></td>
                         <td >
-                            <?php echo $form->textField($model, 'workyear', array('class'=>'input-text','value'=>$_SESSION["workyear"])); ?>              
+                            <?php echo $form->textField($model, 'workyear', array('class'=>'input-text','value'=>$_SESSION["workyear"])); ?>      
                             <?php echo $form->error($model, 'workyear', $htmlOptions = array()); ?>
                         </td>
                     </tr>

@@ -49,11 +49,12 @@ class base_year extends BaseModel {
      */
  
 
-    public function now() {
+    public function now() {//获取当前时间
         $time=getdate();
         if($time['mon']>=9)
         {
             return $this->find("F_value=".$time['year'])->F_NAME;
+            //找到数据库里面当前
         }
         else
         {
@@ -64,6 +65,11 @@ class base_year extends BaseModel {
     protected function beforeSave() {
         parent::beforeSave();
         return true;
+    }
+
+    public function downSelect($form,$m,$atts,$onchange='',$noneshow=''){
+     $data=$this->findAll('1 order by F_CODE');
+     return BaseLib::model()->selectByData($form,$m,$atts,$data,'F_NAME',$onchange,$noneshow);
     }
 
 }
