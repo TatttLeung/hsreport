@@ -10,8 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-
-Date: 2021-11-18 16:56:47
+Date: 2021-11-21 12:23:55
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -1790,17 +1789,15 @@ CREATE TABLE `coursestu` (
   `stuscore` varchar(20) DEFAULT '' COMMENT '学生分数',
   `stuname` varchar(20) DEFAULT '' COMMENT '学生姓名',
   PRIMARY KEY (`id`)
-
-) ENGINE=MyISAM AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of coursestu
 -- ----------------------------
-
-INSERT INTO `coursestu` VALUES ('45', '2021-2022', '上学期', '000034', '离散数学', '陈寅', '20201111003', '', '·100', '黄莉');
-INSERT INTO `coursestu` VALUES ('44', '2021-2022', '上学期', '000034', '离散数学', '陈寅', '20201111002', '', '', '李四');
-INSERT INTO `coursestu` VALUES ('43', '2021-2022', '上学期', '000034', '离散数学', '陈寅', '20201111001', '', '', '张三');
-INSERT INTO `coursestu` VALUES ('46', '2021-2022', '上学期', '35', '程序设计基础', '曾锡山', '20202231011', '', '', '张敬康');
+INSERT INTO `coursestu` VALUES ('49', '2021-2022', '上学期', '000034', '离散数学', '陈寅', '20201111003', '', '', '陈志宇');
+INSERT INTO `coursestu` VALUES ('48', '2021-2022', '上学期', '000034', '离散数学', '陈寅', '20201111002', '', '', '刘源');
+INSERT INTO `coursestu` VALUES ('47', '2021-2022', '上学期', '000034', '离散数学', '陈寅', '20201111001', '', '', '翁行');
+INSERT INTO `coursestu` VALUES ('50', '2021-2022', '上学期', '35', '程序设计基础', '曾锡山', '20202231011', '', '', '张敬康');
 
 -- ----------------------------
 -- Table structure for `coursework`
@@ -6202,9 +6199,7 @@ CREATE TABLE `test_err` (
   `f_username` char(20) DEFAULT '' COMMENT '测试员',
   `f_callname` varchar(200) DEFAULT '' COMMENT '调用函数名称',
   PRIMARY KEY (`f_id`)
-
-) ENGINE=InnoDB AUTO_INCREMENT=719400 DEFAULT CHARSET=utf8;
-
+) ENGINE=InnoDB AUTO_INCREMENT=719418 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of test_err
@@ -6400,7 +6395,24 @@ INSERT INTO `test_err` VALUES ('719396', '68', '2021-11-18 16:15:16', '', '');
 INSERT INTO `test_err` VALUES ('719397', '{\"workarticle\":{\"ctime\":\"2021-11-18 16:15:43\",\"cstatus\":\"\\u901a\\u8fc7\",\"copinion\":\"\\u63d0\\u9ad8\"},\"submitType\":\"baocun\"}', '2021-11-18 16:15:49', '', '');
 INSERT INTO `test_err` VALUES ('719398', '1=1', '2021-11-18 16:16:01', '', '');
 INSERT INTO `test_err` VALUES ('719399', '1=1', '2021-11-18 16:17:06', '', '');
-
+INSERT INTO `test_err` VALUES ('719400', '1=1', '2021-11-19 08:48:36', '', '');
+INSERT INTO `test_err` VALUES ('719401', '1=1', '2021-11-19 09:23:49', '', '');
+INSERT INTO `test_err` VALUES ('719402', 'CLUB_ID<2000', '2021-11-20 20:35:19', '', '');
+INSERT INTO `test_err` VALUES ('719403', '1=1', '2021-11-20 20:38:27', '', '');
+INSERT INTO `test_err` VALUES ('719404', '21', '2021-11-21 11:09:35', '', '');
+INSERT INTO `test_err` VALUES ('719405', '1=1', '2021-11-21 11:09:35', '', '');
+INSERT INTO `test_err` VALUES ('719406', '21', '2021-11-21 11:33:40', '', '');
+INSERT INTO `test_err` VALUES ('719407', '1=1', '2021-11-21 11:33:40', '', '');
+INSERT INTO `test_err` VALUES ('719408', '21', '2021-11-21 11:33:51', '', '');
+INSERT INTO `test_err` VALUES ('719409', '1=1', '2021-11-21 11:33:51', '', '');
+INSERT INTO `test_err` VALUES ('719410', '{\"cyear\":\"2020-2021\",\"cterm\":\"\\u4e0a\\u5b66\\u671f\",\"cstuid\":\"2\",\"cstuname\":\"\\u5218\\u6e90\",\"ccoursename\":\"\\u66fe\\u9521\\u5c71-\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"worktype\":\"\\u5b9e\\u9a8c\\u62a5\\u544a\",\"cworkid\":\"0\",\"cpath\":\"2021\\/11\\/21\\/1_6199bf73629fb2.16575302.pdf\"}', '2021-11-21 11:39:32', '', '');
+INSERT INTO `test_err` VALUES ('719411', '{\"cyear\":\"2021-2022\",\"cterm\":\"\\u4e0b\\u5b66\\u671f\",\"cstuid\":\"2\",\"cstuname\":\"\\u5218\\u6e90\",\"ccoursename\":\"\\u66fe\\u9521\\u5c71-\\u7a0b\\u5e8f\\u8bbe\\u8ba1\\u57fa\\u7840\",\"worktype\":\"\\u5b9e\\u9a8c\\u62a5\\u544a\",\"cworkid\":\"0\",\"cpath\":\"2021\\/11\\/21\\/1_6199c10e8e3d03.18454887.pdf\"}', '2021-11-21 11:46:23', '', '');
+INSERT INTO `test_err` VALUES ('719412', '21', '2021-11-21 11:46:58', '', '');
+INSERT INTO `test_err` VALUES ('719413', '1=1', '2021-11-21 11:46:58', '', '');
+INSERT INTO `test_err` VALUES ('719414', '21', '2021-11-21 11:47:00', '', '');
+INSERT INTO `test_err` VALUES ('719415', '1=1', '2021-11-21 11:47:00', '', '');
+INSERT INTO `test_err` VALUES ('719416', 'CLUB_ID<2000', '2021-11-21 11:47:03', '', '');
+INSERT INTO `test_err` VALUES ('719417', 'CLUB_ID>2000', '2021-11-21 11:47:03', '', '');
 
 -- ----------------------------
 -- Table structure for `user`
@@ -6493,8 +6505,8 @@ INSERT INTO `workcommit` VALUES ('1', '2020-2021', '下学期', '00001', '1', '1
 INSERT INTO `workcommit` VALUES ('2', '2020-2021', '下学期', '00001', '3', '翁行', '2', '2021/11/08/1_6188a3707857e1.43327924.docx', '10', '1', '1', '程序设计基础', '2021-11-03 17:13:53', '考试');
 INSERT INTO `workcommit` VALUES ('3', '2020-2021', '下学期', '', '1', '良叔', '3', '2021/11/08/1_6188a39a68a1a1.01004287.docx', '100', '', null, '曾锡山-程序设计基础', null, '考试');
 INSERT INTO `workcommit` VALUES ('4', '2020-2021', '上学期', '00002', '1', '陈志宇', '88', '2021/11/10/1_618bd9af5f8df5.25642755.pdf', '100', '通过', '提高', '离散数学', '2021-11-18 16:15:43', '实验报告');
-INSERT INTO `workcommit` VALUES ('5', '2020-2021', '上学期', '', '0', '刘源', '2', '2021/11/15/1_6191d0401a8f47.54149806.docx', '', '', null, '曾锡山-程序设计基础', null, '实验报告');
-INSERT INTO `workcommit` VALUES ('6', '2021-2022', '下学期', '', '0', '刘源', '2', '2021/11/15/1_6191d058593602.94328173.docx', '', '', null, '曾锡山-程序设计基础', null, '实验报告');
+INSERT INTO `workcommit` VALUES ('5', '2020-2021', '上学期', '', '0', '刘源', '2', '2021/11/21/1_6199bf73629fb2.16575302.pdf', '', '', null, '曾锡山-程序设计基础', null, '实验报告');
+INSERT INTO `workcommit` VALUES ('6', '2021-2022', '下学期', '', '0', '刘源', '2', '2021/11/21/1_6199c10e8e3d03.18454887.pdf', '', '', null, '曾锡山-程序设计基础', null, '实验报告');
 DROP TRIGGER IF EXISTS `insert_num`;
 DELIMITER ;;
 CREATE TRIGGER `insert_num` AFTER INSERT ON `article` FOR EACH ROW begin

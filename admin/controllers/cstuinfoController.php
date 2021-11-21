@@ -54,6 +54,7 @@ class cstuinfoController extends BaseController {
 
     }
 
+
    public function actionCreate() {
         $modelName = $this->model;
         $model = new $modelName('create');
@@ -82,6 +83,42 @@ class cstuinfoController extends BaseController {
            $data = array();
            $data['model'] = $model;
            $this->render('update', $data);
+        } else {
+            $temp=$_POST[$modelName];            
+           $this-> saveData($model,$temp);
+        }
+       // $this->open($model->excelPath);
+    }
+
+
+   public function actionCreate1() {
+        $modelName = $this->model;
+        $model = new $modelName('create1');
+        $data = array();
+       // put_msg(37);
+         if (!Yii::app()->request->isPostRequest) {
+           // put_msg(39);
+            $data = array();
+            $data['model'] = $model;
+            $this->render('update1', $data);
+            //put_msg(43);
+        }else{
+           // put_msg(44);
+            //put_msg($_POST);
+            $temp=$_POST[$modelName]; 
+           // put_msg(47);
+            $this->saveData($model,$temp);
+        }
+        //$this->open($model->excelPath);
+    }
+
+    public function actionUpdate1($id) {
+        $modelName = $this->model;
+        $model = $this->loadModel($id, $modelName);
+        if (!Yii::app()->request->isPostRequest) {
+           $data = array();
+           $data['model'] = $model;
+           $this->render('update1', $data);
         } else {
             $temp=$_POST[$modelName];            
            $this-> saveData($model,$temp);
