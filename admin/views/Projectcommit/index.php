@@ -56,7 +56,8 @@ $courses=Projectcommit::model()->findALL();
         <th style='text-align: center;'>已选人数</th>
         <th style='text-align: center;'>班级组成</th>        
         <th style='text-align: center;'>课程性质</th>   
-        <th style='text-align: center;'>任务完成人</th>           
+        <th style='text-align: center;'>任务完成人</th> 
+        <th style='text-align: center;'>操作</th>          
     </tr>
 </thead>
         <tbody>
@@ -78,6 +79,9 @@ foreach($arclist as $v){
     <td style='text-align: center;'><?php echo $v->courseclass; ?></td>
     <td style='text-align: center;'><?php echo $v->coursetype; ?></td>
     <td style='text-align: center;'><?php echo $v->courseleader; ?></td> 
+    <td style='text-align: center;'>
+    <a class="btn btn-blue" href="<?php echo $this->createUrl('achievement/index', array('id'=>$v->id,));?>" title="达成度"><i class="fa fa-table">达成度</i></a>
+    <a class="btn" href="javascript:;" onclick="we.dele('<?php echo $v->id;?>', deleteUrl);" title="删除"><i class="fa fa-trash-o"></i></a>
     </td>
 </tr>
 <?php $index++; } ?>

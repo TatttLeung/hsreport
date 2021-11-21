@@ -166,7 +166,7 @@ public function title($vt,$vt1='') {
 //传入图片地址，id名（update用）
 function show_pic($flie='',$id=''){
     $html='';
-    if($flie){
+    if(strlen($flie)>40){
         $html=empty($id)?'<div style="text-align:center">':
             '<div style="float: left; margin-right:10px" id="upload_pic_'.$id.'">';
         if(substr($flie,-3,3)=='pdf' || substr($flie,-4,4)=='docx' || substr($flie,-3,3)=='doc' 
