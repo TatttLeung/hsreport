@@ -106,7 +106,7 @@ foreach($arclist as $v){
          $s1="<td style='text-align: center;'>";
           
          $s1.="<a class='btn' href='";
-         $s1.=$this->createUrl('cstuinfo/update1', array('id'=>$v->id,));
+         $s1.=$this->createUrl('teaconfirm/index', array('id'=>$v->id,));
          $s1.="'title='评分'>评分<i class='fa fa-edit'></i></a></td>";
          echo $s1;
          $s1="";

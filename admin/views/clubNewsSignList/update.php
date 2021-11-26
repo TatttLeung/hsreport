@@ -8,7 +8,7 @@
     ?>
 <div class="box">
     <div class="box-title c">
-    <h1><i class="fa fa-table"></i>活動報名</h1><span class="back">
+    <h1><i class="fa fa-table"></i>活動報名</h1><span class="back">   
     <a class="btn" href="javascript:;" onclick="we.back();">
     <i class="fa fa-reply"></i>返回</a></span></div><!--box-title end-->
     <div class="box-detail">

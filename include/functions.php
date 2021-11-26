@@ -1615,3 +1615,15 @@ function strip_html_tags($tags,$str){
     return $data;
 }
 
+function Yearsc(){
+
+  return  Semester::model()->getYear();
+}
+ 
+ function Termsc(){
+  return  Semester::model()->getTerm();
+}   
+function Termbm(){
+  return  Semester::model()->getTerm();
+}  
+

@@ -10,16 +10,41 @@ class teaconfirmController extends BaseController {
         //dump(Yii::app()->request->isPostRequest);
     }
 
-    public function actionIndex($styear="0",$sterm="1") {
-    set_cookie('_currentUrl_', Yii::app()->request->url);
-    $modelName = $this->model;
-    $model = $modelName::model();
-    $criteria = new CDbCriteria;
-   // $w1=get_where('1=1',($styear!="0"),'f_year',$styear,'"');
-    //$criteria->condition=get_where($w1,($sterm!="0"),'f_term',$sterm,'"');
-    //$criteria->order = 'sign_date_start desc';
-    $data = array();
-    parent::_list($model, $criteria, 'index', $data,20);
+      public function actionIndex( $styear="0",$sterm="0",$id="0",$scourse="0",$steacher="0") {
+        set_cookie('_currentUrl_', Yii::app()->request->url);
+        $modelName = $this->model;
+        $model = $modelName::model();
+        if($id!="0")
+        {
+            $a = cstuinfo::model()->find('id='.$id);
+            $model->cyear = $a->courseyear;
+            $model->cterm = $a->courseterm;
+           // $model->cworkid = $a->courseid;
+            $model->ccoursename = $a->coursename;
+           // $model->cstuname = $a->teaname;
+        }
+        $criteria = new CDbCriteria;
+
+        if($id=="0")
+        {
+            $w1=get_where('1=1',$styear,'cyear',$styear,'"');
+        //put_msg("19"." ".$w1);
+        $w2=get_where($w1,$sterm,'cterm',$sterm,'"');
+        $w3=get_where($w2,$scourse,'ccoursename',$scourse,'"');
+        //$criteria->condition=get_where($w3,$steacher,'cst',$steacher,'"');
+        put_msg($criteria->condition);
+        }
+        else
+        {
+            $criteria->condition="1=1 and cyear="."'$a->courseyear'"." and cterm="."'$a->courseterm'"." and ccoursename="."'$a->coursename'";//." and workteacher="."'$a->teaname'";
+        }
+        
+
+        //1=1 and workyear="2020-2021" and workterm="上学期" and workcourse="程序设计基础" and workteacher="曾锡山"
+        //put_msg("21"." ".$criteria->condition);
+        /*criteria为筛选条件，更改对条件即可完成筛选，第一个不用改，第二个改成index里面对应命名
+        （即参数，应设置为默认0），第三个为此模块中的筛选的表名，第四个为index里面对应命名（即参数）*/
+        parent::_list($model, $criteria, 'index', array()); //调用S
     }
 
    public function actionCreate() {
