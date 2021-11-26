@@ -90,8 +90,7 @@ class ClubNews extends BaseModel {
 
     protected function afterFind() {
         parent::afterFind();
-        $news_content_temp = $this->news_content;
-        put_msg($news_content_temp);
+        $this->news_content_temp = $this->news_content;
         return true;
     } 
 

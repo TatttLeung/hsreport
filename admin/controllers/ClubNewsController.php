@@ -37,7 +37,6 @@ class ClubNewsController extends BaseController {
            $data['model'] = $model;
            $this->render('update', $data);
         } else {
-            put_msg($_POST);
             $temp=$_POST[$modelName];
             
             
@@ -53,7 +52,6 @@ class ClubNewsController extends BaseController {
     function saveData($model,$post) {
            $model->attributes =$post;
            $model->news_content=$post["news_content_temp"];
-           put_msg($model->attributes);
            show_status($model->save(),'保存成功', get_cookie('_currentUrl_'),'保存失败');  
      }
 

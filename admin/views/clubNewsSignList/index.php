@@ -1,3 +1,4 @@
+
 <?php 
 if (!isset($_REQUEST['club_news_id'])) {$_REQUEST['club_news_id']=0;}
 // $school=School::model()->find(); 
@@ -7,6 +8,7 @@ if (!isset($_REQUEST['club_news_id'])) {$_REQUEST['club_news_id']=0;}
  //$class=BaseCode::model()->getClass();
  //$tclass=get_session('class_teacher');
  set_school_resquest('school','level','sclass','scyear','term');
+
  $club_news= ClubNews::model()->getClubnews();
 ?>
 <div class="box">
