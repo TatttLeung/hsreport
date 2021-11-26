@@ -1,4 +1,3 @@
-<?php if (!isset($_REQUEST['news_type'])) {$_REQUEST['news_type']=0;} ?>
 <div class="box">
     <div class="box-title c">
     <h1><i class="fa fa-table"></i>学生活动实践详情</h1><span class="back">
@@ -15,11 +14,11 @@
                     <tr>
                         <td ><?php echo $form->labelEx($model, 'f_year'); ?></td>
                         <td >
-                <?php echo $form->dropDownList($model, 'f_year', Chtml::listData(Yearlist::model()->findALL(), 'F_NAME', 'F_NAME'), array('prompt'=>'请选择')); ?>
-                <?php echo $form->error($model, 'f_year', $htmlOptions = array()); ?>
+                            <?php echo $form->dropDownList($model, 'f_year', Chtml::listData(base_year::model()->findALL(), 'F_NAME', 'F_NAME'), array('prompt'=>'请选择')); ?>
+                            <?php echo $form->error($model, 'f_year', $htmlOptions = array()); ?>
                         </td>
-                    </tr>
-                         <tr>
+                    </tr>                         
+                    <tr>
                         <td ><?php echo $form->labelEx($model, 'news_title'); ?></td>
                         <td >
                             <?php echo $form->textField($model, 'news_title', array('class' => 'input-text')); ?>

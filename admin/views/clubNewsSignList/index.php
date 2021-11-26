@@ -1,12 +1,6 @@
-<?php 
-if (!isset($_REQUEST['club_news_id'])) {$_REQUEST['club_news_id']=0;}
- $school=School::model()->find(); 
- $years=Yearlist::model()->findALL();
- $terms=Term::model()->findALL();
- $levels=Level::model()->findALL();
- $class=BaseCode::model()->getClass();
- $tclass=get_session('class_teacher');
- set_school_resquest('school','level','sclass','scyear','term');
+<?php if (!isset($_REQUEST['club_news_id'])) {$_REQUEST['club_news_id']=0;}
+ $years=base_year::model()->findALL();
+ $terms=base_term::model()->findALL();
  $club_news= ClubNews::model()->getClubnews();
 ?>
 <div class="box">
