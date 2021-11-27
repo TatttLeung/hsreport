@@ -1,11 +1,7 @@
 <?php if (!isset($_REQUEST['news_type'])) {$_REQUEST['news_type']=0;} ?>
 <?php
- $school=schoolList::model()->find(); 
- $years=Yearlist::model()->findALL();
- $terms=Term::model()->findALL();
- $class=User::model()->find();
- $tclass=get_session('class_teacher');
- set_school_resquest('school','stlevel','stclass','styear','sterm');
+ $years=base_year::model()->findALL();
+ $terms=base_term::model()->findALL();
 ?>
 <div class="box">
      <div class="box-title c"><h1><i class="fa fa-table"></i>活动列表</h1></div><!--box-title end-->
@@ -18,27 +14,25 @@
 
      <form action="<?php echo Yii::app()->request->url;?>" method="get">
     <input type="hidden" name="r" value="<?php echo Yii::app()->request->getParam('r');?>">
-    <input type="hidden" name="school" id="school" value="<?php echo $school->school_name;?>">
     <input type="hidden" name="news_type" id="news_type" value="<?php echo $_REQUEST['news_type'];?>">
 
-      <label style="margin-right:20px;">
+    <label style="margin-right:20px;">
         <span>学年</span>
         <select name="styear">
-            <option value="">请选择</option>
             <?php foreach($years as $v){?>
-            <option value="<?php echo $v->F_NAME;?>"<?php if($_REQUEST['styear'] ==$v->F_NAME){?> selected<?php }?>><?php echo $v->F_NAME;?></option>
+            <option value="<?php echo $v->F_NAME;?>"><?php echo $v->F_view;?></option>
             <?php }?>
         </select>
     </label>
+
     <label style="margin-right:20px;">
-        <span>学段</span>
+        <span>学期</span>
         <select name="sterm">
-            <option value="">请选择</option>
-            <?php foreach($terms as $v){?>
-            <option value="<?php echo $v->F_value;?>"<?php if($_REQUEST['sterm']==$v->F_value){?> selected<?php }?>><?php echo $v->F_NAME;?></option>
-            <?php }?>
+            <option value="">全选</option>
+            <option value="上学期">上学期</option>
+            <option value="下学期">下学期</option>
         </select>
-      </label>
+    </label>
 
      
         <button class="btn btn-blue" type="submit">查询</button>
@@ -57,6 +51,7 @@
         <th style='text-align: center;'>报名/需求数</th>
         <th style='text-align: center;'><?php echo $model->getAttributeLabel('sign_date_start');?>
         <th style='text-align: center;'><?php echo $model->getAttributeLabel('sign_date_end');?>
+        <th style='text-align: center;'><?php echo $model->getAttributeLabel('state');?>
         <th style='text-align: center;'>操作</th>
     </tr>
 </thead>
@@ -74,6 +69,8 @@ foreach($arclist as $v){
     <td style='text-align: center;'><?php echo $v->sign_num.'/'.$v->sign_max; ?></td>
     <td style='text-align: center;'><?php echo $v->sign_date_start; ?></td>
     <td style='text-align: center;'><?php echo $v->sign_date_end; ?></td>
+    <td style='text-align: center;'><?php echo $v->state; ?></td>
+
     <td style='text-align: center;'>
      
         <a class="btn" href="<?php echo $this->createUrl('update', array('id'=>$v->id,'news_type'=>Yii::app()->request->getParam('news_type')));?>" title="编辑"><i class="fa fa-edit"></i></a>

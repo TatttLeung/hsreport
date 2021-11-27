@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : mydp
+Source Server         : mydb
 Source Server Version : 50714
 Source Host           : localhost:3306
 Source Database       : hsreport
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2021-11-26 21:32:54
+Date: 2021-11-27 15:53:28
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -1788,16 +1788,16 @@ INSERT INTO `club_list` VALUES ('5', '9002', '2社区', '', '', '', '', '', '', 
 DROP TABLE IF EXISTS `club_news`;
 CREATE TABLE `club_news` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `f_year` int(11) DEFAULT '0',
-  `f_term` int(4) DEFAULT '0',
+  `f_year` char(11) DEFAULT '0',
+  `f_term` char(11) DEFAULT '0',
   `f_order` int(4) DEFAULT '0',
   `news_code` char(12) DEFAULT '' COMMENT '新闻编码，前面是年月日后加四位表示',
   `news_title` varchar(100) NOT NULL DEFAULT '' COMMENT '信息标题 ',
   `news_pic` varchar(50) DEFAULT '' COMMENT '信息图片',
   `news_type` int(4) DEFAULT '225' COMMENT '信息类型，关联base_code表LIVEROOM类型225-常规图文，226-图集，227-视频',
   `news_type_name` varchar(10) DEFAULT '' COMMENT '信息类型名字，关联base_code表LIVEROOM类型225-常规图文，226-图集，227-视频',
-  `news_introduction` varchar(2000) DEFAULT '' COMMENT '内容简介',
-  `news_content` varchar(200) DEFAULT '' COMMENT '信息内容HTML文件名， 路径及命名规范查base_parh表',
+  `news_introduction` longtext COMMENT '内容简介',
+  `news_content` longtext COMMENT '信息内容HTML文件名， 路径及命名规范查base_parh表',
   `news_date` datetime DEFAULT NULL COMMENT '活动时间',
   `club_id` varchar(200) DEFAULT '0' COMMENT '俱乐部ID',
   `club_list` varchar(300) DEFAULT '' COMMENT ' `club_list` varchar(300) DEFAULT '''' COMMENT ''同是兼报社区'',',
@@ -1809,7 +1809,7 @@ CREATE TABLE `club_news` (
   `news_date_start` datetime DEFAULT NULL COMMENT '上线日期',
   `news_date_end` datetime DEFAULT NULL COMMENT '上线结束日期',
   `uDate` datetime DEFAULT NULL COMMENT '更新时间',
-  `state` int(4) DEFAULT '371' COMMENT '状态，关联base_code表STATE类型状态id：371-374',
+  `state` char(20) DEFAULT '' COMMENT '状态',
   `state_name` varchar(20) DEFAULT '' COMMENT '审核名称',
   `reasons_for_failure` varchar(100) DEFAULT '' COMMENT '审核未通过原因，state状态等于1时才有',
   `state_qmddid` int(11) DEFAULT '0' COMMENT '审核管理员GFID，关联qmdd_administrators表ID',
@@ -1829,12 +1829,13 @@ CREATE TABLE `club_news` (
   `signIn_date_end` datetime DEFAULT NULL COMMENT '活动结束时间/签到结束时间',
   PRIMARY KEY (`id`),
   KEY `state_qmddid` (`state_qmddid`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=780 DEFAULT CHARSET=utf8 COMMENT='社区动态信息';
+) ENGINE=InnoDB AUTO_INCREMENT=781 DEFAULT CHARSET=utf8 COMMENT='社区动态信息';
 
 -- ----------------------------
 -- Records of club_news
 -- ----------------------------
-INSERT INTO `club_news` VALUES ('779', '2021', '1', '0', '', '1', '2021/10/27/1_61791f1b8dc691.67572603.gif', '225', '', '1', '77777', null, '3', '1,2', 'kkkkkk', '0', '0', '0', '0', null, null, '2021-11-26 19:36:54', '371', '', '', '0', null, null, '510', '117.51164', '40.040794', '100', '天津市,天津市,蓟县,, ', '1', '2021-10-26 17:19:02', '2021-10-28 10:37:30', '0', '0', null, null);
+INSERT INTO `club_news` VALUES ('779', '2021-2022', '下学期', '0', '', '乡村振兴看福建｜城郊乡：“一根参”的成长与使命', '2021/11/27/1_61a1c80fbfe597.70414630.png', '225', '', '乡村振兴看福建｜城郊乡：“一根参”的成长与使命', '<p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">编者按：</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">福建“八山一水一分田”，发展特色现代农业的资源禀赋得天独厚。</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">近年来，福建走特色路、打特色牌，发展茶叶、蔬菜、水果、水产、食用菌等十大乡村特色产业，已走出一条独具福建特色的乡村产业振兴之路。</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">为了讲好福建产业富民故事，传播八闽乡村振兴声音，在中央广播电视总台福建总站与福建省农业农村厅的指导下，央广网福建频道经过两个月的实地调研采访，从11月16日起推出“乡村振兴看福建|特色小镇的产业富民故事”系列报道。</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">眼底幽妍地，人间长寿乡。</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">柘荣县是国家生态文明建设示范县，位于福建省东北部，是中国长寿之乡，也是全国最大、最活跃的太子参产销区。而城郊乡又是柘荣太子参的核心产区。</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">城郊乡人工栽培太子参已有近百年历史，优越的生态环境和宜人的气候为太子参生长提供了得天独厚的自然条件。</span></p><p><img src=\"https://pics7.baidu.com/feed/b58f8c5494eef01f09c567c97c49e52cbd317d2d.jpeg?token=2b3a9bed59ae1501434736885c4cc9b7\" width=\"640\" class=\"_3yZQZ9OxCCD0QVw16rnEsS\" style=\"border: 0px; width: 599px; border-radius: 13px;\"/></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">天人药业太子参基地航拍图（央广网发 天人药业供图）</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">乡村振兴的“锚点”</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">作为“中国太子参之乡”，城郊乡的太子参产业与脱贫攻坚、乡村振兴密切相关。种植太子参一直是城郊乡农民的重要收入来源。</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">柘荣县太子参年种植面积超过3万亩，产销量占全国的2/3以上。目前，该乡太子参种植面积占柘荣县的1/3，全产业链产值达8.5亿元。</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">近年来，城郊乡大力推广“公司+协会+专业合作社+基地+农户”的经营模式，全县首家天人际会种植产业联合体通过搭建中药材种植、加工炮制、包装运输、仓储寄存、代销贸易、质量追溯、大数据管理等一体化系列服务平台，进行联农带农协同发展。</span></p><p><img src=\"https://pics6.baidu.com/feed/cb8065380cd79123316212523883258bb3b78053.jpeg?token=afe5148024a475bc6bc8ccb3902a2736\" width=\"640\" class=\"_3yZQZ9OxCCD0QVw16rnEsS\" style=\"border: 0px; width: 599px; border-radius: 13px;\"/></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">富溪太子参园（央广网发 吴霖摄）</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">今年51岁的林斌斌是城郊乡际头村最大的种植户，同时也是省级家庭农场示范场的农场主。</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">“我种植太子参20多年了，近几年综合天气等原因，收成最好的是2020年，那年我种植了10多亩，每亩收成300多斤，总共收了4000多斤，一共卖了10多万元。”林斌斌告诉记者。</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">相比其他种植户每亩200多斤的产量，林斌斌种植的太子参每亩产量能达到300多斤。作为太子参的老种植户，林斌斌经常将自己的经验分享给其他种植户，偶尔还客串一下“科特派”的角色。</span></p><p><img src=\"https://pics3.baidu.com/feed/9922720e0cf3d7ca031ebf1a6aa8c2006a63a937.jpeg?token=53979650cb79ceb736a838851e6cce1f\" width=\"640\" class=\"_3yZQZ9OxCCD0QVw16rnEsS\" style=\"border: 0px; width: 599px; border-radius: 13px;\"/></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">太子参迎来丰收，种植户正在晾晒，脸上露出喜悦的笑容（央广网发 城郊乡人民政府供图）</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">据了解，在城郊乡，像林斌斌这样的种植大户还有很多。近年来，城郊乡聚焦农业特色产业，创新农业生产经营体制，培育省级示范社、家庭农场8家，带动蓝莓、葡萄、猕猴桃、水蜜桃、覆盆子等特色水果种植面积达4000亩以上，推进农业产业规模化、标准化、品牌化发展，促进农民增收致富，加快乡村振兴的步伐。</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">2020年9月28日，为了支持太子参产业发展，工商银行宁德分行为当地太子参商户成功发放了第一笔金额为270万元的“太子参贷”。这也是继“海参仓单贷”、“大黄鱼仓单贷”、“鲍鱼仓单贷”后该行创新推出的仓单质押类普惠金融创新模式系列产品。</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">科技助力，产业向价值链高端迈进</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">2019年，农业农村部“产业强镇”项目花落柘荣县城郊乡，为柘荣太子参产业发展装上了新引擎。</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">乡村要振兴，产业是支撑。产业的发展离不开科技的助力，为了将以太子参为主导产业的生物医药循环经济做大做强，2020年12月，太子参植物工厂“天人太子参植物工厂”在城郊乡投产运行。</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">该工厂融合了现代生物技术与智能信息技术，为生产绿色、优质、安全的中药材提供了有力保障。其中，城郊乡农业产业强镇示范建设项目的子项目——天人太子参植物工厂AI果项目实现了太子参脱毒苗规模化生产，满足5000亩良种繁育基地建设需要。</span></p><p><img src=\"https://pics0.baidu.com/feed/38dbb6fd5266d0163b5230f7039ca80e37fa35e2.jpeg?token=d71ddf69b57f57a2f98c1e1cba95a53e\" width=\"640\" class=\"_3yZQZ9OxCCD0QVw16rnEsS\" style=\"border: 0px; width: 599px; border-radius: 13px;\"/></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">天人药业总工程师江慧容在育种基地查看太子参种苗生长情况（央广网记者 罗晓英摄）</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">“我们从2015年开始建立种子资源圃，跟以往传统的种植方法相比，目前选育出来的种源‘天抗1号’在选育的时候就将叶斑病和花叶病的病毒剥离，以此减少太子参在田间生长期间的打药次数，从而提升太子参的品质也让种植户增收，产量能增加20%到30%。”天人药业总工程师江慧容说。</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">据了解，天人药业统一向种植户提供种源清晰、明确的“天抗1号”脱病毒种苗，年生产800万粒，可满足全县太子参种苗供应，由此实现了太子参种源统一管理，种苗统一供应，保障了太子参种业源头绿色、优质、安全、环保。此外，天人药业还为种植户免费提供冷链仓库，供种植户完好保存太子参，解决太子参储存难点。</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">“2020年我们采购了8000万元的太子参，今年受茶产业的冲击，目前收了3、4千万元，后期还会继续采购。我们的联合体成员可以通过两种销售运营模式，第一是订单合作模式，签订太子参收购合同，联合体进行统一销售；第二是采用联合体成员基地共建合作模式，基地产出的鲜参，联合体在采收前一个月进行采样检测，检测报告合格后，联合体依据当前行情价，签订优质优价订单收购合同。”天人药业助理总经理陈阿琴介绍称。</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">目前，城郊乡以天人药业、力捷迅、贝迪药业等为代表的一批太子参深加工企业开始向价值链高端迈进，产品覆盖化学制剂、中成药、中药饮片、医疗器械和兽药等多个领域。</span></p><p><img src=\"https://pics5.baidu.com/feed/b03533fa828ba61e45425105dd83eb03314e59a9.jpeg?token=b79fa2c24e7117051f25e54486aae1d8\" width=\"640\" class=\"_3yZQZ9OxCCD0QVw16rnEsS\" style=\"border: 0px; width: 599px; border-radius: 13px;\"/></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">农户正在参园中忙碌（央广网发 天人药业供图）</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">“一地两用，双轮驱动”</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">近年来，随着茶叶收益的凸显，为了推动农业高质量发展，提升土地综合收益，城郊乡开始探索“一地两用”——茶叶套种太子参的模式。随着新模式的广泛推广，城郊乡已初步形成太子参与茶产业“双轮驱动”的格局，进一步夯实了乡村振兴的产业根基。</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">“为助力柘荣太子参产业发展，柘荣县先后制定出台了《关于加快太子参产业发展的若干意见》等产业发展扶持政策。安排了1000万元的特色农业发展专项资金，通过‘以奖代补’的形式扶持发展包括太子参产业在内的特色农业。乡党委、政府也以产业强镇建设为契机，支持天人药业建设天人太子参植物工厂AI果，进一步完善我县太子参全产业链。”城郊乡乡长游奇锋表示。</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">在做大做强太子参和茶叶等主导产业的同时，城郊乡充分挖掘其他资源优势，打造生态农业旅游、发展水果采摘等多种辅助产业。以剪纸特色村靴岭尾村为代表的“文创农旅”多重融合的乡村发展模式正在城郊乡悄然兴起。</span></p><p><img src=\"https://pics1.baidu.com/feed/8694a4c27d1ed21b1164867936d9a1cd50da3f39.jpeg?token=930a6c0da55075ba67c32ab1d8342e0f\" width=\"640\" class=\"_3yZQZ9OxCCD0QVw16rnEsS\" style=\"border: 0px; width: 599px; border-radius: 13px;\"/></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">参园晨曦（央广网发 吴霖摄）</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">走进环境清新的靴岭尾村，剪纸文化气息扑面而来。在靴岭尾村，家家户户都保存着传统剪纸习俗，随着剪纸艺术的传承与发展，涌现出了袁秀莹、郑平芳、袁作干等一批优秀民间艺人。靴岭尾村“文创田园”的打造，已成为助力该村振兴发展的动力。</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">近年来，城郊乡通过推广标准化种植、拓展产业链等措施，全力推动太子参产业发展，并将产业发展与乡村振兴有效衔接，切实保障了农民的稳定增收。</span></p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; overflow-y: auto; max-width: 100%; line-height: 24px;\"><span class=\"bjh-p\" style=\"max-width: 100%;\">从曾经的穷乡僻壤到如今的诗意田园，当前，城郊乡以省级乡村振兴特色乡镇建设为契机，以产业发展为基础，以农旅融合发展为抓手，正在走出一条一二三产融合发展的乡村振兴之路。（央广网记者 罗晓英）</span></p><p><br/></p>', null, '1', '1,2', '1社区', '0', '0', '0', '0', null, null, '2021-11-27 15:50:19', '驳回', '', '213123123132213', '0', null, null, '510', '113.357356', '23.144358', '100', '广东省,广州市,天河区,紫荆中路, 华南师范大学', '1', '2021-11-27 14:22:57', '2021-11-30 14:22:53', '100', '100', null, null);
+INSERT INTO `club_news` VALUES ('780', '2020-2021', '上学期', '0', '', '东莞中学深圳4日研学课程方案', '', '225', '', '东莞中学深圳4日研学课程方案', '', null, '3', '', '2中学', '0', '0', '0', '0', null, null, '2021-11-27 15:13:12', null, '', '', '0', null, null, '510', '', '', '100', '', '1', '2021-10-26 17:19:02', '2021-11-30 14:22:53', '0', '0', null, null);
 
 -- ----------------------------
 -- Table structure for `collect`
@@ -6801,98 +6802,11 @@ CREATE TABLE `test_err` (
   `f_username` char(20) DEFAULT '' COMMENT '测试员',
   `f_callname` varchar(200) DEFAULT '' COMMENT '调用函数名称',
   PRIMARY KEY (`f_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=720707 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=720741 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of test_err
 -- ----------------------------
-INSERT INTO `test_err` VALUES ('720620', '1=1', '2021-11-22 15:50:13', '', '');
-INSERT INTO `test_err` VALUES ('720621', '1=1', '2021-11-22 15:50:18', '', '');
-INSERT INTO `test_err` VALUES ('720622', '1=1', '2021-11-22 16:20:36', '', '');
-INSERT INTO `test_err` VALUES ('720623', '21', '2021-11-23 20:18:06', '', '');
-INSERT INTO `test_err` VALUES ('720624', '1=1', '2021-11-23 20:18:06', '', '');
-INSERT INTO `test_err` VALUES ('720625', 'CLUB_ID>2000', '2021-11-23 20:18:07', '', '');
-INSERT INTO `test_err` VALUES ('720626', 'CLUB_ID<2000', '2021-11-23 20:18:08', '', '');
-INSERT INTO `test_err` VALUES ('720627', '{\"ClubNews\":{\"f_year\":\"2021-2022\",\"news_title\":\"1\",\"news_introduction\":\"1\",\"club_id\":\"3\",\"club_list\":\"1,2\",\"sign_date_start\":\"2021-10-26 17:19:02\",\"sign_date_end\":\"2021-10-28 10:37:30\",\"sign_max\":\"0\",\"sign_num\":\"0\",\"news_address\":\"\\u5929\\u6d25\\u5e02,\\u5929\\u6d25\\u5e02,\\u84df\\u53bf,, \",\"Longitude\":\"117.51164\",\"latitude\":\"40.040794\",\"news_pic\":\"http:\\/\\/127.0.0.1\\/hsreport\\/uploads\\/temp\\/2021\\/10\\/27\\/1_61791f1b8dc691.67572603.gif\",\"news_content_temp\":\"77777\"},\"submitType\":\"baocun\"}', '2021-11-26 19:36:54', '', '');
-INSERT INTO `test_err` VALUES ('720628', '{\"id\":\"779\",\"f_year\":\"2021-2022\",\"f_term\":\"1\",\"f_order\":\"0\",\"news_code\":\"\",\"news_title\":\"1\",\"news_pic\":\"http:\\/\\/127.0.0.1\\/hsreport\\/uploads\\/temp\\/2021\\/10\\/27\\/1_61791f1b8dc691.67572603.gif\",\"news_type\":\"225\",\"news_type_name\":\"\",\"news_introduction\":\"1\",\"news_content\":\"77777\",\"news_date\":null,\"club_id\":\"3\",\"club_list\":\"1,2\",\"news_club_name\":\"kkkkkk\",\"news_clicked\":\"0\",\"collection_num\":\"0\",\"version\":\"0\",\"order_num\":\"0\",\"news_date_start\":null,\"news_date_end\":null,\"uDate\":\"2021-10-27 22:15:41\",\"state\":\"371\",\"state_name\":\"\",\"reasons_for_failure\":\"\",\"state_qmddid\":\"0\",\"state_qmddname\":null,\"state_time\":null,\"if_del\":\"510\",\"Longitude\":\"117.51164\",\"latitude\":\"40.040794\",\"sign_dist\":\"100\",\"news_address\":\"\\u5929\\u6d25\\u5e02,\\u5929\\u6d25\\u5e02,\\u84df\\u53bf,, \",\"is_online\":\"1\",\"sign_date_start\":\"2021-10-26 17:19:02\",\"sign_date_end\":\"2021-10-28 10:37:30\",\"sign_max\":\"0\",\"sign_num\":\"0\",\"signIn_date_start\":null,\"signIn_date_end\":null}', '2021-11-26 19:36:54', '', '');
-INSERT INTO `test_err` VALUES ('720629', '77777', '2021-11-26 19:36:56', '', '');
-INSERT INTO `test_err` VALUES ('720630', '77777', '2021-11-26 19:36:58', '', '');
-INSERT INTO `test_err` VALUES ('720631', '77777', '2021-11-26 20:06:36', '', '');
-INSERT INTO `test_err` VALUES ('720632', '77777', '2021-11-26 20:06:37', '', '');
-INSERT INTO `test_err` VALUES ('720633', '77777', '2021-11-26 20:07:35', '', '');
-INSERT INTO `test_err` VALUES ('720634', '77777', '2021-11-26 20:07:56', '', '');
-INSERT INTO `test_err` VALUES ('720635', '77777', '2021-11-26 20:07:58', '', '');
-INSERT INTO `test_err` VALUES ('720636', '77777', '2021-11-26 20:07:58', '', '');
-INSERT INTO `test_err` VALUES ('720637', '77777', '2021-11-26 20:13:54', '', '');
-INSERT INTO `test_err` VALUES ('720638', '77777', '2021-11-26 20:13:55', '', '');
-INSERT INTO `test_err` VALUES ('720639', '77777', '2021-11-26 20:13:56', '', '');
-INSERT INTO `test_err` VALUES ('720640', '77777', '2021-11-26 20:19:14', '', '');
-INSERT INTO `test_err` VALUES ('720641', '77777', '2021-11-26 20:19:15', '', '');
-INSERT INTO `test_err` VALUES ('720642', '77777', '2021-11-26 20:19:28', '', '');
-INSERT INTO `test_err` VALUES ('720643', '77777', '2021-11-26 20:19:49', '', '');
-INSERT INTO `test_err` VALUES ('720644', '77777', '2021-11-26 20:19:50', '', '');
-INSERT INTO `test_err` VALUES ('720645', '77777', '2021-11-26 20:19:50', '', '');
-INSERT INTO `test_err` VALUES ('720646', '77777', '2021-11-26 20:20:15', '', '');
-INSERT INTO `test_err` VALUES ('720647', '77777', '2021-11-26 20:20:16', '', '');
-INSERT INTO `test_err` VALUES ('720648', '77777', '2021-11-26 20:20:37', '', '');
-INSERT INTO `test_err` VALUES ('720649', '77777', '2021-11-26 20:20:37', '', '');
-INSERT INTO `test_err` VALUES ('720650', '77777', '2021-11-26 20:21:50', '', '');
-INSERT INTO `test_err` VALUES ('720651', '77777', '2021-11-26 20:21:51', '', '');
-INSERT INTO `test_err` VALUES ('720652', '77777', '2021-11-26 20:27:19', '', '');
-INSERT INTO `test_err` VALUES ('720653', '77777', '2021-11-26 20:27:25', '', '');
-INSERT INTO `test_err` VALUES ('720654', '77777', '2021-11-26 20:28:38', '', '');
-INSERT INTO `test_err` VALUES ('720655', '77777', '2021-11-26 20:35:01', '', '');
-INSERT INTO `test_err` VALUES ('720656', '77777', '2021-11-26 20:47:42', '', '');
-INSERT INTO `test_err` VALUES ('720657', '77777', '2021-11-26 20:47:56', '', '');
-INSERT INTO `test_err` VALUES ('720658', '77777', '2021-11-26 20:47:56', '', '');
-INSERT INTO `test_err` VALUES ('720659', '77777', '2021-11-26 20:48:01', '', '');
-INSERT INTO `test_err` VALUES ('720660', '77777', '2021-11-26 20:48:04', '', '');
-INSERT INTO `test_err` VALUES ('720661', '77777', '2021-11-26 20:48:04', '', '');
-INSERT INTO `test_err` VALUES ('720662', '77777', '2021-11-26 20:48:18', '', '');
-INSERT INTO `test_err` VALUES ('720663', '77777', '2021-11-26 20:48:27', '', '');
-INSERT INTO `test_err` VALUES ('720664', '77777', '2021-11-26 20:48:33', '', '');
-INSERT INTO `test_err` VALUES ('720665', '77777', '2021-11-26 20:48:38', '', '');
-INSERT INTO `test_err` VALUES ('720666', '77777', '2021-11-26 20:48:44', '', '');
-INSERT INTO `test_err` VALUES ('720667', '77777', '2021-11-26 20:48:49', '', '');
-INSERT INTO `test_err` VALUES ('720668', '77777', '2021-11-26 20:48:54', '', '');
-INSERT INTO `test_err` VALUES ('720669', '77777', '2021-11-26 20:49:00', '', '');
-INSERT INTO `test_err` VALUES ('720670', '77777', '2021-11-26 20:49:26', '', '');
-INSERT INTO `test_err` VALUES ('720671', '77777', '2021-11-26 20:49:29', '', '');
-INSERT INTO `test_err` VALUES ('720672', '77777', '2021-11-26 20:49:29', '', '');
-INSERT INTO `test_err` VALUES ('720673', '77777', '2021-11-26 20:49:44', '', '');
-INSERT INTO `test_err` VALUES ('720674', '77777', '2021-11-26 20:49:51', '', '');
-INSERT INTO `test_err` VALUES ('720675', '77777', '2021-11-26 20:49:52', '', '');
-INSERT INTO `test_err` VALUES ('720676', '77777', '2021-11-26 20:49:53', '', '');
-INSERT INTO `test_err` VALUES ('720677', '77777', '2021-11-26 20:49:55', '', '');
-INSERT INTO `test_err` VALUES ('720678', '77777', '2021-11-26 20:49:56', '', '');
-INSERT INTO `test_err` VALUES ('720679', '77777', '2021-11-26 20:49:57', '', '');
-INSERT INTO `test_err` VALUES ('720680', '77777', '2021-11-26 20:50:01', '', '');
-INSERT INTO `test_err` VALUES ('720681', '77777', '2021-11-26 20:50:01', '', '');
-INSERT INTO `test_err` VALUES ('720682', '77777', '2021-11-26 20:50:09', '', '');
-INSERT INTO `test_err` VALUES ('720683', '77777', '2021-11-26 20:50:49', '', '');
-INSERT INTO `test_err` VALUES ('720684', '77777', '2021-11-26 20:50:49', '', '');
-INSERT INTO `test_err` VALUES ('720685', '77777', '2021-11-26 20:51:43', '', '');
-INSERT INTO `test_err` VALUES ('720686', '77777', '2021-11-26 20:51:55', '', '');
-INSERT INTO `test_err` VALUES ('720687', '77777', '2021-11-26 20:51:55', '', '');
-INSERT INTO `test_err` VALUES ('720688', '77777', '2021-11-26 20:53:13', '', '');
-INSERT INTO `test_err` VALUES ('720689', '77777', '2021-11-26 20:53:15', '', '');
-INSERT INTO `test_err` VALUES ('720690', '77777', '2021-11-26 20:53:15', '', '');
-INSERT INTO `test_err` VALUES ('720691', '77777', '2021-11-26 20:54:53', '', '');
-INSERT INTO `test_err` VALUES ('720692', '77777', '2021-11-26 20:54:55', '', '');
-INSERT INTO `test_err` VALUES ('720693', '77777', '2021-11-26 20:54:55', '', '');
-INSERT INTO `test_err` VALUES ('720694', '77777', '2021-11-26 21:15:57', '', '');
-INSERT INTO `test_err` VALUES ('720695', '77777', '2021-11-26 21:32:03', '', '');
-INSERT INTO `test_err` VALUES ('720696', '77777', '2021-11-26 21:32:04', '', '');
-INSERT INTO `test_err` VALUES ('720697', '77777', '2021-11-26 21:32:05', '', '');
-INSERT INTO `test_err` VALUES ('720698', '77777', '2021-11-26 21:32:09', '', '');
-INSERT INTO `test_err` VALUES ('720699', '77777', '2021-11-26 21:32:09', '', '');
-INSERT INTO `test_err` VALUES ('720700', '77777', '2021-11-26 21:32:12', '', '');
-INSERT INTO `test_err` VALUES ('720701', '77777', '2021-11-26 21:32:14', '', '');
-INSERT INTO `test_err` VALUES ('720702', '77777', '2021-11-26 21:32:14', '', '');
-INSERT INTO `test_err` VALUES ('720703', '77777', '2021-11-26 21:32:15', '', '');
-INSERT INTO `test_err` VALUES ('720704', '77777', '2021-11-26 21:32:18', '', '');
-INSERT INTO `test_err` VALUES ('720705', '77777', '2021-11-26 21:32:18', '', '');
-INSERT INTO `test_err` VALUES ('720706', '77777', '2021-11-26 21:32:24', '', '');
 
 -- ----------------------------
 -- Table structure for `user`

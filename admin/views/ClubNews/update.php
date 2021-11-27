@@ -17,7 +17,14 @@
                             <?php echo $form->dropDownList($model, 'f_year', Chtml::listData(base_year::model()->findALL(), 'F_NAME', 'F_NAME'), array('prompt'=>'请选择')); ?>
                             <?php echo $form->error($model, 'f_year', $htmlOptions = array()); ?>
                         </td>
-                    </tr>                         
+                    </tr>
+                    <tr>
+                        <td ><?php echo $form->labelEx($model, 'f_term'); ?></td>
+                        <td >
+                            <?php echo $form->dropDownList($model, 'f_term', Chtml::listData(base_term::model()->findALL(), 'F_NAME', 'F_NAME'), array('prompt'=>'请选择')); ?>
+                            <?php echo $form->error($model, 'f_term', $htmlOptions = array()); ?>
+                        </td>
+                    </tr>                           
                     <tr>
                         <td ><?php echo $form->labelEx($model, 'news_title'); ?></td>
                         <td >
@@ -140,12 +147,12 @@
                 <tr>
                     <td width="15%"><?php echo $form->labelEx($model, 'state'); ?></td>
                     <td width="35%">
-                        <?php echo $form->radioButtonList($model, 'state', Chtml::listData(BaseCode::model()->getCode(370), 'f_id', 'F_NAME'), $htmlOptions = array('separator' => '', 'class' => 'input-check', 'template' => '<span class="check">{input}{label}</span>')); ?>
+                        <?php echo $form->radioButtonList($model, 'state', ['通过'=>'通过','驳回'=>'驳回'], array('separator'=>'', 'template'=>'<span class="radio">{input} {label}</span> ')); ?>
                         <?php echo $form->error($model, 'state'); ?>
                     </td>
                     <td width="15%"><?php echo $form->labelEx($model, 'reasons_for_failure'); ?></td>
                     <td width="35%">
-                        <?php echo $form->textArea($model, 'reasons_for_failure', array('class' => 'input-text' ,'value'=>'')); ?>
+                        <?php echo $form->textArea($model, 'reasons_for_failure', array('class' => 'input-text')); ?>
                         <?php echo $form->error($model, 'reasons_for_failure', $htmlOptions = array()); ?>
                     </td>
                 </tr>

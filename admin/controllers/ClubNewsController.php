@@ -10,13 +10,13 @@ class ClubNewsController extends BaseController {
         //dump(Yii::app()->request->isPostRequest);
     }
 
-    public function actionIndex($styear="0",$sterm="1") {
+    public function actionIndex($styear="",$sterm="") {
     set_cookie('_currentUrl_', Yii::app()->request->url);
     $modelName = $this->model;
     $model = $modelName::model();
     $criteria = new CDbCriteria;
-    $w1=get_where('1=1',($styear!="0"),'f_year',$styear,'"');
-    $criteria->condition=get_where($w1,($sterm!="0"),'f_term',$sterm,'"');
+    $w1=get_where('1=1',$styear,'f_year',$styear,'"');
+    $criteria->condition=get_where($w1,$sterm,'f_term',$sterm,'"');
     $criteria->order = 'sign_date_start desc';
     $data = array();
     parent::_list($model, $criteria, 'index', $data,20);
@@ -38,8 +38,6 @@ class ClubNewsController extends BaseController {
            $this->render('update', $data);
         } else {
             $temp=$_POST[$modelName];
-            
-            
            $this-> saveData($model,$temp);
         }
     }
@@ -50,7 +48,11 @@ class ClubNewsController extends BaseController {
     }
     
     function saveData($model,$post) {
+        put_msg(51);
+            put_msg($post);
            $model->attributes =$post;
+           $model->news_club_name = ClubList::model()->find("id=".$model->club_id)->club_name;
+           put_msg($model->attributes);
            $model->news_content=$post["news_content_temp"];
            show_status($model->save(),'保存成功', get_cookie('_currentUrl_'),'保存失败');  
      }

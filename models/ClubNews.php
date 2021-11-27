@@ -20,7 +20,7 @@ class ClubNews extends BaseModel {
       
           array('news_title,news_pic,news_content,club_id,news_date_start,news_date_end,news_club_name,
             news_address,latitude,Longitude,sign_date_start,sign_date_end,f_year,f_term,club_list,
-            sign_max,sign_num','safe'),
+            sign_max,sign_num,state,reasons_for_failure','safe'),
 
            // array('f_year,f_term,news_title,news_content_temp','safe'),
         );

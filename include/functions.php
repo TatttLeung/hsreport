@@ -60,17 +60,6 @@ function strlen_hz($str){
  return mb_strlen($str,'UTF-8');
 }
 
-function Yearsc(){
-
-  return  Semester::model()->getYear();
-}
- 
- function Termsc(){
-  return  Semester::model()->getTerm();
-}   
-function Termbm(){
-  return  Semester::model()->getTerm();
-} 
 
 //将内容进行UNICODE编码
 function unicode_encode($name)
